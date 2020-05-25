@@ -52,8 +52,11 @@ require('header.php')
             <div class="item post">
                 <div class="h-100 d-inline-block img-wrap post-for-image">
                     <img src="img/девушка1.jpg" alt="категория" class="post-image">
-                    <p class="post-image-category"
-                       style="width: 60%;border-radius: 17px;background-color: rgba(0, 0, 0, 0.27);color: white;    top: 10px; left: 75px;">
+                    <p class="post-image-category" style="    background-color: rgba(0, 0, 0, 0.27);
+    color: white;    border-radius: 17px;    width: 60%;    left: 37%;
+
+
+">
                         категория</p>
                 </div>
                 <div class="col">

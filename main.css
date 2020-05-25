@@ -116,8 +116,7 @@ a {
 
 .post-image-category {
     top: 10px;
-    left: 75px;
-
+    font-size: 16px;
 }
 
 .post-date {
@@ -134,7 +133,7 @@ a {
     text-align: left;
     line-height: 100%;
     font-size: 12px;
-    margin:  0 0 0 9px;
+    margin: 0 0 0 9px;
 }
 
 .post-statistics {
@@ -349,8 +348,8 @@ a {
     }
 
     .post-image-category {
-        top: 0px;
-        left: 75px;
+        top: 4px;
+        font-size: 10px;
     }
 
     .post-date {
@@ -366,7 +365,7 @@ a {
     .post-text {
         line-height: 90%;
         font-size: 7px;
-        margin:  0 0 0 1px;
+        margin: 0 0 0 1px;
     }
 
     .post-statistics-like {
@@ -385,6 +384,7 @@ a {
         width: 10px;
         padding: 0;
     }
+
     .post-statistics-values {
         padding: 0;
         font-size: 7px;
