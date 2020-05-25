@@ -2,6 +2,9 @@
     font-size: 1em;
 }
 
+body {
+}
+
 .orange-background {
     background-color: rgba(254, 197, 65, 1);
 }
@@ -17,9 +20,10 @@
 }
 
 .main-block {
-    background: #FAFAFA;
     padding: 1% 11% 3% 11%;
     position: static;
+    background-color: rgba(255, 250, 245, 1);
+
 }
 
 .round-sides {
@@ -69,6 +73,7 @@
     background-color: rgba(255, 255, 255, 0.27);
 }
 
+
 .item {
     display: inline-block;
     padding: 5px 0px;
@@ -87,7 +92,78 @@ a {
 }
 
 .post {
+    width: 550px;
+    height: 200px;
+    margin: 10px 5px 0px 0px;
+    padding: 0;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(127, 127, 127, 0.42);
+}
 
+.post-for-image {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    float: left;
+}
+
+.post-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+}
+
+.post-image-category {
+    top: 10px;
+    left: 75px;
+
+}
+
+.post-date {
+    padding: 0 0 0 10px;
+    font-size: 13px;
+}
+
+.post-header {
+    padding: 0 0 0 10px;
+    font-size: 30px;
+}
+
+.post-text {
+    text-align: left;
+    line-height: 100%;
+    font-size: 12px;
+    margin:  0 0 0 9px;
+}
+
+.post-statistics {
+    padding: 0;
+}
+
+.post-statistics-like {
+    padding: 0;
+    left: 100px;
+}
+
+.post-statistics-comment {
+    padding: 0;
+    left: 60px;
+}
+
+.post-statistics-views {
+    padding: 0;
+    left: 10px;
+}
+
+.post-statistics-image {
+    width: 20px;
+    padding: 0;
+}
+
+.post-statistics-values {
+    padding: 0;
+    font-size: 12px;
 }
 
 /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
@@ -251,7 +327,66 @@ a {
     .form-autorisation-size {
         width: 100%;
     }
+
     .btn-API-SN-text {
         font-size: 12px;
+    }
+
+    .post {
+        width: 300px;
+        height: 100px;
+        margin: 2px 1px 0px 0px;
+    }
+
+    .post-for-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .post-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .post-image-category {
+        top: 0px;
+        left: 75px;
+    }
+
+    .post-date {
+        padding: 0 0 0 10px;
+        font-size: 10px;
+    }
+
+    .post-header {
+        padding: 0 0 0 10px;
+        font-size: 12px;
+    }
+
+    .post-text {
+        line-height: 90%;
+        font-size: 7px;
+        margin:  0 0 0 1px;
+    }
+
+    .post-statistics-like {
+        left: 60px;
+    }
+
+    .post-statistics-comment {
+        left: 30px;
+    }
+
+    .post-statistics-views {
+        left: 0;
+    }
+
+    .post-statistics-image {
+        width: 10px;
+        padding: 0;
+    }
+    .post-statistics-values {
+        padding: 0;
+        font-size: 7px;
     }
 }
