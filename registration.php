@@ -21,14 +21,14 @@ require('header.php')
                 чтобы иметь больше возможностей</p>
             <div class="btn input-group mb-2 mr-sm-2 btn-API" style="text-align: center; max-height: 50px">
                 <div class="input-group-text btn-API-SN">G</div>
-                <span class="input-group-text input-group-sm btn-API-SN-text"
+                <span class="input-group-text btn-API-SN-text"
                       style="background-color: rgba(51, 51, 51, 1); border-color: #363533; color: #FEC541;margin-left: 30px">
                     Вход через Google
                 </span>
             </div>
             <div class="btn input-group mb-2 mr-sm-2 btn-API" style="text-align: center; max-height: 50px">
                 <div class="input-group-text btn-API-SN">f</div>
-                <div class="input-group-text  input-group-sm btn-API-SN-text"
+                <div class="input-group-text btn-API-SN-text"
                      style="background-color: rgba(51, 51, 51, 1); border-color: #363533; color: #FEC541;margin-left: 40px">
                     Вход через Facebook
                 </div>

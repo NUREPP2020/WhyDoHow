@@ -156,10 +156,7 @@ a {
 }
 
 .btn-API-SN-text {
-    font-size: 11px;
-    background-color: rgba(51, 51, 51, 1);
-    border-color: #363533;
-    color: #FEC541;
+    font-size: 16px;
     vertical-align: middle
 }
 
@@ -235,7 +232,7 @@ a {
     }
 
     .form-autorisation-size {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -253,5 +250,8 @@ a {
 
     .form-autorisation-size {
         width: 100%;
+    }
+    .btn-API-SN-text {
+        font-size: 12px;
     }
 }
