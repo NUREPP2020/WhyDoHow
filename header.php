@@ -18,8 +18,7 @@
 <header style=" position: sticky; top: 0; width: 100%; z-index: 100;">
 
     <nav class="navbar navbar-expand-lg navbar-light orange-background">
-
-        <a class="navbar-brand logo d-none d-lg-block" href="#"">
+        <a class="navbar-brand logo d-none d-lg-block" href="index.php"">
         <img src="img/WhyDoHow.png" alt="лого" style="width: 300px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -36,7 +35,8 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">🔎</div>
                         </div>
-                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Имя пользователя">
+                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2"
+                               placeholder="Имя пользователя">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button">🔎</button>
                         </div>
@@ -50,25 +50,63 @@
             </a>
             <div class="dropdown-menu category-background" aria-labelledby="navbarDropdown">
                 <div class="centerDivs">
-                    <?php
-                    #заменить на реальные ссылки на страницы с фоточками и текстом
-                    for ($i = 0; $i < 15; $i++) {
-                        echo '
-                    <a href="#">
+                    <!--категории-->
+                    <a href="registration.php">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">регистрация</p>
+                        </div>
+                    </a>
+                    <a href="createpost.php">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">создание поста</p>
+                        </div>
+                    </a><a href="#">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">текст</p>
+                        </div>
+                    </a><a href="#">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">текст</p>
+                        </div>
+                    </a><a href="#">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">текст</p>
+                        </div>
+                    </a><a href="#">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">текст</p>
+                        </div>
+                    </a><a href="#">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">текст</p>
+                        </div>
+                    </a><a href="#">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">текст</p>
+                        </div>
+                    </a><a href="#">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">текст</p>
+                        </div>
+                    </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
                             <p style="bottom: -11px;">текст</p>
                         </div>
                     </a>
-';
-                    }
-                    ?>
                 </div>
             </div>
         </div>
-        <!--
-        профиль
-        -->
+        <!--профиль-->
         <a href="registration.php">
             <div class="round-sides dark-background"
                  style="min-width: 100px; padding-left: 10px; color: #FEC541" align="right">
