@@ -45,24 +45,23 @@ require('header.php')
     </div>
     -->
     <!--топ 3 хреновины-->
-    <div>
+    <div id="topPosts">
         <div class="row img-wrap" style="margin: 0 10% 0 10%">
             <img src="img/девушка1.jpg" alt="" class="col post-top-image post-top-image-big">
-            <span>
-                <img src="img/eye.png" alt="" style="width: 45px">
+            <span class="post-top-image-stats-size post-top-image-big-eye">
+                <img src="img/eye.png" alt="" class="post-top-image-big-top-icon" >
                 1234
             </span>
-            <span style=" border: 1px solid #fff;border-radius: 7px;top: 50%">
+            <span class="post-top-label-most-popular">
                 самые популярные
             </span>
-            <span style="bottom: 22%; ">
-                <h4 style="width: 40%">
-                    заголовок f f f f f f f f f f f f f f f f f f f f f f f f f f f f  f f
-                </h4>
+            <span class="post-top-image-big-top-span-header">
+                    <b>заголовок f f f f f f f f f f f f f f f f f f f f f f f f f f f f</b>
             </span>
-            <span style="bottom: 10%; left: 30%"><img src="img/heart.png" alt="" style="width: 40px">
+            <span style="left: 30%" class="post-top-image-stats-size post-top-image-big-bottom-icon-y">
+                <img src="img/heart.png" alt="" class="post-top-image-big-bottom-icon">
                 1231
-                <img src="img/comment.png" alt="" style="width: 40px">
+                <img src="img/comment.png" alt="" class="post-top-image-big-bottom-icon">
                 1231
             </span>
 
@@ -70,18 +69,17 @@ require('header.php')
                 <!--первая мелкая фотка-->
                 <div class="row">
                     <img src="img/девушка1.jpg" alt="" class="col post-top-image post-top-image-small">
-                    <span>
-                <img src="img/eye.png" alt="" style="width: 40px; left: 5%">
+                    <span class="post-top-span-margin-content post-top-image-stats-size">
+                <img src="img/eye.png" alt="" class="post-top-image-small-top-icon">
                 1235
                     </span>
-                    <span style="top: 25%; ">
-                <h5 style="width: 50%">
-                    заголовок f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f
-                </h5>
+                    <span class="post-top-span-margin-content post-top-image-small-top-span-header1">
+                    <b>заголовок f f f f f f f f f f f f f f f f f f f f f f f f f f f</b>
                     </span>
-                    <span style="top: 35%; left: 60%"><img src="img/heart.png" alt="" style="width: 30px">
+                    <span style="left: 60%" class="post-top-image-stats-size post-top-image-small-bottom-icon-y1">
+                        <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
                 1235
-                <img src="img/comment.png" alt="" style="width: 30px">
+                <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
                 1235
             </span>
                 </div>
@@ -89,25 +87,25 @@ require('header.php')
                 <!--вторая мелкая фотка-->
                 <div class="row">
                     <img src="img/девушка1.jpg" alt="" class="col post-top-image post-top-image-small">
-                    <span>
-                <img src="img/eye.png" alt="" style="width: 40px">
-                1235
+                    <span class="post-top-span-margin-content post-top-image-stats-size">
+                <img src="img/eye.png" alt="" class="post-top-image-small-top-icon">
+                1237
                     </span>
-                    <span style="top: 73%; ">
-                <h5 style="width: 50%">
-                    заголовок f f f f f f f f f f f f f f f f f f f f f f f f f f f f f
-                </h5>
+                    <span class="post-top-span-margin-content post-top-image-small-top-span-header2">
+                   <b>заголовок f f f f f f f f f f f f f f f f f f f f f f</b>
                     </span>
-                    <span style="top: 83%; left: 60%"><img src="img/heart.png" alt="" style="width: 30px">
-                1235
-                <img src="img/comment.png" alt="" style="width: 30px">
-                1235
-            </span>
+                    <span style="left: 60%" class="post-top-image-stats-size post-top-image-small-bottom-icon-y2">
+                        <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
+                        1237
+                        <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
+                        1237
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-    <br><br>
+    <br>
+    <br>
     <!--мелкие постыы-->
     <div class="centerDivs">
         <?php
