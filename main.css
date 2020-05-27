@@ -73,6 +73,11 @@ body {
     background-color: rgba(255, 255, 255, 0.27);
 }
 
+.img-wrap span {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    left: 3%;
+}
 
 .item {
     display: inline-block;
@@ -130,10 +135,12 @@ a {
 }
 
 .post-text {
-    text-align: left;
-    line-height: 100%;
-    font-size: 12px;
-    margin: 0 0 0 9px;
+    display: block; /* or inline-block */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.3em;
 }
 
 .post-statistics {
@@ -282,6 +289,22 @@ a {
     margin-right: -100%;
 }
 
+.post-top-image {
+    border-radius: 36px;
+}
+.post-top-image-big {
+    height: 440px;
+    margin: 0 0 5% 0;
+}
+
+.post-top-image-small {
+    height: 210px;
+}
+
+.post-top-label-most-popular {
+    font-size: 15px;
+}
+
 @media screen and (max-width: 1200px) {
     .username {
         font-size: 0.6em;
@@ -291,6 +314,16 @@ a {
         background: #FAFAFA;
         padding: 1% 8% 3% 8%;
         position: static;
+    }
+
+    .post-top-image-big {
+        margin: 7% 0 5% 0;
+        height: 300px;
+    }
+
+    .post-top-image-small {
+        width: 330px;
+        height: 190px;
     }
 }
 
@@ -309,6 +342,7 @@ a {
     .form-autorisation-size {
         width: 90%;
     }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -388,5 +422,25 @@ a {
     .post-statistics-values {
         padding: 0;
         font-size: 7px;
+    }
+
+    .post-top-image-big {
+        margin: 2% 0 5% 0;
+        height: 260px;
+    }
+
+    .post-top-image-small {
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post-top-image-big {
+        margin: 5% 0 0% 0;
+        height: 120px;
+    }
+
+    .post-top-image-small {
+        height: 70px;
     }
 }
