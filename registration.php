@@ -11,7 +11,7 @@ require('header.php')
 ?>
 <main class="main-block position-center" style="">
     <div class="form-autorisation-size orange-background" style="padding: 30px; border-radius:10px;">
-        <form id="registrationform" class="needs-validation">
+        <form action="create_new_account.php" method="post" id="registrationform" class="needs-validation">
             <!--лого-->
             <div class="position-center" style="left: 50%;">
                 <img src="img/WhyDoHow.png" alt="лого" style="width: 300px"></div>
