@@ -12,7 +12,8 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="main.css"/>
-
+<script src="https://kit.fontawesome.com/6df34de0e3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="main.css"/>
 
 <header style=" position: sticky; top: 0; width: 100%; z-index: 100;    box-shadow: 0 0 10px rgba(127, 127, 127, 0.42);
 ">
@@ -73,10 +74,10 @@
                             <p style="bottom: -11px;">посмотреть пост</p>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="viewstream.php">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
+                            <p style="bottom: -11px;">посмотреть стрим</p>
                         </div>
                     </a>
                     <a href="#">

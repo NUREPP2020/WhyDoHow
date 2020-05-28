@@ -900,7 +900,7 @@ popup2{
 
 .down-cat:hover{
     float: left;
-    background: rgb(54,53,51,0.8);
+    background: rgba(54,53,51,0.8);
     border-radius: 9px;
     padding:  5px 5px 5px 5px;
     box-shadow: 0 0px 6px rgba(0,0,0,0.6);
@@ -1278,7 +1278,7 @@ popup2{
 
     .down-cat:hover{
         float: left;
-        background: rgb(54,53,51,0.8);
+        background: rgba(54,53,51,0.8);
         border-radius: 9px;
         padding:  5px 5px 5px 5px;
         box-shadow: 0 0px 6px rgba(0,0,0,0.6);
