@@ -22,46 +22,47 @@
 require('header.php')
 ?>
 <main class="main-block">
-    <div class="centerDivs" style="margin-left: 11%; margin-right: 11%">
-        <br>
+    <div class="centerDivs profile-header">
         <div class="row" style="border-color: #363533">
             <div class="col-3">
-                <div class="col"><img src="img/девушка1.jpg" alt="ава" class="rounded-circle"
-                                      style="width: 180px; border: 4px solid #363533;">
+                <div class="col"><img src="img/девушка1.jpg" alt="ава" class="rounded-circle profile-image-avatar">
                 </div>
                 <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit"
-                            style="margin: 3%; width: 200px; padding: 2px"><img src="img/девушка1.jpg" alt=""
-                             style="width: 26px; float: left">Добавить NewHow
+                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
+                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Добавить NewHow
                     </button>
                 </div>
                 <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit"
-                            style="margin: 3%; width: 200px; padding: 2px"><img src="img/девушка1.jpg" alt=""
-                                                                                style="width: 26px; float: left">Запустить
-                        стрим
+                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
+                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Запустить стрим
                     </button>
                 </div>
             </div>
             <div class="col-7">
                 <div class="row">
-                    <div class="col"><span>Пахомова Алиса</span></div>
-                    <div class="col">
-                        <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit"
-                                style="margin: 3%; width: 200px; padding: 2px">Настройки профиля
-                            <img src="img/девушка1.jpg" alt=""
-                                 style="width: 26px; float: left">
+                    <div class="col"><span class="profile-span-name">Пахомова Алиса</span></div>
+                    <div class="col" style="float: left">
+                        <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings" type="submit">
+                            Настройки профиля
+                            <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
                         </button>
 
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col"><span><b>1234</b> подписчики</span></div>
-                    <div class="col"><span><b>1234</b> подписки</span></div>
-                    <div class="col"><span><b>1234</b> публикации</span></div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col"><span class="profile-span-stats"><b>1234</b> подписчики</span></div>
+                    <div class="col"><span class="profile-span-stats"><b>1234</b> подписки</span></div>
+                    <div class="col"><span class="profile-span-stats"><b>1234</b> публикации</span></div>
                 </div>
-                <div class="row"><p class="line">glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g
-                        hsdfh gk hszf hg izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+                <div class="row line profile-description">
+                    <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                        izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+                    <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                        izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+                    <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                        izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+                    <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                        izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
                 </div>
             </div>
         </div>

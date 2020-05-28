@@ -375,11 +375,70 @@ a {
 .post-top-image-small-bottom-icon-y2 {
     top: 83%;
 }
+
+/*личный профиль*/
 .line {
-    border-left: 2px solid #ccc; /* Параметры линии */
+    border-left: 3px solid #363533; /* Параметры линии */
     margin-left: 20px; /* Отступ слева */
     padding-left: 10px; /* Расстояние от линии до текста */
 }
+
+.profile-header {
+    margin: 0px 5% 0px 5%;
+}
+
+.profile-image-avatar {
+    width: 200px;
+    border: 4px solid #363533;
+}
+
+.profile-button-new {
+    margin: 3%;
+    width: 220px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+.profile-button-new-image {
+    width: 30px;
+    float: left;
+}
+
+.profile-span-name {
+    float: left;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+.profile-button-settings {
+    margin: 3%;
+    width: 260px;
+    max-height: 50px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+.profile-button-settings-image {
+    width: 26px;
+    float: right;
+}
+
+.profile-button-settings-image {
+    width: 26px;
+    float: right;
+}
+
+.profile-span-stats {
+    font-size: 20px;
+}
+
+.profile-description {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+/* конец личный профиль*/
 
 @media screen and (max-width: 1200px) {
     .username {
@@ -447,6 +506,52 @@ a {
     .post-top-span-margin-content {
         margin-left: 6%;
     }
+
+    /*личный профиль*/
+    .profile-header {
+        margin: 0px 5% 0px 5%;
+    }
+
+    .profile-image-avatar {
+        width: 160px;
+    }
+
+    .profile-button-new {
+        width: 180px;
+        padding: 2px;
+        font-size: 16px;
+    }
+
+    .profile-button-new-image {
+        width: 26px;
+        float: left;
+    }
+
+    .profile-span-name {
+        font-size: 32px;
+        margin-left: 30px;
+    }
+
+    .profile-button-settings {
+        margin: 3%;
+        width: 200px;
+        font-size: 18px;
+    }
+
+    .profile-button-settings-image {
+        width: 22px;
+    }
+
+    .profile-span-stats {
+        font-size: 18px;
+    }
+
+    .profile-description {
+        margin-top: 22px;
+        font-size: 14px;
+    }
+
+    /* конец личный профиль*/
 }
 
 @media screen and (max-width: 998px) {
@@ -512,6 +617,52 @@ a {
     .post-top-span-margin-content {
         margin-left: 6%;
     }
+
+    /*личный профиль*/
+    .profile-header {
+        margin: 0px 5% 0px 5%;
+    }
+
+    .profile-image-avatar {
+        width: 160px;
+    }
+
+    .profile-button-new {
+        width: 160px;
+        padding: 2px;
+        font-size: 14px;
+    }
+
+    .profile-button-new-image {
+        width: 22px;
+        float: left;
+    }
+
+    .profile-span-name {
+        font-size: 26px;
+        margin-left: 20px;
+    }
+
+    .profile-button-settings {
+        margin: 3%;
+        width: 160px;
+        font-size: 14px;
+    }
+
+    .profile-button-settings-image {
+        width: 20px;
+    }
+
+    .profile-span-stats {
+        font-size: 14px;
+    }
+
+    .profile-description {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+
+    /* конец личный профиль*/
 }
 
 @media screen and (max-width: 768px) {
@@ -657,6 +808,7 @@ a {
     .post-top-span-margin-content {
         margin-left: 7%;
     }
+
     .post-top-image-big-bottom-icon-y {
         bottom: 16%;
     }
@@ -668,9 +820,7 @@ a {
     .post-top-image-small-bottom-icon-y2 {
         top: 89%;
     }
-}
 
-@media screen and (max-width: 768px) {
     .post-top-image-big {
         margin: 5% 0 0% 0;
         height: 120px;
@@ -679,20 +829,109 @@ a {
     .post-top-image-small {
         height: 70px;
     }
-    #topPosts{
+
+    #topPosts {
         visibility: hidden;
         overflow: hidden;
         height: 0;
         position: relative;
     }
+
+    /*личный профиль*/
+    .profile-header {
+        margin: 0px 5% 0px 5%;
+    }
+
+    .profile-image-avatar {
+        width: 130px;
+    }
+
+    .profile-button-new {
+        width: 130px;
+        padding: 2px;
+        font-size: 11px;
+    }
+
+    .profile-button-new-image {
+        width: 20px;
+    }
+
+    .profile-span-name {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .profile-button-settings {
+        margin: 3%;
+        width: 120px;
+        font-size: 10px;
+    }
+
+    .profile-button-settings-image {
+        width: 16px;
+    }
+
+    .profile-span-stats {
+        font-size: 12px;
+    }
+
+    .profile-description {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+    /* конец личный профиль*/
 }
-.popup{
+@media screen and (max-width: 412px){
+    /*личный профиль*/
+    .profile-header {
+        margin: 0;
+    }
+
+    .profile-image-avatar {
+        width: 90px;
+    }
+
+    .profile-button-new {
+        width: 90px;
+        padding: 1px;
+        font-size: 8px;
+    }
+
+    .profile-button-new-image {
+        width: 12px;
+    }
+
+    .profile-span-name {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .profile-button-settings {
+        margin: 3%;
+        width: 100px;
+        font-size: 8px;
+    }
+
+    .profile-button-settings-image {
+        width: 12px;
+    }
+
+    .profile-span-stats {
+        font-size: 6px;
+    }
+
+    .profile-description {
+        margin-top: 10px;
+        font-size: 7px;
+    }
+    /* конец личный профиль*/
+}
+.popup {
     display: block;
     width: 260px;
     background-color: black;
     padding: 30px;
     text-transform: uppercase;
-    font-family: arial;
     color: white;
     font-size: 14px;
     position: absolute;
@@ -702,7 +941,7 @@ a {
     transition: .5s all linear;
 }
 
-.popup input{
+.popup input {
     width: 100%;
     border: 0;
     margin: 10px 0;
@@ -711,20 +950,20 @@ a {
     outline: none;
 }
 
-.submit{
+.submit {
     background-color: #fff;
     cursor: pointer;
 }
 
-#callback{
+#callback {
     display: none;
 }
 
-#callback:checked ~ .popup{
+#callback:checked ~ .popup {
     top: 200px;
 }
 
-.close{
+.close {
     display: block;
     position: absolute;
     transform: rotate(45deg);
@@ -733,7 +972,8 @@ a {
     right: 10px;
     cursor: pointer;
 }
-.popup2{
+
+.popup2 {
     display: block;
     width: 260px;
     background-color: black;
@@ -749,7 +989,7 @@ a {
     transition: .5s all linear;
 }
 
-.popup2 input{
+.popup2 input {
     width: 100%;
     border: 0;
     margin: 10px 0;
@@ -758,20 +998,20 @@ a {
     outline: none;
 }
 
-.submit2{
+.submit2 {
     background-color: #fff;
     cursor: pointer;
 }
 
-#callback2{
+#callback2 {
     display: none;
 }
 
-#callback2:checked ~ .popup2{
+#callback2:checked ~ .popup2 {
     top: 200px;
 }
 
-.close2{
+.close2 {
     display: block;
     position: absolute;
     transform: rotate(45deg);
@@ -782,7 +1022,7 @@ a {
 }
 
 /* View Post */
-.prev{
+.prev {
     width: 100%;
     height: 750px;
     background-repeat: no-repeat;
@@ -790,15 +1030,17 @@ a {
     margin: 0;
 }
 
-.main-block1{
+.main-block1 {
     width: 100%;
 }
-.id_post{
+
+.id_post {
     background: white;
     border-radius: 10px;
     width: 100px;
 }
-.category1{
+
+.category1 {
     background: rgba(255, 255, 255, 0.4);
     width: 15%;
     height: 45px;
@@ -807,144 +1049,168 @@ a {
     margin-top: 130px;
 
 }
-.cattext{
-    color:white;
+
+.cattext {
+    color: white;
     opacity: 1;
 }
-.namepost{
+
+.namepost {
     margin-top: 30px;
     word-wrap: break-word;
 }
-.napo{
+
+.napo {
     font-size: 40pt;
-    color:white;
+    color: white;
 }
 
-.authorp{
+.authorp {
     margin-left: 40%;
     margin-top: 50px;
 }
-.avtar{
+
+.avtar {
     float: left;
 
 }
-.autname{
+
+.autname {
     float: left;
     margin-left: 25px;
     margin-top: 25px;
 }
-.avt{
+
+.avt {
     width: 90px;
     height: 90px;
     border-radius: 50%;
 }
-.avttext{
+
+.avttext {
     color: white;
     cursor: pointer;
 }
-.datap{
+
+.datap {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 12px;
     width: 170px;
     margin-top: 170px;
     margin-left: 47%;
 }
-.dataptext{
+
+.dataptext {
     color: white;
     padding-left: 25px;
     padding-bottom: 2px;
 
 }
-.infopo{
+
+.infopo {
     margin-left: 39%;
     margin-top: 85px;
 
 }
-.likepo{
+
+.likepo {
     float: left;
 
     padding-right: 65px;
 }
-.compo{
+
+.compo {
     float: left;
     border-left: 4px solid rgba(255, 255, 255, 0.4);
     border-right: 4px solid rgba(255, 255, 255, 0.4);
     padding-right: 65px;
     padding-left: 65px;
 }
-.viepo{
+
+.viepo {
     float: left;
     padding-left: 65px;
 
 }
-.infopo h4{
+
+.infopo h4 {
     padding-left: 10px;
 
 }
-.maintextp{
+
+.maintextp {
     margin: 0px 400px 10px 400px;
-    padding:  20px 20px 5px 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    padding: 20px 20px 5px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
-.down-info{
+
+.down-info {
     height: 70px;
     padding-bottom: 10px;
 }
-.down-cat{
-    float: left;
-    background: rgb(54,53,51);
-    border-radius: 9px;
-    padding:  5px 5px 5px 5px;
-    cursor: pointer;
-    box-shadow: 0 0px 5px rgba(0,0,0,0.6);
-    margin-top: 20px;
-}
 
-.down-cat:hover{
+.down-cat {
     float: left;
-    background: rgba(54,53,51,0.8);
+    background: rgb(54, 53, 51);
     border-radius: 9px;
-    padding:  5px 5px 5px 5px;
-    box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+    padding: 5px 5px 5px 5px;
     cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     margin-top: 20px;
 
+
 }
-.down-cat p{
+
+.down-cat:hover {
+    float: left;
+    background: rgba(54, 53, 51, 0.8);
+    border-radius: 9px;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.down-cat p {
     display: inline;
-    color: rgb(254,197,65);
+    color: rgb(254, 197, 65);
 
 }
-.down-like{
+
+.down-like {
     float: right;
     padding-right: 15px;
 
 }
-.down-like h5{
+
+.down-like h5 {
     float: left;
     cursor: pointer;
     padding-right: 15px;
     padding-top: 20px;
 }
-.down-like i{
+
+.down-like i {
     cursor: pointer;
 
 }
-.commentblock{
+
+.commentblock {
     margin: 80px 400px 100px 400px;
-    padding:  20px 20px 5px 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    padding: 20px 20px 5px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* View Stream */
 
-.infostream{
+.infostream {
     margin-left: 45%;
     margin-top: 85px;
 
 }
 
-.viestream{
+.viestream {
     float: left;
     border-left: 4px solid rgba(255, 255, 255, 0.4);
     border-right: 4px solid rgba(255, 255, 255, 0.4);
@@ -953,11 +1219,13 @@ a {
     padding-left: 65px;
 
 }
-.infostream h4{
+
+.infostream h4 {
     padding-left: 10px;
 
 }
-.maintextp iframe{
+
+.maintextp iframe {
 
     width: 100%;
     height: 700px;
@@ -965,79 +1233,274 @@ a {
 
 
 /* View Post and Stream - mobile */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1700px) {
 
-    .prev{
+    .prev {
         width: 100%;
-        height: 1000px;
+        height: 750px;
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
     }
-    .main-block1{
+
+    .main-block1 {
         width: 100%;
     }
-    .id_post{
+
+    .id_post {
         background: white;
         border-radius: 10px;
         width: 100px;
     }
 
-    .category1{
+    .category1 {
         background: rgba(255, 255, 255, 0.4);
-        width: 250px;
-        height: 85px;
-        margin-left: 270px;
+        width: 350px;
+        height: 50px;
+        margin-left: 43%;
         border-radius: 12px;
         margin-top: 130px;
 
-
-
     }
-    .cattext{
-        color:white;
 
+    .cattext {
+        color: white;
+        opacity: 1;
     }
-    .namepost{
+
+    .namepost {
         margin-top: 30px;
         word-wrap: break-word;
     }
-    .napo{
-        font-size: 30pt;
-        color:white;
+
+    .napo {
+        font-size: 40pt;
+        color: white;
     }
 
-    .authorp{
-        margin-left: 30%;
-        margin-top: 70px;
+    .authorp {
+        margin-left: 40%;
+        margin-top: 50px;
     }
-    .avtar{
+
+    .avtar {
         float: left;
 
-
     }
-    .autname{
+
+    .autname {
         float: left;
-        margin-left: 20px;
+        margin-left: 25px;
         margin-top: 25px;
     }
-    .avt{
+
+    .avt {
         width: 90px;
         height: 90px;
         border-radius: 50%;
     }
-    .avttext{
+
+    .avttext {
         color: white;
         cursor: pointer;
     }
-    .datap{
+
+    .datap {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 170px;
+        margin-top: 170px;
+        margin-left: 47%;
+    }
+
+    .dataptext {
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 2px;
+
+    }
+
+    .infopo {
+        margin-left: 39%;
+        margin-top: 85px;
+
+    }
+
+    .likepo {
+        float: left;
+
+        padding-right: 65px;
+    }
+
+    .compo {
+        float: left;
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-right: 65px;
+        padding-left: 65px;
+    }
+
+    .viepo {
+        float: left;
+        padding-left: 65px;
+
+    }
+
+    .infopo h4 {
+        padding-left: 10px;
+
+    }
+
+    .maintextp {
+        margin: 0 300px 10px 300px;
+        padding: 20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .down-info {
+        height: 70px;
+        padding-bottom: 10px;
+    }
+
+    .down-cat {
+        float: left;
+        background: rgb(54, 53, 51);
+        border-radius: 9px;
+        padding: 5px 5px 5px 5px;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+
+
+    }
+
+    .down-cat:hover {
+        float: left;
+        background: rgba(54, 53, 51, 0.8);
+        border-radius: 9px;
+        padding: 5px 5px 5px 5px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+
+    .down-cat p {
+        display: inline;
+        color: rgb(254, 197, 65);
+
+    }
+
+    .down-like {
+        float: right;
+        padding-right: 15px;
+
+    }
+
+    .down-like h5 {
+        float: left;
+        cursor: pointer;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+
+    .down-like i {
+        cursor: pointer;
+
+    }
+
+    .commentblock {
+        margin: 80px 300px 100px 300px;
+        padding: 20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .prev {
+        width: 100%;
+        height: 850px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .main-block1 {
+        width: 100%;
+    }
+
+    .id_post {
+        background: white;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    .category1 {
+        background: rgba(255, 255, 255, 0.4);
+        width: 350px;
+        height: 50px;
+        margin-left: 340px;
+        border-radius: 12px;
+        margin-top: 130px;
+
+
+    }
+
+    .cattext {
+        color: white;
+
+    }
+
+    .namepost {
+        margin-top: 35px;
+        word-wrap: break-word;
+    }
+
+    .napo {
+        font-size: 35pt;
+        color: white;
+    }
+
+    .authorp {
+        margin-left: 30%;
+        margin-top: 70px;
+    }
+
+    .avtar {
+        float: left;
+
+
+    }
+
+    .autname {
+        float: left;
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+
+    .avt {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+
+    .avttext {
+        color: white;
+        cursor: pointer;
+    }
+
+    .datap {
         background: rgba(0, 0, 0, 0.5);
         border-radius: 12px;
         width: 170px;
         margin-top: 240px;
-        margin-left: 39%;
+        margin-left: 42%;
     }
-    .dataptext{
+
+    .dataptext {
         color: white;
         padding-left: 25px;
         padding-bottom: 2px;
@@ -1045,123 +1508,129 @@ a {
     }
 
 
-
-    .infopo{
-        margin-left: 200px;
+    .infopo {
+        margin-left: 220px;
         margin-top: 85px;
 
     }
 
-    .infopo span{
+    .infopo span {
         font-size: 31px;
     }
 
-    .likepo{
+    .likepo {
         font-size: 31px;
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 65px;
+        padding-left: 65px;
 
     }
-    .compo{
+
+    .compo {
 
         border-left: 4px solid rgba(255, 255, 255, 0.4);
         border-right: 4px solid rgba(255, 255, 255, 0.4);
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 65px;
+        padding-left: 65px;
     }
-    .viepo{
 
-        padding-left: 25px;
+    .viepo {
+
+        padding-left: 65px;
 
     }
-    .infopo h4{
+
+    .infopo h4 {
         padding-left: 10px;
 
     }
-    .maintextp{
+
+    .maintextp {
         margin: 0px 0px 10px 0px;
-        padding:  20px 20px 50px 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        padding: 20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
-    .down-info{
+
+    .down-info {
         height: 90px;
         padding-bottom: 10px;
     }
-    .down-cat{
+
+    .down-cat {
         float: left;
-        background: rgb(54,53,51);
+        background: rgb(54, 53, 51);
         border-radius: 9px;
         margin-left: 25px;
-        padding:  5px 5px 5px 5px;
+        padding: 5px 5px 5px 5px;
         cursor: pointer;
-        box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
         margin-top: 20px;
-
-
-
     }
 
-    .down-cat:hover{
+    .down-cat:hover {
         float: left;
-        background: rgb(54,53,51,0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
-        padding:  5px 5px 5px 5px;
-        box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+        padding: 5px 5px 5px 5px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
         cursor: pointer;
         margin-top: 20px;
-
     }
-    .down-cat p{
+
+    .down-cat p {
         display: inline;
-        color: rgb(254,197,65);
-
+        color: rgb(254, 197, 65);
     }
-    .down-like{
+
+    .down-like {
         float: right;
         padding-right: 45px;
-
     }
-    .down-like h5{
+
+    .down-like h5 {
         float: left;
         cursor: pointer;
         padding-right: 15px;
         padding-top: 20px;
     }
-    .down-like i{
+
+    .down-like i {
         cursor: pointer;
 
     }
-    .commentblock{
-        margin: 80px 0px 100px 0px;
-        padding:  20px 20px 5px 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    }
-    .maintextp iframe{
 
-        width: 500px;
+    .commentblock {
+        margin: 80px 0 100px 0;
+        padding: 20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .maintextp iframe {
+        width: 100%;
         height: 700px;
     }
 }
 
 @media screen and (max-width: 998px) {
 
-    .prev{
+    .prev {
         width: 100%;
         height: 1000px;
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
     }
-    .main-block1{
+
+    .main-block1 {
         width: 100%;
     }
-    .id_post{
+
+    .id_post {
         background: white;
         border-radius: 10px;
         width: 100px;
     }
 
-    .category1{
+    .category1 {
         background: rgba(255, 255, 255, 0.4);
         width: 200px;
         height: 85px;
@@ -1170,51 +1639,59 @@ a {
         margin-top: 130px;
 
 
+    }
+
+    .cattext {
+        color: white;
 
     }
-    .cattext{
-        color:white;
 
-    }
-    .namepost{
+    .namepost {
         margin-top: 30px;
         word-wrap: break-word;
     }
-    .napo{
+
+    .napo {
         font-size: 30pt;
-        color:white;
+        color: white;
     }
 
-    .authorp{
+    .authorp {
         margin-left: 40%;
         margin-top: 50px;
     }
-    .avtar{
+
+    .avtar {
         float: left;
 
     }
-    .autname{
+
+    .autname {
         float: left;
         margin-left: -80px;
         margin-top: 25px;
     }
-    .avt{
+
+    .avt {
         width: 90px;
         height: 90px;
         border-radius: 50%;
     }
-    .avttext{
+
+    .avttext {
         color: white;
         cursor: pointer;
     }
-    .datap{
+
+    .datap {
         background: rgba(0, 0, 0, 0.5);
         border-radius: 12px;
         width: 170px;
         margin-top: 240px;
         margin-left: 35%;
     }
-    .dataptext{
+
+    .dataptext {
         color: white;
         padding-left: 25px;
         padding-bottom: 2px;
@@ -1222,177 +1699,196 @@ a {
     }
 
 
-
-    .infopo{
+    .infopo {
         margin-left: 25px;
         margin-top: 85px;
 
     }
 
-    .infopo span{
+    .infopo span {
         font-size: 31px;
     }
 
-    .likepo{
+    .likepo {
         font-size: 31px;
         padding-right: 25px;
         padding-left: 25px;
 
     }
-    .compo{
+
+    .compo {
 
         border-left: 4px solid rgba(255, 255, 255, 0.4);
         border-right: 4px solid rgba(255, 255, 255, 0.4);
         padding-right: 25px;
         padding-left: 25px;
     }
-    .viepo{
+
+    .viepo {
 
         padding-left: 25px;
 
     }
-    .infopo h4{
+
+    .infopo h4 {
         padding-left: 10px;
 
     }
-    .maintextp{
-        margin: 0px 0px 10px 0px;
-        padding:  20px 20px 50px 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+
+    .maintextp {
+        margin: 0 0 10px 0;
+        padding: 20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
-    .down-info{
+
+    .down-info {
         height: 90px;
         padding-bottom: 10px;
     }
-    .down-cat{
+
+    .down-cat {
         float: left;
-        background: rgb(54,53,51);
+        background: rgb(54, 53, 51);
         border-radius: 9px;
         margin-left: 25px;
-        padding:  5px 5px 5px 5px;
+        padding: 5px 5px 5px 5px;
         cursor: pointer;
-        box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
         margin-top: 20px;
-
 
 
     }
 
-    .down-cat:hover{
+    .down-cat:hover {
         float: left;
-        background: rgba(54,53,51,0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
-        padding:  5px 5px 5px 5px;
-        box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+        padding: 5px 5px 5px 5px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
         cursor: pointer;
         margin-top: 20px;
 
     }
-    .down-cat p{
+
+    .down-cat p {
         display: inline;
-        color: rgb(254,197,65);
+        color: rgb(254, 197, 65);
 
     }
-    .down-like{
+
+    .down-like {
         float: right;
         padding-right: 45px;
 
     }
-    .down-like h5{
+
+    .down-like h5 {
         float: left;
         cursor: pointer;
         padding-right: 15px;
         padding-top: 20px;
     }
-    .down-like i{
+
+    .down-like i {
         cursor: pointer;
 
     }
-    .commentblock{
-        margin: 80px 0px 100px 0px;
-        padding:  20px 20px 5px 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+
+    .commentblock {
+        margin: 80px 0px 100px 0;
+        padding: 20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
-    .maintextp iframe{
+    .maintextp iframe {
 
-        width: 500px;
+        width: 100%;
         height: 700px;
     }
 
 }
 
 @media screen and (max-width: 768px) {
-    .prev{
+    .prev {
         width: 100%;
-        height: 1000px;
+        height: 850px;
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
     }
-    .main-block1{
+
+    .main-block1 {
         width: 100%;
     }
-    .id_post{
+
+    .id_post {
         background: white;
         border-radius: 10px;
         width: 100px;
     }
 
-    .category1{
+    .category1 {
         background: rgba(255, 255, 255, 0.4);
-        width: 200px;
-        height: 85px;
-        margin-left: 105px;
+        width: 350px;
+        height: 50px;
+        margin-left: 230px;
         border-radius: 12px;
         margin-top: 130px;
 
 
+    }
+
+    .cattext {
+        color: white;
 
     }
-    .cattext{
-        color:white;
 
-    }
-    .namepost{
+    .namepost {
         margin-top: 30px;
         word-wrap: break-word;
     }
-    .napo{
+
+    .napo {
         font-size: 30pt;
-        color:white;
+        color: white;
     }
 
-    .authorp{
-        margin-left: 40%;
-        margin-top: 50px;
+    .authorp {
+        margin-left: 27%;
+        margin-top: 100px;
     }
-    .avtar{
+
+    .avtar {
         float: left;
 
     }
-    .autname{
+
+    .autname {
         float: left;
-        margin-left: -80px;
+        margin-left: 10px;
         margin-top: 25px;
     }
-    .avt{
+
+    .avt {
         width: 90px;
         height: 90px;
         border-radius: 50%;
     }
-    .avttext{
+
+    .avttext {
         color: white;
         cursor: pointer;
     }
-    .datap{
+
+    .datap {
         background: rgba(0, 0, 0, 0.5);
         border-radius: 12px;
         width: 170px;
         margin-top: 240px;
-        margin-left: 35%;
+        margin-left: 39%;
     }
-    .dataptext{
+
+    .dataptext {
         color: white;
         padding-left: 25px;
         padding-bottom: 2px;
@@ -1400,121 +1896,323 @@ a {
     }
 
 
-
-    .infopo{
-        margin-left: 25px;
+    .infopo {
+        margin-left: 155px;
         margin-top: 85px;
 
     }
 
-    .infopo span{
+    .infopo span {
         font-size: 31px;
     }
 
-    .likepo{
+    .likepo {
         font-size: 31px;
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 45px;
+        padding-left: 45px;
 
     }
-    .compo{
+
+    .compo {
 
         border-left: 4px solid rgba(255, 255, 255, 0.4);
         border-right: 4px solid rgba(255, 255, 255, 0.4);
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 45px;
+        padding-left: 45px;
     }
-    .viepo{
 
-        padding-left: 25px;
+    .viepo {
+
+        padding-left: 45px;
 
     }
-    .infopo h4{
+
+    .infopo h4 {
         padding-left: 10px;
 
     }
-    .maintextp{
-        margin: 0px 0px 10px 0px;
-        padding:  20px 20px 50px 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+
+    .maintextp {
+        margin: 0 0 10px 0;
+        padding: 20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
-    .down-info{
-        height: 80px;
+
+    .down-info {
+        height: 90px;
         padding-bottom: 10px;
     }
-    .down-cat{
-        float: left;
-        background: rgb(54,53,51);
-        border-radius: 9px;
-        margin-left: 35px;
-        padding:  5px 5px 5px 5px;
-        cursor: pointer;
-        box-shadow: 0 0px 5px rgba(0,0,0,0.6);
-        margin-top: 20px;
 
+    .down-cat {
+        float: left;
+        background: rgb(54, 53, 51);
+        border-radius: 9px;
+        margin-left: 25px;
+        padding: 5px 5px 5px 5px;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
 
 
     }
 
-    .down-cat:hover{
+    .down-cat:hover {
         float: left;
-        background: rgb(54,53,51,0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
-        padding:  5px 5px 5px 5px;
-        box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+        padding: 5px 5px 5px 5px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
         cursor: pointer;
         margin-top: 20px;
 
     }
-    .down-cat p{
+
+    .down-cat p {
         display: inline;
-        color: rgb(254,197,65);
+        color: rgb(254, 197, 65);
 
     }
-    .down-like{
+
+    .down-like {
         float: right;
         padding-right: 45px;
 
     }
-    .down-like h5{
+
+    .down-like h5 {
         float: left;
         cursor: pointer;
         padding-right: 15px;
         padding-top: 20px;
     }
-    .down-like i{
+
+    .down-like i {
         cursor: pointer;
 
     }
-    .commentblock{
-        margin: 80px 0px 100px 0px;
-        padding:  20px 20px 5px 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    }
-    .maintextp iframe{
 
-        width: 375px;
+    .commentblock {
+        margin: 80px 0 100px 0;
+        padding: 20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .maintextp iframe {
+
+        width: 100%;
         height: 700px;
     }
 
-    .infostream{
+    .infostream {
         margin-left: 110px;
         margin-top: 85px;
 
     }
 
-    .viestream{
+    .viestream {
         float: left;
         border-left: 4px solid rgba(255, 255, 255, 0.4);
         border-right: 4px solid rgba(255, 255, 255, 0.4);
         padding-left: 65px;
         padding-right: 65px;
-        padding-left: 65px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .prev {
+        width: 100%;
+        height: 1000px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .main-block1 {
+        width: 100%;
+    }
+
+    .id_post {
+        background: white;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    .category1 {
+        background: rgba(255, 255, 255, 0.4);
+        width: 200px;
+        height: 85px;
+        margin-left: 105px;
+        border-radius: 12px;
+        margin-top: 130px;
+    }
+
+    .cattext {
+        color: white;
+    }
+
+    .namepost {
+        margin-top: 30px;
+        word-wrap: break-word;
+    }
+
+    .napo {
+        font-size: 30pt;
+        color: white;
+    }
+
+    .authorp {
+        margin-left: 40%;
+        margin-top: 50px;
+    }
+
+    .avtar {
+        float: left;
 
     }
 
+    .autname {
+        float: left;
+        margin-left: -80px;
+        margin-top: 25px;
+    }
 
+    .avt {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+
+    .avttext {
+        color: white;
+        cursor: pointer;
+    }
+
+    .datap {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 170px;
+        margin-top: 240px;
+        margin-left: 35%;
+    }
+
+    .dataptext {
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 2px;
+    }
+
+
+    .infopo {
+        margin-left: 25px;
+        margin-top: 85px;
+    }
+
+    .infopo span {
+        font-size: 31px;
+    }
+
+    .likepo {
+        font-size: 31px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .compo {
+
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .viepo {
+        padding-left: 25px;
+    }
+
+    .infopo h4 {
+        padding-left: 10px;
+    }
+
+    .maintextp {
+        margin: 0px 0px 10px 0px;
+        padding: 20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .down-info {
+        height: 90px;
+        padding-bottom: 10px;
+    }
+
+    .down-cat {
+        float: left;
+        background: rgb(54, 53, 51);
+        border-radius: 9px;
+        margin-left: 25px;
+        padding: 5px 5px 5px 5px;
+        cursor: pointer;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+    }
+
+    .down-cat:hover {
+        float: left;
+        background: rgb(54, 53, 51, 0.8);
+        border-radius: 9px;
+        padding: 5px 5px 5px 5px;
+        box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+
+    .down-cat p {
+        display: inline;
+        color: rgb(254, 197, 65);
+    }
+
+    .down-like {
+        float: right;
+        padding-right: 45px;
+    }
+
+    .down-like h5 {
+        float: left;
+        cursor: pointer;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+
+    .down-like i {
+        cursor: pointer;
+
+    }
+
+    .commentblock {
+        margin: 80px 0 100px 0;
+        padding: 20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .maintextp iframe {
+        width: 350px;
+        height: 700px;
+    }
+
+    .infostream {
+        margin-left: 110px;
+        margin-top: 85px;
+    }
+
+    .viestream {
+        float: left;
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-left: 65px;
+        padding-right: 65px;
+    }
 }
+
 /*конец просмотра поста и стрима*/
 
 
