@@ -27,24 +27,13 @@ require('header.php')
             <div class="col-3">
                 <div class="col"><img src="img/девушка1.jpg" alt="ава" class="rounded-circle profile-image-avatar">
                 </div>
-                <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
-                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Добавить NewHow
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
-                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Запустить стрим
-                    </button>
-                </div>
             </div>
             <div class="col-7">
                 <div class="row">
                     <div class="col"><span class="profile-span-name">Пахомова Алиса</span></div>
                     <div class="col" style="float: left">
                         <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings" type="submit">
-                            Настройки профиля
-                            <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                            Подписаться/отписаться
                         </button>
 
                     </div>
@@ -68,6 +57,10 @@ require('header.php')
         </div>
     </div>
     <hr>
+    <!--забаненый профиль-->
+    <div class="centerDivs">
+    <span class="banprofile-span"><img src="img/ban.png" alt="" class="banprofile-image"><b> ЭТОТ ПРОФИЛЬ БЫЛ ЗАБЛОКИРОВАН</b></span>
+    </div>
     <!--мелкие постыы-->
     <div class="centerDivs">
         <?php
@@ -130,3 +123,4 @@ require('footer.php')
 ?>
 </body>
 </html>
+

@@ -86,10 +86,10 @@
                             <p style="bottom: -11px;">мой профиль</p>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="otherprofile.php">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
+                            <p style="bottom: -11px;">чужой профиль</p>
                         </div>
                     </a>
                     <a href="#">

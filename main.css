@@ -440,6 +440,15 @@ a {
 
 /* конец личный профиль*/
 
+/* забаненый профиль*/
+.banprofile-image{
+    width: 160px;
+}
+.banprofile-span{
+    font-size: 40px;
+}
+/* конец забаненый профиль*/
+
 @media screen and (max-width: 1200px) {
     .username {
         font-size: 0.6em;
@@ -552,6 +561,14 @@ a {
     }
 
     /* конец личный профиль*/
+    /* забаненый профиль*/
+    .banprofile-image{
+        width: 140px;
+    }
+    .banprofile-span{
+        font-size: 36px;
+    }
+    /* конец забаненый профиль*/
 }
 
 @media screen and (max-width: 998px) {
@@ -663,6 +680,14 @@ a {
     }
 
     /* конец личный профиль*/
+    /* забаненый профиль*/
+    .banprofile-image{
+        width: 120px;
+    }
+    .banprofile-span{
+        font-size: 32px;
+    }
+    /* конец забаненый профиль*/
 }
 
 @media screen and (max-width: 768px) {
@@ -880,6 +905,14 @@ a {
         font-size: 10px;
     }
     /* конец личный профиль*/
+    /* забаненый профиль*/
+    .banprofile-image{
+        width: 100px;
+    }
+    .banprofile-span{
+        font-size: 28px;
+    }
+    /* конец забаненый профиль*/
 }
 @media screen and (max-width: 412px){
     /*личный профиль*/
@@ -925,6 +958,14 @@ a {
         font-size: 7px;
     }
     /* конец личный профиль*/
+    /* забаненый профиль*/
+    .banprofile-image{
+        width: 70px;
+    }
+    .banprofile-span{
+        font-size: 22px;
+    }
+    /* конец забаненый профиль*/
 }
 .popup {
     display: block;
