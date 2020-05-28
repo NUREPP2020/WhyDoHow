@@ -11,7 +11,7 @@ require('header.php')
 ?>
 <main class="main-block position-center" style="">
     <div class="form-autorisation-size orange-background" style="padding: 30px; border-radius:10px;">
-        <form>
+        <form id="registrationform" class="needs-validation">
             <!--лого-->
             <div class="position-center" style="left: 50%;">
                 <img src="img/WhyDoHow.png" alt="лого" style="width: 300px"></div>
@@ -38,20 +38,20 @@ require('header.php')
                 <div class="label-or" style="text-align: center; margin:  3% 0 3% 0"> или</div>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" id="inputAddress"
-                       placeholder="Эл. адрес">
+                <input type="text" class="form-control border border-dark form-control-orange" id="name" name="name"
+                       placeholder="Имя на сайте" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє ]+" required  title="Имя должно состоять только из букв">
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" id="inputAddress"
-                       placeholder="Имя на сайте">
+                <input type="text" class="form-control border border-dark form-control-orange" id="email" name="email"
+                       placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Неверный адресс эл. почты" required/>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" id="inputAddress"
-                       placeholder="Пароль">
+                <input type="password" class="form-control border border-dark form-control-orange" id="password1" name="password1"
+                       placeholder="Пароль" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*]).{8,16}$" title="Неверный формат пароля. Необходимо 1 заглавная, 1 строчная, 1 цифра, 1спец символ, длинна 8-16" required/>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" id="inputAddress"
-                       placeholder="Повторите пароль">
+                <input type="password" class="form-control border border-dark form-control-orange" id="password2" name="password2"
+                       placeholder="Повторите пароль" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*]).{8,16}$" title="Неверный формат пароля. Необходимо 1 заглавная, 1 строчная, 1 цифра, 1спец символ, длинна 8-16" required/>
             </div>
 
             <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit">Зарегестрироваться</button>
@@ -59,11 +59,24 @@ require('header.php')
                 Регистрируясь, вы принимаете наши Условия, Политику использования данных и Политику в отношении файлов
                 cookie.</p>
         </form>
-    </div>
-
 </main>
 <?php
 require('footer.php')
 ?>
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+    }
+    function validatePassword(){
+        var pass2=document.getElementById("password2").value;
+        var pass1=document.getElementById("password1").value;
+        if(pass1!=pass2)
+            document.getElementById("password2").setCustomValidity("Пароли не совпадают");
+        else
+            document.getElementById("password2").setCustomValidity('');
+//empty string means no validation error
+    }
+</script>
 </body>
 </html>
