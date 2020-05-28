@@ -38,28 +38,20 @@ require('header.php')
                 <div class="label-or" style="text-align: center; margin:  3% 0 3% 0"> или</div>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" name="email" id="inputAddress"
-                       placeholder="Эл. адрес"required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <input type="text" class="form-control border border-dark form-control-orange" id="name" name="name"
+                       placeholder="Имя на сайте" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє ]+" required  title="Имя должно состоять только из букв">
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" id="inputAddress"
-                       placeholder="Имя на сайте"required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <input type="text" class="form-control border border-dark form-control-orange" id="email" name="email"
+                       placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Неверный адресс эл. почты" required/>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" id="inputAddress"
-                       placeholder="Пароль" required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <input type="password" class="form-control border border-dark form-control-orange" id="password1" name="password1"
+                       placeholder="Пароль" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*]).{8,16}$" title="Неверный формат пароля. Необходимо 1 заглавная, 1 строчная, 1 цифра, 1спец символ, длинна 8-16" required/>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="text" class="form-control border border-dark form-control-orange" id="inputAddress"
-                       placeholder="Повторите пароль"required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <input type="password" class="form-control border border-dark form-control-orange" id="password2" name="password2"
+                       placeholder="Повторите пароль" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*]).{8,16}$" title="Неверный формат пароля. Необходимо 1 заглавная, 1 строчная, 1 цифра, 1спец символ, длинна 8-16" required/>
             </div>
 
             <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit">Зарегестрироваться</button>
@@ -71,85 +63,20 @@ require('header.php')
 <?php
 require('footer.php')
 ?>
-<script>
-    $(document).ready(function() {
-        $('#registrationform').bootstrapValidator({
-            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                username: {
-                    message: 'The username is not valid',
-                    validators: {
-                        notEmpty: {
-                            message: 'The username is required and cannot be empty'
-                        },
-                        stringLength: {
-                            min: 6,
-                            max: 30,
-                            message: 'The username must be more than 6 and less than 30 characters long'
-                        },
-                        regexp: {
-                            regexp: /^[a-zA-Z0-9]+$/,
-                            message: 'The username can only consist of alphabetical and number'
-                        },
-                        different: {
-                            field: 'password',
-                            message: 'The username and password cannot be the same as each other'
-                        }
-                    }
-                },
-                email: {
-                    validators: {
-                        notEmpty: {
-                            message: 'The email address is required and cannot be empty'
-                        },
-                        emailAddress: {
-                            message: 'The email address is not a valid'
-                        }
-                    }
-                },
-                password: {
-                    validators: {
-                        notEmpty: {
-                            message: 'The password is required and cannot be empty'
-                        },
-                        different: {
-                            field: 'username',
-                            message: 'The password cannot be the same as username'
-                        },
-                        stringLength: {
-                            min: 8,
-                            message: 'The password must have at least 8 characters'
-                        }
-                    }
-                },
-            }
-        });
-    });
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+    }
+    function validatePassword(){
+        var pass2=document.getElementById("password2").value;
+        var pass1=document.getElementById("password1").value;
+        if(pass1!=pass2)
+            document.getElementById("password2").setCustomValidity("Пароли не совпадают");
+        else
+            document.getElementById("password2").setCustomValidity('');
+//empty string means no validation error
+    }
 </script>
-<!--<script>
-    // Disable form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Get the forms we want to add validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>-->
 </body>
 </html>
