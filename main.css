@@ -681,3 +681,97 @@ a {
         position: relative;
     }
 }
+.popup{
+    display: block;
+    width: 260px;
+    background-color: black;
+    padding: 30px;
+    text-transform: uppercase;
+    font-family: arial;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -999px;
+    transition: .5s all linear;
+}
+
+.popup input{
+    width: 100%;
+    border: 0;
+    margin: 10px 0;
+    height: 35px;
+    padding: 5px;
+    outline: none;
+}
+
+.submit{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#callback{
+    display: none;
+}
+
+#callback:checked ~ .popup{
+    top: 200px;
+}
+
+.close{
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 24px;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+popup2{
+    display: block;
+    width: 260px;
+    background-color: black;
+    padding: 30px;
+    text-transform: uppercase;
+    font-family: arial;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 200px;
+    transition: .5s all linear;
+}
+
+.popup2 input{
+    width: 100%;
+    border: 0;
+    margin: 10px 0;
+    height: 35px;
+    padding: 5px;
+    outline: none;
+}
+
+.submit2{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#callback2{
+    display: none;
+}
+
+#callback2:checked ~ .popup2{
+    top: 200px;
+}
+
+.close2{
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 24px;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}

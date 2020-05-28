@@ -45,6 +45,7 @@ require('header.php')
     </div>
     -->
     <!--топ 3 хреновины-->
+
     <div id="topPosts">
         <div class="row img-wrap" style="margin: 0 10% 0 10%">
             <img src="img/девушка1.jpg" alt="" class="col post-top-image post-top-image-big">
