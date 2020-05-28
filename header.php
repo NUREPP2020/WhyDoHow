@@ -107,13 +107,33 @@
             </div>
         </div>
         <!--профиль-->
-        <a href="registration.php">
-            <div class="round-sides dark-background"
-                 style="min-width: 100px; padding-left: 10px; color: #FEC541" align="right">
+        <?php
+        if(!isset($_COOKIE['userId']))
+        {
+            //<a href="registration.php"> или выпадающие окна
+            echo "
+            <a href=\"registration.php\">
+            <div class=\"round-sides dark-background\"
+                 style=\"min-width: 100px; padding-left: 10px; color: #FEC541\" align=\"right\">
                 мое очень длинное имя
-                <img src="img/user.png" alt="фото" class="rounded-circle img-fluid" style="max-height: 40px">
+                <img src=\"img/user.png\" alt=\"фото\" class=\"rounded-circle img-fluid\" style=\"max-height: 40px\">
             </div>
         </a>
+            ";
+        }
+        else{
+            //<a href="index.php"> -> кабинет личный
+            echo "
+            <a href=\"index.php\">
+            <div class=\"round-sides dark-background\"
+                 style=\"min-width: 100px; padding-left: 10px; color: #FEC541\" align=\"right\">
+                {$_COOKIE['userName']}
+            <img src = \"img/{$_COOKIE['userImage']}\" alt = \"фото\" class=\"rounded-circle img-fluid\" style = \"max-height: 40px\" >
+            </div >
+        </a >
+            ";
+        }
+        ?>
 
     </nav>
 </header>
