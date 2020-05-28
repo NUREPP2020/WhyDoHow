@@ -775,3 +775,744 @@ popup2{
     right: 10px;
     cursor: pointer;
 }
+
+/* View Post */
+.prev{
+    width: 100%;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.main-block1{
+    width: 100%;
+}
+.id_post{
+    background: white;
+    border-radius: 10px;
+    width: 100px;
+}
+.category1{
+    background: rgba(255, 255, 255, 0.4);
+    width: 15%;
+    height: 45px;
+    margin-left: 43%;
+    border-radius: 12px;
+    margin-top: 130px;
+
+}
+.cattext{
+    color:white;
+    opacity: 1;
+}
+.namepost{
+    margin-top: 30px;
+    word-wrap: break-word;
+}
+.napo{
+    font-size: 40pt;
+    color:white;
+}
+
+.authorp{
+    margin-left: 40%;
+    margin-top: 50px;
+}
+.avtar{
+    float: left;
+
+}
+.autname{
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.avt{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.avttext{
+    color: white;
+    cursor: pointer;
+}
+.datap{
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    width: 170px;
+    margin-top: 170px;
+    margin-left: 47%;
+}
+.dataptext{
+    color: white;
+    padding-left: 25px;
+    padding-bottom: 2px;
+
+}
+.infopo{
+    margin-left: 39%;
+    margin-top: 85px;
+
+}
+.likepo{
+    float: left;
+
+    padding-right: 65px;
+}
+.compo{
+    float: left;
+    border-left: 4px solid rgba(255, 255, 255, 0.4);
+    border-right: 4px solid rgba(255, 255, 255, 0.4);
+    padding-right: 65px;
+    padding-left: 65px;
+}
+.viepo{
+    float: left;
+    padding-left: 65px;
+
+}
+.infopo h4{
+    padding-left: 10px;
+
+}
+.maintextp{
+    margin: 0px 400px 10px 400px;
+    padding:  20px 20px 5px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+.down-info{
+    height: 70px;
+    padding-bottom: 10px;
+}
+.down-cat{
+    float: left;
+    background: rgb(54,53,51);
+    border-radius: 9px;
+    padding:  5px 5px 5px 5px;
+    cursor: pointer;
+    box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+    margin-top: 20px;
+
+
+
+}
+
+.down-cat:hover{
+    float: left;
+    background: rgb(54,53,51,0.8);
+    border-radius: 9px;
+    padding:  5px 5px 5px 5px;
+    box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+.down-cat p{
+    display: inline;
+    color: rgb(254,197,65);
+
+}
+.down-like{
+    float: right;
+    padding-right: 15px;
+
+}
+.down-like h5{
+    float: left;
+    cursor: pointer;
+    padding-right: 15px;
+    padding-top: 20px;
+}
+.down-like i{
+    cursor: pointer;
+
+}
+.commentblock{
+    margin: 80px 400px 100px 400px;
+    padding:  20px 20px 5px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* View Stream */
+
+.infostream{
+    margin-left: 45%;
+    margin-top: 85px;
+
+}
+
+.viestream{
+    float: left;
+    border-left: 4px solid rgba(255, 255, 255, 0.4);
+    border-right: 4px solid rgba(255, 255, 255, 0.4);
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-left: 65px;
+
+}
+.infostream h4{
+    padding-left: 10px;
+
+}
+.maintextp iframe{
+
+    width: 100%;
+    height: 700px;
+}
+
+
+/* View Post and Stream - mobile */
+@media screen and (max-width: 1200px) {
+
+    .prev{
+        width: 100%;
+        height: 1000px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+    .main-block1{
+        width: 100%;
+    }
+    .id_post{
+        background: white;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    .category1{
+        background: rgba(255, 255, 255, 0.4);
+        width: 250px;
+        height: 85px;
+        margin-left: 270px;
+        border-radius: 12px;
+        margin-top: 130px;
+
+
+
+    }
+    .cattext{
+        color:white;
+
+    }
+    .namepost{
+        margin-top: 30px;
+        word-wrap: break-word;
+    }
+    .napo{
+        font-size: 30pt;
+        color:white;
+    }
+
+    .authorp{
+        margin-left: 30%;
+        margin-top: 70px;
+    }
+    .avtar{
+        float: left;
+
+
+    }
+    .autname{
+        float: left;
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+    .avt{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .avttext{
+        color: white;
+        cursor: pointer;
+    }
+    .datap{
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 170px;
+        margin-top: 240px;
+        margin-left: 39%;
+    }
+    .dataptext{
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 2px;
+
+    }
+
+
+
+    .infopo{
+        margin-left: 200px;
+        margin-top: 85px;
+
+    }
+
+    .infopo span{
+        font-size: 31px;
+    }
+
+    .likepo{
+        font-size: 31px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+    }
+    .compo{
+
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .viepo{
+
+        padding-left: 25px;
+
+    }
+    .infopo h4{
+        padding-left: 10px;
+
+    }
+    .maintextp{
+        margin: 0px 0px 10px 0px;
+        padding:  20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .down-info{
+        height: 90px;
+        padding-bottom: 10px;
+    }
+    .down-cat{
+        float: left;
+        background: rgb(54,53,51);
+        border-radius: 9px;
+        margin-left: 25px;
+        padding:  5px 5px 5px 5px;
+        cursor: pointer;
+        box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+        margin-top: 20px;
+
+
+
+    }
+
+    .down-cat:hover{
+        float: left;
+        background: rgb(54,53,51,0.8);
+        border-radius: 9px;
+        padding:  5px 5px 5px 5px;
+        box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+    .down-cat p{
+        display: inline;
+        color: rgb(254,197,65);
+
+    }
+    .down-like{
+        float: right;
+        padding-right: 45px;
+
+    }
+    .down-like h5{
+        float: left;
+        cursor: pointer;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+    .down-like i{
+        cursor: pointer;
+
+    }
+    .commentblock{
+        margin: 80px 0px 100px 0px;
+        padding:  20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .maintextp iframe{
+
+        width: 500px;
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 998px) {
+
+    .prev{
+        width: 100%;
+        height: 1000px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+    .main-block1{
+        width: 100%;
+    }
+    .id_post{
+        background: white;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    .category1{
+        background: rgba(255, 255, 255, 0.4);
+        width: 200px;
+        height: 85px;
+        margin-left: 105px;
+        border-radius: 12px;
+        margin-top: 130px;
+
+
+
+    }
+    .cattext{
+        color:white;
+
+    }
+    .namepost{
+        margin-top: 30px;
+        word-wrap: break-word;
+    }
+    .napo{
+        font-size: 30pt;
+        color:white;
+    }
+
+    .authorp{
+        margin-left: 40%;
+        margin-top: 50px;
+    }
+    .avtar{
+        float: left;
+
+    }
+    .autname{
+        float: left;
+        margin-left: -80px;
+        margin-top: 25px;
+    }
+    .avt{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .avttext{
+        color: white;
+        cursor: pointer;
+    }
+    .datap{
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 170px;
+        margin-top: 240px;
+        margin-left: 35%;
+    }
+    .dataptext{
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 2px;
+
+    }
+
+
+
+    .infopo{
+        margin-left: 25px;
+        margin-top: 85px;
+
+    }
+
+    .infopo span{
+        font-size: 31px;
+    }
+
+    .likepo{
+        font-size: 31px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+    }
+    .compo{
+
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .viepo{
+
+        padding-left: 25px;
+
+    }
+    .infopo h4{
+        padding-left: 10px;
+
+    }
+    .maintextp{
+        margin: 0px 0px 10px 0px;
+        padding:  20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .down-info{
+        height: 90px;
+        padding-bottom: 10px;
+    }
+    .down-cat{
+        float: left;
+        background: rgb(54,53,51);
+        border-radius: 9px;
+        margin-left: 25px;
+        padding:  5px 5px 5px 5px;
+        cursor: pointer;
+        box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+        margin-top: 20px;
+
+
+
+    }
+
+    .down-cat:hover{
+        float: left;
+        background: rgb(54,53,51,0.8);
+        border-radius: 9px;
+        padding:  5px 5px 5px 5px;
+        box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+    .down-cat p{
+        display: inline;
+        color: rgb(254,197,65);
+
+    }
+    .down-like{
+        float: right;
+        padding-right: 45px;
+
+    }
+    .down-like h5{
+        float: left;
+        cursor: pointer;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+    .down-like i{
+        cursor: pointer;
+
+    }
+    .commentblock{
+        margin: 80px 0px 100px 0px;
+        padding:  20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .maintextp iframe{
+
+        width: 500px;
+        height: 700px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .prev{
+        width: 100%;
+        height: 1000px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+    .main-block1{
+        width: 100%;
+    }
+    .id_post{
+        background: white;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    .category1{
+        background: rgba(255, 255, 255, 0.4);
+        width: 200px;
+        height: 85px;
+        margin-left: 105px;
+        border-radius: 12px;
+        margin-top: 130px;
+
+
+
+    }
+    .cattext{
+        color:white;
+
+    }
+    .namepost{
+        margin-top: 30px;
+        word-wrap: break-word;
+    }
+    .napo{
+        font-size: 30pt;
+        color:white;
+    }
+
+    .authorp{
+        margin-left: 40%;
+        margin-top: 50px;
+    }
+    .avtar{
+        float: left;
+
+    }
+    .autname{
+        float: left;
+        margin-left: -80px;
+        margin-top: 25px;
+    }
+    .avt{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .avttext{
+        color: white;
+        cursor: pointer;
+    }
+    .datap{
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 170px;
+        margin-top: 240px;
+        margin-left: 35%;
+    }
+    .dataptext{
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 2px;
+
+    }
+
+
+
+    .infopo{
+        margin-left: 25px;
+        margin-top: 85px;
+
+    }
+
+    .infopo span{
+        font-size: 31px;
+    }
+
+    .likepo{
+        font-size: 31px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+    }
+    .compo{
+
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .viepo{
+
+        padding-left: 25px;
+
+    }
+    .infopo h4{
+        padding-left: 10px;
+
+    }
+    .maintextp{
+        margin: 0px 0px 10px 0px;
+        padding:  20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .down-info{
+        height: 80px;
+        padding-bottom: 10px;
+    }
+    .down-cat{
+        float: left;
+        background: rgb(54,53,51);
+        border-radius: 9px;
+        margin-left: 35px;
+        padding:  5px 5px 5px 5px;
+        cursor: pointer;
+        box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+        margin-top: 20px;
+
+
+
+    }
+
+    .down-cat:hover{
+        float: left;
+        background: rgb(54,53,51,0.8);
+        border-radius: 9px;
+        padding:  5px 5px 5px 5px;
+        box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+    .down-cat p{
+        display: inline;
+        color: rgb(254,197,65);
+
+    }
+    .down-like{
+        float: right;
+        padding-right: 45px;
+
+    }
+    .down-like h5{
+        float: left;
+        cursor: pointer;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+    .down-like i{
+        cursor: pointer;
+
+    }
+    .commentblock{
+        margin: 80px 0px 100px 0px;
+        padding:  20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .maintextp iframe{
+
+        width: 375px;
+        height: 700px;
+    }
+
+    .infostream{
+        margin-left: 110px;
+        margin-top: 85px;
+
+    }
+
+    .viestream{
+        float: left;
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-left: 65px;
+        padding-right: 65px;
+        padding-left: 65px;
+
+    }
+
+
+}
+/*конец просмотра поста и стрима*/
+
+
