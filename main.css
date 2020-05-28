@@ -375,6 +375,11 @@ a {
 .post-top-image-small-bottom-icon-y2 {
     top: 83%;
 }
+.line {
+    border-left: 2px solid #ccc; /* Параметры линии */
+    margin-left: 20px; /* Отступ слева */
+    padding-left: 10px; /* Расстояние от линии до текста */
+}
 
 @media screen and (max-width: 1200px) {
     .username {
@@ -728,7 +733,7 @@ a {
     right: 10px;
     cursor: pointer;
 }
-popup2{
+.popup2{
     display: block;
     width: 260px;
     background-color: black;
@@ -893,9 +898,6 @@ popup2{
     cursor: pointer;
     box-shadow: 0 0px 5px rgba(0,0,0,0.6);
     margin-top: 20px;
-
-
-
 }
 
 .down-cat:hover{

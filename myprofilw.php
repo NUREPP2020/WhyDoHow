@@ -3,7 +3,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Hello, world!</title>
+    <title>Мой профиль</title>
     <script>//Universal resize event
         function universalResize() {
             if (typeof (Event) === 'function') { // modern browsers
@@ -22,90 +22,52 @@
 require('header.php')
 ?>
 <main class="main-block">
-    <!--
-    <div class="centerDivs">
-        <div class="row">
-            <div class="thumb-wrap">
-                <img src="img/девушка1.jpg" alt="" width="600" height="400" sallowfullscreen></iframe>
+    <div class="centerDivs" style="margin-left: 11%; margin-right: 11%">
+        <br>
+        <div class="row" style="border-color: #363533">
+            <div class="col-3">
+                <div class="col"><img src="img/девушка1.jpg" alt="ава" class="rounded-circle"
+                                      style="width: 180px; border: 4px solid #363533;">
+                </div>
+                <div class="col">
+                    <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit"
+                            style="margin: 3%; width: 200px; padding: 2px"><img src="img/девушка1.jpg" alt=""
+                             style="width: 26px; float: left">Добавить NewHow
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit"
+                            style="margin: 3%; width: 200px; padding: 2px"><img src="img/девушка1.jpg" alt=""
+                                                                                style="width: 26px; float: left">Запустить
+                        стрим
+                    </button>
+                </div>
             </div>
-            <div class="col">
-                <div class="thumb-wrap">
-                    <div class="row"><img src="img/девушка1.jpg" alt="" width="300" height="200"
-                                          sallowfullscreen></iframe>
+            <div class="col-7">
+                <div class="row">
+                    <div class="col"><span>Пахомова Алиса</span></div>
+                    <div class="col">
+                        <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit"
+                                style="margin: 3%; width: 200px; padding: 2px">Настройки профиля
+                            <img src="img/девушка1.jpg" alt=""
+                                 style="width: 26px; float: left">
+                        </button>
+
                     </div>
                 </div>
-                <br>
-                <div class="thumb-wrap">
-                    <div class="row"><img src="img/девушка1.jpg" alt="" width="300" height="200"
-                                          sallowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!--топ 3 хреновины-->
-
-    <div id="topPosts">
-        <div class="row img-wrap" style="margin: 0 10% 0 10%">
-            <img src="img/девушка1.jpg" alt="" class="col post-top-image post-top-image-big">
-            <span class="post-top-image-stats-size post-top-image-big-eye">
-                <img src="img/eye.png" alt="" class="post-top-image-big-top-icon" >
-                1234
-            </span>
-            <span class="post-top-label-most-popular">
-                самые популярные
-            </span>
-            <span class="post-top-image-big-top-span-header">
-                    <b>заголовок f f f f f f f f f f f f f f f f f f f f f f f f f f f f</b>
-            </span>
-            <span style="left: 30%" class="post-top-image-stats-size post-top-image-big-bottom-icon-y">
-                <img src="img/heart.png" alt="" class="post-top-image-big-bottom-icon">
-                1231
-                <img src="img/comment.png" alt="" class="post-top-image-big-bottom-icon">
-                1231
-            </span>
-
-            <div class="col img-wrap" style="max-width: 600px">
-                <!--первая мелкая фотка-->
                 <div class="row">
-                    <img src="img/девушка1.jpg" alt="" class="col post-top-image post-top-image-small">
-                    <span class="post-top-span-margin-content post-top-image-stats-size">
-                <img src="img/eye.png" alt="" class="post-top-image-small-top-icon">
-                1235
-                    </span>
-                    <span class="post-top-span-margin-content post-top-image-small-top-span-header1">
-                    <b>заголовок f f f f f f f f f f f f f f f f f f f f f f f f f f f</b>
-                    </span>
-                    <span style="left: 60%" class="post-top-image-stats-size post-top-image-small-bottom-icon-y1">
-                        <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
-                1235
-                <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
-                1235
-            </span>
+                    <div class="col"><span><b>1234</b> подписчики</span></div>
+                    <div class="col"><span><b>1234</b> подписки</span></div>
+                    <div class="col"><span><b>1234</b> публикации</span></div>
                 </div>
-                <br>
-                <!--вторая мелкая фотка-->
-                <div class="row">
-                    <img src="img/девушка1.jpg" alt="" class="col post-top-image post-top-image-small">
-                    <span class="post-top-span-margin-content post-top-image-stats-size">
-                <img src="img/eye.png" alt="" class="post-top-image-small-top-icon">
-                1237
-                    </span>
-                    <span class="post-top-span-margin-content post-top-image-small-top-span-header2">
-                   <b>заголовок f f f f f f f f f f f f f f f f f f f f f f</b>
-                    </span>
-                    <span style="left: 60%" class="post-top-image-stats-size post-top-image-small-bottom-icon-y2">
-                        <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
-                        1237
-                        <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
-                        1237
-                    </span>
+                <div class="row"><p class="line">glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g
+                        hsdfh gk hszf hg izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
                 </div>
             </div>
         </div>
     </div>
     <br>
+    <hr>
     <br>
     <!--мелкие постыы-->
     <div class="centerDivs">
