@@ -17,14 +17,28 @@ if (count($user) != 0) {
     $db->close();
     header('WhyDoHow-master/registration.php' );
 }
+$query = $db->query("SELECT * FROM `login_google` WHERE `mail`= '$email' ");
+$user = mysqli_fetch_assoc($query);
+if (count($user) != 0) {
+    $db->close();
+    header('WhyDoHow-master/registration.php' );
+}
+
+$query = $db->query("SELECT * FROM `login_facebook` WHERE `mail`= '$email' ");
+$user = mysqli_fetch_assoc($query);
+if (count($user) != 0) {
+    $db->close();
+    header('WhyDoHow-master/registration.php' );
+}
+
+
+
 $query = $db->query("INSERT INTO `user` (`name`,`image`,`description`,`privat`,`id_role`) VALUES('$name','user.png',' ','0','1')");
 
 $query = $db->query("SELECT * FROM `user` ORDER BY `id_user` DESC LIMIT 1");
 $user = mysqli_fetch_assoc($query);
-if (count($user) == 0) {
-    echo "Что-то не так пользователя 0";
-    exit();
-}
+
+
 $use = filter_var(trim($user['id_user']),FILTER_SANITIZE_NUMBER_INT);
 $password = md5($password . "asdbjb123bkhbasjbc");
 $query = $db->query("INSERT INTO `login_mail` (`id_user`,`mail`,`password`) VALUES('$use','$email','$password')");
@@ -36,4 +50,4 @@ setcookie('userImage', 'user.png', time() + 3600*24, "/");
 $db->close();
 
 //сделать переход в кабинет
-header('Location: /WhyDoHow-master/index.php' );
+header('Location: /WhyDoHow-master/myprofile.php');
