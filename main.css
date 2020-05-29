@@ -441,14 +441,52 @@ a {
 /* конец личный профиль*/
 
 /* забаненый профиль*/
-.banprofile-image{
+.banprofile-image {
     width: 160px;
 }
-.banprofile-span{
+
+.banprofile-span {
     font-size: 40px;
 }
-/* конец забаненый профиль*/
 
+/* конец забаненый профиль*/
+/*коментарий*/
+.media-body .author {
+    display: block;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+}
+
+.media-body .metadata .report-button{
+    display: block;
+    color: #777;
+    font-size: .8125rem;
+}
+
+.media-text {
+    margin-bottom: 0.25rem;
+}
+
+.title-comments {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, .87);
+    margin-bottom: 1rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid rgba(34, 36, 38, .15);
+}
+
+.media-left img {
+    width: 50px;
+    border-radius: 110px;
+    border: 2px solid #363533;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/*конец коментарий*/
 @media screen and (max-width: 1200px) {
     .username {
         font-size: 0.6em;
@@ -562,12 +600,14 @@ a {
 
     /* конец личный профиль*/
     /* забаненый профиль*/
-    .banprofile-image{
+    .banprofile-image {
         width: 140px;
     }
-    .banprofile-span{
+
+    .banprofile-span {
         font-size: 36px;
     }
+
     /* конец забаненый профиль*/
 }
 
@@ -681,12 +721,14 @@ a {
 
     /* конец личный профиль*/
     /* забаненый профиль*/
-    .banprofile-image{
+    .banprofile-image {
         width: 120px;
     }
-    .banprofile-span{
+
+    .banprofile-span {
         font-size: 32px;
     }
+
     /* конец забаненый профиль*/
 }
 
@@ -904,17 +946,21 @@ a {
         margin-top: 20px;
         font-size: 10px;
     }
+
     /* конец личный профиль*/
     /* забаненый профиль*/
-    .banprofile-image{
+    .banprofile-image {
         width: 100px;
     }
-    .banprofile-span{
+
+    .banprofile-span {
         font-size: 28px;
     }
+
     /* конец забаненый профиль*/
 }
-@media screen and (max-width: 412px){
+
+@media screen and (max-width: 412px) {
     /*личный профиль*/
     .profile-header {
         margin: 0;
@@ -957,16 +1003,20 @@ a {
         margin-top: 10px;
         font-size: 7px;
     }
+
     /* конец личный профиль*/
     /* забаненый профиль*/
-    .banprofile-image{
+    .banprofile-image {
         width: 70px;
     }
-    .banprofile-span{
+
+    .banprofile-span {
         font-size: 22px;
     }
+
     /* конец забаненый профиль*/
 }
+
 .popup {
     display: block;
     width: 260px;
