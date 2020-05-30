@@ -29,12 +29,64 @@ require('header.php')
                     document.location.href = "google_login.php?id=" + profile.getId() + "&email=" + profile.getEmail() + "&name=" + profile.getGivenName() + "&fname=" + profile.getFamilyName();
                 }
             </script>
-            <div class="btn input-group mb-2 mr-sm-2 btn-API" style="text-align: center; max-height: 50px">
-                <div class="input-group-text btn-API-SN">f</div>
-                <div class="input-group-text btn-API-SN-text"
-                     style="background-color: rgba(51, 51, 51, 1); border-color: #363533; color: #FEC541;margin-left: 40px">
-                    Вход через Facebook
-                </div>
+            <!-- Facebook Api -->
+            <script>
+
+                function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+                    console.log('statusChangeCallback');
+                    console.log(response);                   // The current login status of the person.
+                    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+                        testAPI();
+                    }
+                }
+
+
+                function checkLoginState() {               // Called when a person is finished with the Login Button.
+                    FB.getLoginStatus(function(response) {   // See the onlogin handler
+                        statusChangeCallback(response);
+                    });
+                }
+
+
+                window.fbAsyncInit = function() {
+                    FB.init({
+                        appId      : '857050318136434',
+                        cookie     : true,                     // Enable cookies to allow the server to access the session.
+                        xfbml      : true,                     // Parse social plugins on this webpage.
+                        version    : 'v7.0'           // Use this Graph API version for this call.
+                    });
+
+
+                    FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+                        statusChangeCallback(response);        // Returns the login status.
+                    });
+                };
+
+
+                (function(d, s, id) {                      // Load the SDK asynchronously
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https://connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+
+
+                function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+                    console.log('Welcome!  Fetching your information.... ');
+                    FB.api('/me', function(response) {
+                        console.log('Successful login for: ' + response.name);
+                        document.getElementById('status').innerHTML =
+                            'Thanks for logging in, ' + response.name + '! <a href=facebook_login.php?name=' + response.name.replace(" ","_") + '&email=' + response.email + '</a>';
+                    });
+                }
+
+            </script>
+
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
+
+            <div id="status">
             </div>
 
             <div>
