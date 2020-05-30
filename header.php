@@ -1,4 +1,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--  Google API -->
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="425789449877-hmna0tirie3lf6aot04ckghk9rghcsid.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -44,41 +48,8 @@
                         </div>
                     </div>
                 </form>
-            </ul>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Send message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal END-->
+            </ul>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Категории
@@ -97,25 +68,25 @@
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
                             <p style="bottom: -11px;">создание поста</p>
                         </div>
-                    </a><a href="viewpost.php">
+                    </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">просмотр поста</p>
+                            <p style="bottom: -11px;">текст</p>
                         </div>
-                    </a><a href="viewstream.php">
+                    </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">просмотр стрима</p>
+                            <p style="bottom: -11px;">текст</p>
                         </div>
-                    </a><a href="myprofilw.php">
+                    </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">мой профиль</p>
+                            <p style="bottom: -11px;">текст</p>
                         </div>
-                    </a><a href="otherprofile.php">
+                    </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">чужой профиль</p>
+                            <p style="bottom: -11px;">текст</p>
                         </div>
                     </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
@@ -169,16 +140,6 @@
             ";
         }
         ?>
-        <script>
-            $('#exampleModal').on('show.bs.modal', function (event) {
-                var button = $(event.relatedTarget) // Button that triggered the modal
-                var recipient = button.data('whatever') // Extract info from data-* attributes
-                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-                var modal = $(this)
-                modal.find('.modal-title').text('New message to ' + recipient)
-                modal.find('.modal-body input').val(recipient)
-            })
-        </script>
+
     </nav>
 </header>
