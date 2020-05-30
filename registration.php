@@ -19,13 +19,16 @@ require('header.php')
             <p style="text-align: center; font-size: 1.4em;margin: 40px;line-height: 1;">
                 Зарегистрируйтесь,<br>
                 чтобы иметь больше возможностей</p>
-            <div class="btn input-group mb-2 mr-sm-2 btn-API" style="text-align: center; max-height: 50px">
-                <div class="input-group-text btn-API-SN">G</div>
-                <span class="input-group-text btn-API-SN-text"
-                      style="background-color: rgba(51, 51, 51, 1); border-color: #363533; color: #FEC541;margin-left: 30px">
-                    Вход через Google
-                </span>
-            </div>
+            <!-- Google Api -->
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+            <script>
+                function onSignIn(googleUser) {
+                    // Useful data for your client-side scripts:
+                    var profile = googleUser.getBasicProfile();
+                    var id_token = googleUser.getAuthResponse().id_token;
+                    document.location.href = "google_login.php?id=" + profile.getId() + "&email=" + profile.getEmail() + "&name=" + profile.getGivenName() + "&fname=" + profile.getFamilyName();
+                }
+            </script>
             <div class="btn input-group mb-2 mr-sm-2 btn-API" style="text-align: center; max-height: 50px">
                 <div class="input-group-text btn-API-SN">f</div>
                 <div class="input-group-text btn-API-SN-text"
