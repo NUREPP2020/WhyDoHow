@@ -16,13 +16,13 @@ if(isset($_GET['name']))
     $user = mysqli_fetch_assoc($query);
     if (count($user) != 0) {
         $db->close();
-        header('WhyDoHow-master/registration.php' );
+        header('Location: /WhyDoHow-master/registration.php' );
     }
     $query = $db->query("SELECT * FROM `login_google` WHERE `mail`= '$email' ");
     $user = mysqli_fetch_assoc($query);
     if (count($user) != 0) {
         $db->close();
-        header('WhyDoHow-master/registration.php' );
+        header('Location: /WhyDoHow-master/registration.php' );
     }
     $query = $db->query("SELECT * FROM `login_facebook` WHERE `mail`= '$email'");
     $user = mysqli_fetch_assoc($query);
