@@ -165,25 +165,23 @@ require('header.php')
                     </div>
                     <div class="row" style="padding: 10px">
                         <p class="post-text">
-                            текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
-                            текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
-                            текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                            текст текст текст 
                         </p>
                     </div>
                     <div class="row post-statistics">
                         <div class="col post-statistics-like">
-                            <div class="row post-statistics ">
+                            <div class="row" style="padding: 0">
                                 <img src="img/heart.png" alt="" class="post-statistics-image">
                             </div>
                             <div class="row post-statistics-values">123</div>
                         </div>
-                        <div class="col post-statistics-comment" style="">
+                        <div class="col post-statistics-comment">
                             <div class="row" style="padding: 0">
                                 <img src="img/comment.png" alt="" class="post-statistics-image">
                             </div>
                             <div class="row post-statistics-values">123</div>
                         </div>
-                        <div class="col post-statistics-views" style="">
+                        <div class="col post-statistics-views">
                             <div class="row" style="padding: 0">
                                 <img src="img/eye.png" alt="" class="post-statistics-image">
                             </div>

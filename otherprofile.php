@@ -77,7 +77,7 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <?
+                                <?php
                                 for ($i = 0; $i < 112; $i++) {
                                     echo '
                                 <a href="otherprofile.php">
@@ -114,7 +114,7 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                             </button>
                         </div>
                         <div class="modal-body">
-                            <?
+                            <?php
                             for ($i = 0; $i < 112; $i++) {
                                 echo '
                             <a href="otherprofile.php">

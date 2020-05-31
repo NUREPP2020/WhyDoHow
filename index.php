@@ -148,7 +148,6 @@ require('header.php')
                 echo '</div>';
             echo '</div>';
         echo '</div>';
-
     echo '</a>';
             }
               mysqli_free_result($result);
@@ -161,8 +160,6 @@ require('header.php')
       // Close connection
       mysqli_close($link);
       ?>
-
-
     </div>
 
 </main>

@@ -3,8 +3,20 @@
 }
 
 body {
+    height: 100%;
 }
-
+html {
+    position:relative;
+    min-height:100%;
+}
+main {
+    padding-bottom: 1200px;/*Примерно 2 размера footer, чтобы он не наезжал на контент при узком окне браузера*/
+}
+footer {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+}
 .orange-background {
     background-color: rgba(254, 197, 65, 1);
 }
@@ -104,6 +116,7 @@ a {
     background-color: white;
     border-radius: 7px;
     box-shadow: 0 0 10px rgba(127, 127, 127, 0.42);
+    position:relative; /* добавили */
 }
 
 .post-for-image {
@@ -145,6 +158,9 @@ a {
 
 .post-statistics {
     padding: 0;
+    position:absolute; /* добавили */
+    bottom: -65%; /* добавили */
+    margin-left: 50%;
 }
 
 .post-statistics-like {

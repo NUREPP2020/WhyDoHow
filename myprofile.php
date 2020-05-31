@@ -85,7 +85,7 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <?
+                                <?php
                                 for ($i = 0; $i < 112; $i++) {
                                     echo '
                                 <a href="otherprofile.php">
@@ -122,7 +122,7 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                             </button>
                         </div>
                         <div class="modal-body">
-                            <?
+                            <?php
                             for ($i = 0; $i < 112; $i++) {
                                 echo '
                             <a href="otherprofile.php">
