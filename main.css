@@ -458,7 +458,7 @@ a {
     font-weight: 700;
 }
 
-.media-body .metadata .report-button{
+.media-body .metadata .report-button {
     display: block;
     color: #777;
     font-size: .8125rem;
@@ -1323,192 +1323,6 @@ a {
 }
 
 
-/* View Post and Stream - mobile */
-@media screen and (max-width: 1700px) {
-
-    .prev {
-        width: 100%;
-        height: 750px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-    }
-
-    .main-block1 {
-        width: 100%;
-    }
-
-    .id_post {
-        background: white;
-        border-radius: 10px;
-        width: 100px;
-    }
-
-    .category1 {
-        background: rgba(255, 255, 255, 0.4);
-        width: 350px;
-        height: 50px;
-        margin-left: 43%;
-        border-radius: 12px;
-        margin-top: 130px;
-
-    }
-
-    .cattext {
-        color: white;
-        opacity: 1;
-    }
-
-    .namepost {
-        margin-top: 30px;
-        word-wrap: break-word;
-    }
-
-    .napo {
-        font-size: 40pt;
-        color: white;
-    }
-
-    .authorp {
-        margin-left: 40%;
-        margin-top: 50px;
-    }
-
-    .avtar {
-        float: left;
-
-    }
-
-    .autname {
-        float: left;
-        margin-left: 25px;
-        margin-top: 25px;
-    }
-
-    .avt {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-    }
-
-    .avttext {
-        color: white;
-        cursor: pointer;
-    }
-
-    .datap {
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 12px;
-        width: 170px;
-        margin-top: 170px;
-        margin-left: 47%;
-    }
-
-    .dataptext {
-        color: white;
-        padding-left: 25px;
-        padding-bottom: 2px;
-
-    }
-
-    .infopo {
-        margin-left: 39%;
-        margin-top: 85px;
-
-    }
-
-    .likepo {
-        float: left;
-
-        padding-right: 65px;
-    }
-
-    .compo {
-        float: left;
-        border-left: 4px solid rgba(255, 255, 255, 0.4);
-        border-right: 4px solid rgba(255, 255, 255, 0.4);
-        padding-right: 65px;
-        padding-left: 65px;
-    }
-
-    .viepo {
-        float: left;
-        padding-left: 65px;
-
-    }
-
-    .infopo h4 {
-        padding-left: 10px;
-
-    }
-
-    .maintextp {
-        margin: 0 300px 10px 300px;
-        padding: 20px 20px 5px 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-    }
-
-    .down-info {
-        height: 70px;
-        padding-bottom: 10px;
-    }
-
-    .down-cat {
-        float: left;
-        background: rgb(54, 53, 51);
-        border-radius: 9px;
-        padding: 5px 5px 5px 5px;
-        cursor: pointer;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-        margin-top: 20px;
-
-
-    }
-
-    .down-cat:hover {
-        float: left;
-        background: rgba(54, 53, 51, 0.8);
-        border-radius: 9px;
-        padding: 5px 5px 5px 5px;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
-        cursor: pointer;
-        margin-top: 20px;
-
-    }
-
-    .down-cat p {
-        display: inline;
-        color: rgb(254, 197, 65);
-
-    }
-
-    .down-like {
-        float: right;
-        padding-right: 15px;
-
-    }
-
-    .down-like h5 {
-        float: left;
-        cursor: pointer;
-        padding-right: 15px;
-        padding-top: 20px;
-    }
-
-    .down-like i {
-        cursor: pointer;
-
-    }
-
-    .commentblock {
-        margin: 80px 300px 100px 300px;
-        padding: 20px 20px 5px 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-    }
-
-}
-
-
 @media screen and (max-width: 1200px) {
 
     .prev {
@@ -1653,28 +1467,33 @@ a {
         margin-left: 25px;
         padding: 5px 5px 5px 5px;
         cursor: pointer;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
         margin-top: 20px;
+
+
     }
 
     .down-cat:hover {
         float: left;
-        background: rgba(54, 53, 51, 0.8);
+        background: rgb(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
         cursor: pointer;
         margin-top: 20px;
+
     }
 
     .down-cat p {
         display: inline;
         color: rgb(254, 197, 65);
+
     }
 
     .down-like {
         float: right;
         padding-right: 45px;
+
     }
 
     .down-like h5 {
@@ -1690,14 +1509,193 @@ a {
     }
 
     .commentblock {
-        margin: 80px 0 100px 0;
+        margin: 80px 0px 100px 0px;
         padding: 20px 20px 5px 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     .maintextp iframe {
+
         width: 100%;
         height: 700px;
+    }
+
+
+    /* Settings Mail*/
+    .main-block11 {
+        margin: -40px 10px 10px 100px;
+    }
+
+    .formsett {
+        margin-top: 50px;
+    }
+
+    .formsettings2 {
+
+        margin-top: 10px;
+
+    }
+
+    .formsettings1 {
+        width: 800px;
+
+
+    }
+
+    .formsettings2 {
+        width: 800px;
+        margin-top: 10px;
+
+    }
+
+    .formplace {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 230px;
+
+
+    }
+
+    .formplace1 {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 5px;
+    }
+
+    .form-group1 {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%
+    }
+
+    .photoavtr {
+
+        margin-top: 25px;
+        margin-left: 350px;
+    }
+
+    .avtset {
+        position: absolute;
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        border: 4px solid rgb(0, 0, 0);
+    }
+
+    .lol {
+        position: relative;
+    }
+
+    .shapeadd {
+        position: absolute;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        width: 10em;
+        height: 5em;
+        margin-top: 87px;
+        margin-left: 5px;
+        background: rgba(255, 255, 255, 0.5);
+
+    }
+
+    .kek {
+        position: relative;
+    }
+
+    .bt1 {
+        height: 50px;
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .cams {
+        position: absolute;
+        margin-left: 60px;
+        margin-bottom: 50px;
+    }
+
+    .ques {
+        position: absolute;
+        float: left;
+        left: 820px;
+        top: 835px;
+    }
+
+
+    .descr {
+        display: none;
+        margin-left: -350px;
+        padding: 5px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques:hover .descr {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud {
+        font-size: 12pt;
+    }
+
+    .formplace button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .formplace1 button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .ques1 {
+        position: absolute;
+        float: left;
+        left: 810px;
+        top: 770px;
+    }
+
+
+    .descr1 {
+        display: none;
+        margin-left: -350px;
+        padding: 10px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques1:hover .descr1 {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud1 {
+        font-size: 12pt;
     }
 }
 
@@ -1827,7 +1825,7 @@ a {
     }
 
     .maintextp {
-        margin: 0 0 10px 0;
+        margin: 0px 0px 10px 0px;
         padding: 20px 20px 50px 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
@@ -1844,7 +1842,7 @@ a {
         margin-left: 25px;
         padding: 5px 5px 5px 5px;
         cursor: pointer;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
         margin-top: 20px;
 
 
@@ -1855,7 +1853,7 @@ a {
         background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
         cursor: pointer;
         margin-top: 20px;
 
@@ -1886,7 +1884,7 @@ a {
     }
 
     .commentblock {
-        margin: 80px 0px 100px 0;
+        margin: 80px 0px 100px 0px;
         padding: 20px 20px 5px 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
@@ -1895,6 +1893,171 @@ a {
 
         width: 100%;
         height: 700px;
+    }
+
+    /* Settings Mail*/
+    .main-block11 {
+        margin: -40px 10px 10px 10px;
+    }
+
+    .formsett {
+        margin-top: 50px;
+    }
+
+    .formsettings2 {
+
+        margin-top: 10px;
+
+    }
+
+    .formplace {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 230px;
+
+
+    }
+
+    .formplace1 {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 5px;
+    }
+
+    .form-group1 {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%
+    }
+
+    .photoavtr {
+
+        margin-top: 25px;
+        margin-left: 270px;
+    }
+
+    .avtset {
+        position: absolute;
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        border: 4px solid rgb(0, 0, 0);
+    }
+
+    .lol {
+        position: relative;
+    }
+
+    .shapeadd {
+        position: absolute;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        width: 10em;
+        height: 5em;
+        margin-top: 87px;
+        margin-left: 5px;
+        background: rgba(255, 255, 255, 0.5);
+
+    }
+
+    .kek {
+        position: relative;
+    }
+
+    .bt1 {
+        height: 50px;
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .cams {
+        position: absolute;
+        margin-left: 60px;
+        margin-bottom: 50px;
+    }
+
+    .ques {
+        position: absolute;
+        float: left;
+        left: 700px;
+        top: 785px;
+    }
+
+
+    .descr {
+        display: none;
+        margin-left: -350px;
+        padding: 5px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques:hover .descr {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud {
+        font-size: 12pt;
+    }
+
+    .formplace button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .formplace1 button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .ques1 {
+        position: absolute;
+        float: left;
+        left: 660px;
+        top: 720px;
+    }
+
+
+    .descr1 {
+        display: none;
+        margin-left: -350px;
+        padding: 10px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques1:hover .descr1 {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud1 {
+        font-size: 12pt;
     }
 
 }
@@ -2024,7 +2187,7 @@ a {
     }
 
     .maintextp {
-        margin: 0 0 10px 0;
+        margin: 0px 0px 10px 0px;
         padding: 20px 20px 50px 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
@@ -2041,7 +2204,7 @@ a {
         margin-left: 25px;
         padding: 5px 5px 5px 5px;
         cursor: pointer;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
         margin-top: 20px;
 
 
@@ -2049,10 +2212,10 @@ a {
 
     .down-cat:hover {
         float: left;
-        background: rgba(54, 53, 51, 0.8);
+        background: rgb(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
         cursor: pointer;
         margin-top: 20px;
 
@@ -2083,7 +2246,7 @@ a {
     }
 
     .commentblock {
-        margin: 80px 0 100px 0;
+        margin: 80px 0px 100px 0px;
         padding: 20px 20px 5px 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
@@ -2106,7 +2269,187 @@ a {
         border-right: 4px solid rgba(255, 255, 255, 0.4);
         padding-left: 65px;
         padding-right: 65px;
+        padding-left: 65px;
+
     }
+
+    /* Settings Mail*/
+    .main-block11 {
+        margin: -40px 10px 10px 10px;
+    }
+
+    .formsett {
+        margin-top: 50px;
+    }
+
+    .formsettings2 {
+
+        margin-top: 10px;
+
+    }
+
+    .formplace {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 230px;
+
+
+    }
+
+    .formsettings1 {
+        width: 750px;
+
+
+    }
+
+    .formsettings2 {
+        width: 750px;
+
+
+    }
+
+    .formplace1 {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 5px;
+    }
+
+    .form-group1 {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%
+    }
+
+    .photoavtr {
+
+        margin-top: 25px;
+        margin-left: 270px;
+    }
+
+    .avtset {
+        position: absolute;
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        border: 4px solid rgb(0, 0, 0);
+    }
+
+    .lol {
+        position: relative;
+    }
+
+    .shapeadd {
+        position: absolute;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        width: 10em;
+        height: 5em;
+        margin-top: 87px;
+        margin-left: 5px;
+        background: rgba(255, 255, 255, 0.5);
+
+    }
+
+    .kek {
+        position: relative;
+    }
+
+    .bt1 {
+        height: 50px;
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .cams {
+        position: absolute;
+        margin-left: 60px;
+        margin-bottom: 50px;
+    }
+
+    .ques {
+        position: absolute;
+        float: left;
+        left: 650px;
+        top: 785px;
+    }
+
+
+    .descr {
+        display: none;
+        margin-left: -350px;
+        padding: 5px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques:hover .descr {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud {
+        font-size: 12pt;
+    }
+
+    .formplace button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .formplace1 button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .ques1 {
+        position: absolute;
+        float: left;
+        left: 660px;
+        top: 720px;
+    }
+
+
+    .descr1 {
+        display: none;
+        margin-left: -350px;
+        padding: 10px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques1:hover .descr1 {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud1 {
+        font-size: 12pt;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -2135,10 +2478,13 @@ a {
         margin-left: 105px;
         border-radius: 12px;
         margin-top: 130px;
+
+
     }
 
     .cattext {
         color: white;
+
     }
 
     .namepost {
@@ -2190,12 +2536,14 @@ a {
         color: white;
         padding-left: 25px;
         padding-bottom: 2px;
+
     }
 
 
     .infopo {
         margin-left: 25px;
         margin-top: 85px;
+
     }
 
     .infopo span {
@@ -2206,6 +2554,7 @@ a {
         font-size: 31px;
         padding-right: 25px;
         padding-left: 25px;
+
     }
 
     .compo {
@@ -2217,11 +2566,14 @@ a {
     }
 
     .viepo {
+
         padding-left: 25px;
+
     }
 
     .infopo h4 {
         padding-left: 10px;
+
     }
 
     .maintextp {
@@ -2244,6 +2596,8 @@ a {
         cursor: pointer;
         box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
         margin-top: 20px;
+
+
     }
 
     .down-cat:hover {
@@ -2260,11 +2614,13 @@ a {
     .down-cat p {
         display: inline;
         color: rgb(254, 197, 65);
+
     }
 
     .down-like {
         float: right;
         padding-right: 45px;
+
     }
 
     .down-like h5 {
@@ -2280,12 +2636,13 @@ a {
     }
 
     .commentblock {
-        margin: 80px 0 100px 0;
+        margin: 80px 0px 100px 0px;
         padding: 20px 20px 5px 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     .maintextp iframe {
+
         width: 350px;
         height: 700px;
     }
@@ -2293,6 +2650,7 @@ a {
     .infostream {
         margin-left: 110px;
         margin-top: 85px;
+
     }
 
     .viestream {
@@ -2301,9 +2659,578 @@ a {
         border-right: 4px solid rgba(255, 255, 255, 0.4);
         padding-left: 65px;
         padding-right: 65px;
+        padding-left: 65px;
+
     }
+
+    /* Settings Mail*/
+    .main-block11 {
+        margin: -40px 2px 10px 2px;
+    }
+
+    .formsett {
+        margin-top: 50px;
+    }
+
+    .formsettings2 {
+
+        margin-top: 10px;
+
+    }
+
+    .formplace {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 230px;
+
+
+    }
+
+    .formsettings1 {
+        width: 350px;
+
+
+    }
+
+    .formsettings2 {
+        width: 350px;
+        margin-top: 10px;
+
+    }
+
+    .
+    .formplace1 {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 5px;
+    }
+
+    .form-group1 {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%
+    }
+
+    .formplace button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .formplace1 button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .photoavtr {
+
+        margin-top: 25px;
+        margin-left: 100px;
+    }
+
+    .avtset {
+        position: absolute;
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        border: 4px solid rgb(0, 0, 0);
+    }
+
+    .lol {
+        position: relative;
+    }
+
+    .shapeadd {
+        position: absolute;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        width: 10em;
+        height: 5em;
+        margin-top: 87px;
+        margin-left: 5px;
+        background: rgba(255, 255, 255, 0.5);
+
+    }
+
+    .kek {
+        position: relative;
+    }
+
+    .bt1 {
+        height: 50px;
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .cams {
+        position: absolute;
+        margin-left: 60px;
+        margin-bottom: 50px;
+    }
+
+    .ques {
+        position: absolute;
+        float: left;
+        left: 290px;
+        top: 817px;
+    }
+
+
+    .descr {
+        display: none;
+        margin-left: -350px;
+        padding: 5px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques:hover .descr {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud {
+        font-size: 12pt;
+    }
+
+    .ques1 {
+        position: absolute;
+        float: left;
+        left: 290px;
+        top: 725px;
+    }
+
+
+    .descr1 {
+        display: none;
+        margin-left: -350px;
+        padding: 10px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques1:hover .descr1 {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud1 {
+        font-size: 12pt;
+    }
+
 }
 
-/*конец просмотра поста и стрима*/
+
+@media screen and (max-width: 400px) {
+    .prev {
+        width: 100%;
+        height: 1000px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .main-block1 {
+        width: 100%;
+    }
+
+    .id_post {
+        background: white;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    .category1 {
+        background: rgba(255, 255, 255, 0.4);
+        width: 200px;
+        height: 85px;
+        margin-left: 105px;
+        border-radius: 12px;
+        margin-top: 130px;
 
 
+    }
+
+    .cattext {
+        color: white;
+
+    }
+
+    .namepost {
+        margin-top: 30px;
+        word-wrap: break-word;
+    }
+
+    .napo {
+        font-size: 30pt;
+        color: white;
+    }
+
+    .authorp {
+        margin-left: 40%;
+        margin-top: 50px;
+    }
+
+    .avtar {
+        float: left;
+
+    }
+
+    .autname {
+        float: left;
+        margin-left: -80px;
+        margin-top: 25px;
+    }
+
+    .avt {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+
+    .avttext {
+        color: white;
+        cursor: pointer;
+    }
+
+    .datap {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 170px;
+        margin-top: 240px;
+        margin-left: 35%;
+    }
+
+    .dataptext {
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 2px;
+
+    }
+
+
+    .infopo {
+        margin-left: 25px;
+        margin-top: 85px;
+
+    }
+
+    .infopo span {
+        font-size: 31px;
+    }
+
+    .likepo {
+        font-size: 31px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+    }
+
+    .compo {
+
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .viepo {
+
+        padding-left: 25px;
+
+    }
+
+    .infopo h4 {
+        padding-left: 10px;
+
+    }
+
+    .maintextp {
+        margin: 0px 0px 10px 0px;
+        padding: 20px 20px 50px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .down-info {
+        height: 90px;
+        padding-bottom: 10px;
+    }
+
+    .down-cat {
+        float: left;
+        background: rgb(54, 53, 51);
+        border-radius: 9px;
+        margin-left: 25px;
+        padding: 5px 5px 5px 5px;
+        cursor: pointer;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+
+
+    }
+
+    .down-cat:hover {
+        float: left;
+        background: rgb(54, 53, 51, 0.8);
+        border-radius: 9px;
+        padding: 5px 5px 5px 5px;
+        box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+
+    .down-cat p {
+        display: inline;
+        color: rgb(254, 197, 65);
+
+    }
+
+    .down-like {
+        float: right;
+        padding-right: 45px;
+
+    }
+
+    .down-like h5 {
+        float: left;
+        cursor: pointer;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+
+    .down-like i {
+        cursor: pointer;
+
+    }
+
+    .commentblock {
+        margin: 80px 0px 100px 0px;
+        padding: 20px 20px 5px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .maintextp iframe {
+
+        width: 350px;
+        height: 700px;
+    }
+
+    .infostream {
+        margin-left: 110px;
+        margin-top: 85px;
+
+    }
+
+    .viestream {
+        float: left;
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        border-right: 4px solid rgba(255, 255, 255, 0.4);
+        padding-left: 65px;
+        padding-right: 65px;
+        padding-left: 65px;
+
+    }
+
+    /* Settings Mail*/
+    .main-block11 {
+        margin: -40px 2px 10px 2px;
+    }
+
+    .formsett {
+        margin-top: 50px;
+    }
+
+    .formsettings2 {
+
+        margin-top: 10px;
+
+    }
+
+    .formplace {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 230px;
+
+
+    }
+
+    .formsettings1 {
+        width: 350px;
+
+
+    }
+
+    .formsettings2 {
+        width: 350px;
+        margin-top: 10px;
+
+    }
+
+    .
+    .formplace1 {
+        background: rgb(254, 197, 65);
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 5px;
+    }
+
+    .form-group1 {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%
+    }
+
+    .formplace button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .formplace1 button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .photoavtr {
+
+        margin-top: 25px;
+        margin-left: 100px;
+    }
+
+    .avtset {
+        position: absolute;
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        border: 4px solid rgb(0, 0, 0);
+    }
+
+    .lol {
+        position: relative;
+    }
+
+    .shapeadd {
+        position: absolute;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        width: 10em;
+        height: 5em;
+        margin-top: 87px;
+        margin-left: 5px;
+        background: rgba(255, 255, 255, 0.5);
+
+    }
+
+    .kek {
+        position: relative;
+    }
+
+    .bt1 {
+        height: 50px;
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .cams {
+        position: absolute;
+        margin-left: 60px;
+        margin-bottom: 50px;
+    }
+
+    .ques {
+        position: absolute;
+        float: left;
+        left: 290px;
+        top: 817px;
+    }
+
+
+    .descr {
+        display: none;
+        margin-left: -350px;
+        padding: 5px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques:hover .descr {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud {
+        font-size: 12pt;
+    }
+
+    .ques1 {
+        position: absolute;
+        float: left;
+        left: 290px;
+        top: 753px;
+    }
+
+
+    .descr1 {
+        display: none;
+        margin-left: -350px;
+        padding: 10px;
+        margin-top: 17px;
+        background: #f3f3f3;
+        height: 200px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ques1:hover .descr1 {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        z-index: 9999;
+        width: 300px;
+    }
+
+    .textcloud1 {
+        font-size: 12pt;
+    }
+
+}

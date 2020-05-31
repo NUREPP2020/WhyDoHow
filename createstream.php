@@ -11,10 +11,11 @@ if (isset($_POST["insert"])) {
     $idcategory = $_POST['idcategory'];
     $idsubcategory = $_POST['idsubcategory'];
     $privat = $_POST['privat'];
+    $linck = $_POST['linck'];
     $text = $_POST['text'];
     $view_count = $_POST['view_count'];
     $date = $_POST['date'];
-    $query = "INSERT INTO post(id_user, preview, header, id_category, id_subcategory, privat, text, view_count, date) VALUES ('$iduser','$file','$header', '$idcategory', '$idsubcategory', '$privat', '$text', '$view_count', '$date')";
+    $query = "INSERT INTO stream(id_user, preview, heder, id_category, id_subcategory, privat, linck, text, view_count, date) VALUES ('$iduser','$file','$header', '$idcategory', '$idsubcategory', '$privat','$linck', '$text', '$view_count', '$date')";
     if (mysqli_query($connect, $query)) {
         echo '<script>alert("Image Inserted into Database")</script>';
     }
@@ -100,7 +101,8 @@ require('header.php')
                 <label for="exampleFormControlTextarea1">Example textarea</label>
                 <textarea class="form-control" textarea id="NicEdit" cols="80" rows="9"name="text"></textarea><br>
             </div>
-
+            <label>Ссылка:</label>
+            <input class="input" name="linck" type="text" value=""><br>
             <div class="form-group row" style="float: revert">
                 <div class="col-sm-10">
                     <button type="submit" class="btn  btn-my-dark-color btn-my-dark-size" type="submit" name="insert" id="insert" value="Insert" style="width: 30%">Insert</button>

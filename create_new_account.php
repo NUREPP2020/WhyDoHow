@@ -31,8 +31,6 @@ if (count($user) != 0) {
     header('WhyDoHow-master/registration.php' );
 }
 
-$db->begin_transaction();
-
 $query = $db->query("INSERT INTO `user` (`name`,`image`,`description`,`privat`,`id_role`) VALUES('$name','user.png',' ','0','1')");
 
 $query = $db->query("SELECT * FROM `user` ORDER BY `id_user` DESC LIMIT 1");
@@ -42,7 +40,6 @@ $user = mysqli_fetch_assoc($query);
 $use = filter_var(trim($user['id_user']),FILTER_SANITIZE_NUMBER_INT);
 $password = md5($password . "asdbjb123bkhbasjbc");
 $query = $db->query("INSERT INTO `login_mail` (`id_user`,`mail`,`password`) VALUES('$use','$email','$password')");
-$db->commit();
 
 setcookie('userId', $use, time() + 3600*24, "/");
 setcookie('userName', $name, time() + 3600*24, "/");

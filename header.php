@@ -18,7 +18,7 @@
         crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="main.css"/>
 
-
+<script src="https://kit.fontawesome.com/6df34de0e3.js" crossorigin="anonymous"></script>
 
 
 <header style=" position: sticky; top: 0; width: 100%; z-index: 100;">
