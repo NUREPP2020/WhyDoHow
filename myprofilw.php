@@ -51,10 +51,10 @@ require('header.php')
                 </div>
                 <div class="row" style="margin-top: 10px">
                     <!-- Button trigger modal -->
-                    <div class="col" data-toggle="modal" data-target="#exampleModalCenter"
+                    <div class="col" data-toggle="modal" data-target="#modalSubscribers"
                     "><span class="profile-span-stats"><b>1234</b> подписчики</span></div>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                <div class="modal fade" id="modalSubscribers" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content orange-background">
@@ -75,32 +75,70 @@ require('header.php')
                                             <img src="img/девушка1.jpg" alt="" style="width: 60px"
                                                  class="rounded-circle">
                                         </div>
-                                        <div class="col subscriptions-img" >
-                                          <span class="subscriptions-text">  sdfsdfsdfsdhssdf sd f sd f sd fs df sf s df sd f sd f sd fs df sf s df sd f sd f sd fs df sf s df sd f sd f sd fs df sf s df sd f sd f sd fs df sf s df</span>
+                                        <div class="col subscriptions-img">
+                                            <span class="subscriptions-text">  подписчики</span>
                                         </div>
                                     </div>
                                 </a>
-                                    ';
+                                ';
                                 }
                                 ?>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col"><span class="profile-span-stats"><b>1234</b> подписки</span></div>
-                <div class="col"><span class="profile-span-stats"><b>1234</b> публикации</span></div>
+                <!-- Button trigger modal -->
+                <div class="col" data-toggle="modal" data-target="#modalSubscriptions"
+                "><span class="profile-span-stats"><b>1234</b>подписки</span></div>
+            <!-- Modal -->
+            <div class="modal fade" id="modalSubscriptions" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content orange-background">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLongTitle">Подписки</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <?
+                            for ($i = 0; $i < 112; $i++) {
+                                echo '
+                            <a href="otherprofile.php">
+                                <div class="row"
+                                     style="margin: 2px;">
+                                    <div class="col-2">
+                                        <img src="img/девушка1.jpg" alt="" style="width: 60px"
+                                             class="rounded-circle">
+                                    </div>
+                                    <div class="col subscriptions-img">
+                                        <span class="subscriptions-text">  подписчики</span>
+                                    </div>
+                                </div>
+                            </a>
+                            ';
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row line profile-description">
-                <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-                    izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
-                <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-                    izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
-                <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-                    izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
-                <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-                    izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+            <div class="col">
+                <span class="profile-span-stats"><b><?=$countpost?></b> публикации</span>
             </div>
-        </div>
+    </div>
+    <div class="row line profile-description">
+        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+    </div>
+    </div>
     </div>
     </div>
     <hr>
