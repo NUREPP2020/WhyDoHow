@@ -68,15 +68,15 @@
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
                             <p style="bottom: -11px;">создание поста</p>
                         </div>
-                    </a><a href="#">
+                    </a><a href="myprofilw.php">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
+                            <p style="bottom: -11px;">myprofilw</p>
                         </div>
-                    </a><a href="#">
+                    </a><a href="myprofile.php">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
+                            <p style="bottom: -11px;">myprofile</p>
                         </div>
                     </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
