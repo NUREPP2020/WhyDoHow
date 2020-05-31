@@ -43,6 +43,7 @@ if(isset($_GET['id']))
     }
     else
     {
+        $db->begin_transaction();
         $query = $db->query("INSERT INTO `user` (`name`,`image`,`description`,`privat`,`id_role`) VALUES('$name','user.png',' ','0','1')");
 
         $query = $db->query("SELECT * FROM `user` ORDER BY `id_user` DESC LIMIT 1");
@@ -51,6 +52,7 @@ if(isset($_GET['id']))
 
         $use = filter_var(trim($user['id_user']),FILTER_SANITIZE_NUMBER_INT);
         $query = $db->query("INSERT INTO `login_google` (`id_user`,`mail`,`id_google`) VALUES('$use','$email','$id_google')");
+        $db->commit();
 
         setcookie('userId', $use, time() + 3600*24, "/");
         setcookie('userName', $name, time() + 3600*24, "/");
