@@ -48,70 +48,38 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
     <div class="centerDivs profile-header">
         <div class="row" style="border-color: #363533">
             <div class="col-3">
-                <div class="col"><img src="img/<?= $Image ?>" alt="ава" class="rounded-circle profile-image-avatar">
-                </div>
-                <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
-                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Добавить NewHow
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
-                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Запустить стрим
-                    </button>
+                <div class="col"><img src="img/девушка1.jpg" alt="ава" class="rounded-circle profile-image-avatar">
                 </div>
             </div>
             <div class="col-7">
-                <div class="row" style="margin-top: 10px">
-                    <div class="row" style="border-color: #363533">
-                        <div class="col-3">
-                            <div class="col"><img src="img/девушка1.jpg" alt="ава"
-                                                  class="rounded-circle profile-image-avatar">
-                            </div>
-                            <div class="col">
-                                <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new"
-                                        type="submit">
-                                    <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Добавить NewHow
-                                </button>
-                            </div>
-                            <div class="col">
-                                <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new"
-                                        type="submit">
-                                    <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Запустить стрим
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-7">
-                            <div class="row">
-                                <div class="col"><span class="profile-span-name">Пахомова Алиса</span></div>
-                                <div class="col" style="float: left">
-                                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
-                                            type="submit">
-                                        Настройки профиля
-                                        <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
-                                    </button>
+                <div class="row">
+                    <div class="col"><span class="profile-span-name">Пахомова Алиса</span></div>
+                    <div class="col" style="float: left">
+                        <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings" type="submit">
+                            Подписаться/отписаться
+                        </button>
 
-                                </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <!-- Button trigger modal -->
+                    <div class="col" data-toggle="modal" data-target="#modalSubscribers"
+                    "><span class="profile-span-stats"><b>1234</b> подписчики</span></div>
+                <!-- Modal -->
+                <div class="modal fade" id="modalSubscribers" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content orange-background">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalLongTitle">Подписчики</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                            <div class="row" style="margin-top: 10px">
-                                <!-- Button trigger modal -->
-                                <div class="col" data-toggle="modal" data-target="#modalSubscribers"
-                                "><span class="profile-span-stats"><b>1234</b> подписчики</span></div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalSubscribers" tabindex="-1" role="dialog"
-                                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content orange-background">
-                                        <div class="modal-header">
-                                            <h2 class="modal-title" id="exampleModalLongTitle">Подписчики</h2>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <?
-                                            for ($i = 0; $i < 112; $i++) {
-                                                echo '
+                            <div class="modal-body">
+                                <?
+                                for ($i = 0; $i < 112; $i++) {
+                                    echo '
                                 <a href="otherprofile.php">
                                     <div class="row"
                                          style="margin: 2px;">
@@ -125,30 +93,30 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                                     </div>
                                 </a>
                                 ';
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>
+                                }
+                                ?>
                             </div>
-                            <!-- Button trigger modal -->
-                            <div class="col" data-toggle="modal" data-target="#modalSubscriptions"
-                            "><span class="profile-span-stats"><b>1234</b>подписки</span></div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalSubscriptions" tabindex="-1" role="dialog"
-                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content orange-background">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title" id="exampleModalLongTitle">Подписки</h2>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <?
-                                        for ($i = 0; $i < 112; $i++) {
-                                            echo '
+                        </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+                <div class="col" data-toggle="modal" data-target="#modalSubscriptions"
+                "><span class="profile-span-stats"><b>1234</b>подписки</span></div>
+            <!-- Modal -->
+            <div class="modal fade" id="modalSubscriptions" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content orange-background">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLongTitle">Подписки</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <?
+                            for ($i = 0; $i < 112; $i++) {
+                                echo '
                             <a href="otherprofile.php">
                                 <div class="row"
                                      style="margin: 2px;">
@@ -162,56 +130,56 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                                 </div>
                             </a>
                             ';
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
+                            }
+                            ?>
                         </div>
-                        <div class="col">
-                            <span class="profile-span-stats"><b><?= $countpost ?></b> публикации</span>
-                        </div>
-                    </div>
-                    <div class="row line profile-description">
-                        <?php
-                        echo $description;
-                        ?>
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <span class="profile-span-stats"><b><?= $countpost ?></b> публикации</span>
+            </div>
         </div>
-        <hr>
-        <?php
-        if ($role == 2) {
-            echo "
+        <div class="row line profile-description">
+            <?php
+            echo $description;
+            ?>
+        </div>
+    </div>
+    </div>
+    </div>
+    <hr>
+    <?php
+    if ($role == 2) {
+        echo "
         <!--забаненый профиль-->
     <div class=\"centerDivs\">
     <span class=\"banprofile-span\"><img src=\"img/ban.png\" alt=\"\" class=\"banprofile-image\"><b> ЭТОТ ПРОФИЛЬ БЫЛ ЗАБЛОКИРОВАН</b></span>
     </div>
         ";
-        } else {
-            echo "
+    } else {
+        echo "
 <!--мелкие постыы-->
 <div class=\"centerDivs\">";
 
-            #заменить на реальные ссылки на страницы с фоточками и текстом
-            $query = $db->query("SELECT * FROM `post` WHERE `id_user`= '{$userId}'");
-            $posts = mysqli_fetch_assoc($query);
+        #заменить на реальные ссылки на страницы с фоточками и текстом
+        $query = $db->query("SELECT * FROM `post` WHERE `id_user`= '{$userId}'");
+        $posts = mysqli_fetch_assoc($query);
 
-            foreach ($posts as $post) {
-                $query = $db->query("SELECT * FROM `category` WHERE `id_category`= '{$post['id_category']}'");
-                $category = mysqli_fetch_assoc($query);
-                $category = filter_var(trim($category['name']), FILTER_SANITIZE_STRING);
+        foreach ($posts as $post) {
+            $query = $db->query("SELECT * FROM `category` WHERE `id_category`= '{$post['id_category']}'");
+            $category = mysqli_fetch_assoc($query);
+            $category = filter_var(trim($category['name']), FILTER_SANITIZE_STRING);
 
-                $query = $db->query("SELECT * FROM `liked` WHERE `id_post`= '{$post['id_post']}'");
-                $countlike = mysqli_fetch_assoc($query);
-                $like = count($countlike);
+            $query = $db->query("SELECT * FROM `liked` WHERE `id_post`= '{$post['id_post']}'");
+            $countlike = mysqli_fetch_assoc($query);
+            $like = count($countlike);
 
-                $query = $db->query("SELECT * FROM `comment` WHERE `id_post`= '{$post['id_post']}'");
-                $countcomment = mysqli_fetch_assoc($query);
-                $comment = count($countcomment);
+            $query = $db->query("SELECT * FROM `comment` WHERE `id_post`= '{$post['id_post']}'");
+            $countcomment = mysqli_fetch_assoc($query);
+            $comment = count($countcomment);
 
-                echo "
+            echo "
         <a href=\"post.php?id={$post['id']}\">
             <div class=\"item post\">
                 <div class=\"h-100 d-inline-block img-wrap post-for-image\">
@@ -255,9 +223,9 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
             </div>
         </a>
         ";
-            }
         }
-        ?>
+    }
+    ?>
 
 
 </main>
