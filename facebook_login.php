@@ -16,13 +16,13 @@ if(isset($_GET['name']))
     $user = mysqli_fetch_assoc($query);
     if (count($user) != 0) {
         $db->close();
-        header('WhyDoHow-master/registration.php' );
+        header('Location: /WhyDoHow-master/registration.php' );
     }
     $query = $db->query("SELECT * FROM `login_google` WHERE `mail`= '$email' ");
     $user = mysqli_fetch_assoc($query);
     if (count($user) != 0) {
         $db->close();
-        header('WhyDoHow-master/registration.php' );
+        header('Location: /WhyDoHow-master/registration.php' );
     }
     $query = $db->query("SELECT * FROM `login_facebook` WHERE `mail`= '$email'");
     $user = mysqli_fetch_assoc($query);
@@ -40,7 +40,7 @@ if(isset($_GET['name']))
     }
     else
     {
-
+        $db->begin_transaction();
         $query = $db->query("INSERT INTO `user` (`name`,`image`,`description`,`privat`,`id_role`) VALUES('$name','user.png',' ','0','1')");
 
         $query = $db->query("SELECT * FROM `user` ORDER BY `id_user` DESC LIMIT 1");
@@ -49,7 +49,7 @@ if(isset($_GET['name']))
 
         $use = filter_var(trim($user['id_user']),FILTER_SANITIZE_NUMBER_INT);
         $query = $db->query("INSERT INTO `login_facebook` (`id_user`,`mail`) VALUES('$use','$email')");
-
+        $db->commit();
 
         setcookie('userId', $use, time() + 3600*24, "/");
         setcookie('userName', $name, time() + 3600*24, "/");
