@@ -3584,7 +3584,7 @@ a {
 
     .down-cat:hover {
         float: left;
-        background: rgb(54, 53, 51, 0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
         box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
@@ -3614,7 +3614,6 @@ a {
 
     .down-like i {
         cursor: pointer;
-
     }
 
     .commentblock {
@@ -3624,7 +3623,6 @@ a {
     }
 
     .maintextp iframe {
-
         width: 350px;
         height: 700px;
     }
@@ -3632,7 +3630,6 @@ a {
     .infostream {
         margin-left: 110px;
         margin-top: 85px;
-
     }
 
     .viestream {
@@ -3641,8 +3638,6 @@ a {
         border-right: 4px solid rgba(255, 255, 255, 0.4);
         padding-left: 65px;
         padding-right: 65px;
-        padding-left: 65px;
-
     }
 
     /* Settings Mail*/
@@ -3851,3 +3846,127 @@ a {
 }
 
 /* конец после поика*/
+
+.main-block2 {
+    margin: 1% 15% 2% 15%;
+    padding: 1% 11% 3% 11%;
+    position: static;
+    background-color: rgb(254, 197, 65);
+
+}
+
+.tabl {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.main-block2 table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    background: white;
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.main-block2 th {
+    font-weight: normal;
+    color: rgb(51, 51, 51);
+    border-bottom: 2px solid rgb(51, 51, 51);
+    padding: 10px 8px;
+}
+
+.main-block2 td {
+    color: rgb(51, 51, 51);
+    padding: 9px 8px;
+    transition: .1s linear;
+}
+
+.main-block2 tr:hover td {
+    color: rgb(51, 51, 51);
+}
+
+.main-block2 th {
+    font-weight: normal;
+    color: rgb(51, 51, 51);
+    padding: 10px 15px;
+}
+
+.main-block2 td {
+    color: rgb(51, 51, 51);
+    border-top: 1px solid rgb(51, 51, 51);
+    padding: 10px 15px;
+}
+
+.main-block2 tr:hover td {
+    color: rgb(254, 197, 65);
+    background: rgb(51, 51, 51);
+}
+
+.adm {
+    color: rgb(51, 51, 51);
+    size: 2px;
+}
+
+.search_user {
+    margin-top: 50px;
+}
+
+.search_user_ {
+    float: left;
+}
+
+.btn_admin_user {
+    color: rgb(254, 197, 65);
+    background: rgb(51, 51, 51);
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+
+.user_post {
+    padding-top: 45px;
+}
+
+.btn_refresh {
+    margin: 10px;
+    color: rgb(254, 197, 65);
+    background: rgb(51, 51, 51);
+    float: left;
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .main-block2 {
+        margin: 1% 15% 2% 15%;
+        padding: 1% 11% 3% 11%;
+        position: static;
+        background-color: rgb(254, 197, 65);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-block2 {
+        margin: 1% 5% 2% 5%;
+        padding: 1% 5% 3% 5%;
+        position: static;
+        background-color: rgb(254, 197, 65);
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .main-block2 {
+        margin: 1% 5% 2% 5%;
+        padding: 1% 5% 3% 5%;
+        position: static;
+        background-color: rgb(254, 197, 65);
+    }
+}

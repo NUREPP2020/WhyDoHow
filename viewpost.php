@@ -191,15 +191,15 @@ require('header.php')
                     Отправить отзыв
                 </button>
             </form>
+            <br>
             <hr>
 
             <ul class="media-list">
                 <?php
                 #заменить на реальные ссылки на страницы с фоточками и текстом
                 for ($i = 0; $i < 6; $i++) {
-                    echo '';
-                }
-                ?>
+                    echo '
+
                 <!-- Комментарий (уровень 1) -->
                 <li class="media">
                     <div class="row">
@@ -218,57 +218,75 @@ require('header.php')
                                 <div class="btn-group" style="float: right">
                                     <!-- Кнопка -->
                                     <button class="btn  btn-my-dark-color btn-my-dark-size" type="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="modal" data-target="#commentReportModal"
+                                            data-whatever="@getbootstrap">
+                                        <!--commentReportModal заменить на commentReportModal_id-->
                                         <img src="img/девушка1.jpg" alt="" width="20px">
                                     </button>
-                                    <!-- Меню -->
-                                    <div class="dropdown">
-                                        <form>
-                                            <fieldset class="form-group">
-                                                <div class="row">
-                                                    <legend class="col-form-label col-sm-2 pt-0" style="font-size: 0px">
-                                                    </legend>
-                                                    <div class="col-sm-10">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                   name="gridRadios" id="gridRadios1" value="option1"
-                                                                   checked>
-                                                            <label class="form-check-label" for="gridRadios1">
-                                                                First radio
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                   name="gridRadios" id="gridRadios2" value="option2">
-                                                            <label class="form-check-label" for="gridRadios2">
-                                                                Second radio
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                   name="gridRadios" id="gridRadios2" value="option2">
-                                                            <label class="form-check-label" for="gridRadios2">
-                                                                Second radio
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                   name="gridRadios" id="gridRadios2" value="option2">
-                                                            <label class="form-check-label" for="gridRadios2">
-                                                                Second radio
-                                                            </label>
-                                                        </div>
-                                                    </div>
+                                    <!-- Button trigger modal -->
+                                    <div class="modal fade" id="commentReportModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel"
+                                         aria-hidden="true"><!--commentReportModal заменить на commentReportModal_id-->
+                                        <div class="modal-dialog " role="document" style="max-width: 460px">
+                                            <div class="modal-content orange-background">
+                                                <div class="modal-header" style="border: 0">
+                                                    <h5 class="modal-title">пожаловаться</h5>
+                                                    <!--commentReportModal заменить на commentReportModal_id-->
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
                                                 </div>
-                                            </fieldset>
-
-                                            <div class="form-group row">
-                                                <div class="col-sm-10">
-                                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                                <div class="modal-body">
+                                                    <!--форма входа-->
+                                                    <form action="create_new_account.php" method="post"
+                                                          id="commentReport" class="needs-validation">
+                                                        <div align="left">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="exampleRadios" id="exampleRadios1"
+                                                                       value="option1" checked>
+                                                                <label class="form-check-label" for="exampleRadios1">
+                                                                    Спам
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="exampleRadios" id="exampleRadios2"
+                                                                       value="option2">
+                                                                <label class="form-check-label" for="exampleRadios2">
+                                                                    Насилие
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="exampleRadios" id="exampleRadios1"
+                                                                       value="option1" checked>
+                                                                <label class="form-check-label" for="exampleRadios3">
+                                                                    Оскорбление других участников
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="exampleRadios" id="exampleRadios2"
+                                                                       value="option2">
+                                                                <label class="form-check-label" for="exampleRadios4">
+                                                                    Флуд, то есть не несет никакой пользы
+                                                                </label>
+                                                            </div>
+                                                            <button class="btn  btn-my-dark-color btn-my-dark-size"
+                                                                    type="submit" style="max-width: 300px">
+                                                                Войти
+                                                            </button>
+                                                        </div>
+                                                        <div id="status">
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
+                                    <!-- Modal END-->
                                 </div>
                             </div>
                             <div class="metadata">
@@ -288,6 +306,11 @@ require('header.php')
                     </div>
                 </li>
                 <!-- Конец комментария (уровень 1) -->
+
+                ';
+                }
+                ?>
+
             </ul>
         </div>
     </div>

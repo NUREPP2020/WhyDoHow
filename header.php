@@ -120,7 +120,6 @@
                 data-whatever=\"@getbootstrap\" style=\"min-width: 100px; padding: 0; padding-left: 10px;border: 0; color: #FEC541\" align=\"right\">гость
             <img src=\"img/user.png\" alt=\"фото\" class=\"rounded-circle img-fluid\" style=\"max-height: 40px\">
         </button>
-        </a>
             ";
         } else {
             //<a href="index.php"> -> кабинет личный
