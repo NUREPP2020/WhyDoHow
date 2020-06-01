@@ -43,21 +43,22 @@ require('header.php')
                     <div class="col"><span class="profile-span-name">Пахомова Алиса</span></div>
                     <div class="col" style="float: left">
                         <div class="row">
-                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
-                                    type="submit">
-                                <a href="s">Настройки профиля
+                            <a href="setting_current.php">
+                                <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                        type="submit">
+                                    Настройки профиля
                                     <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
-                                </a>
-                            </button>
+                                </button>
+                            </a>
                         </div>
                         <div class="row">
-                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
-                                    type="submit">
-                                <a href="exit.php">
+                            <a href="exit.php">
+                                <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                        type="submit">
                                     Выйти
                                     <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
-                                </a>
-                            </button>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -167,7 +168,7 @@ require('header.php')
                     <p class="post-image-category" style="    background-color: rgba(0, 0, 0, 0.27);
     color: white;    border-radius: 17px;    width: 60%;    left: 37%;">
                         категория</p>
-                </div>style="font-size:19px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-line-clamp: 1; -webkit-box-orient: vertical;"
+                </div>
                 <div class="col">
                     <div class="row post-date">
                         12 марта 2020
@@ -176,8 +177,8 @@ require('header.php')
                         <b>Заголовок поста</b>
                     </div>
                     <div class="row" style="padding: 10px">
-                        <p class="post-text">
-                            текст текст текст
+                        <p class="post-text" style=\"    background-color: rgba(0, 0, 0, 0.27);color: white;border-radius: 17px width: 60%;left: 37%;">
+                            текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст 
                         </p>
                     </div>
                     <div class="row post-statistics">

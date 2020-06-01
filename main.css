@@ -156,13 +156,13 @@ a {
 .post-statistics {
     padding: 0;
     position:absolute; /* добавили */
-    bottom: -65%; /* добавили */
-    margin-left: 50%;
+    bottom:  -24%; /* добавили */
+    margin-left: 55%;
 }
 
 .post-statistics-like {
     padding: 0;
-    left: 100px;
+    left: 110px;
 }
 
 .post-statistics-comment {
@@ -1288,7 +1288,7 @@ a {
 
 .down-cat:hover {
     float: left;
-    background: rgb(54, 53, 51, 0.8);
+    background: rgba(54, 53, 51, 0.8);
     border-radius: 9px;
     padding: 5px 5px 5px 5px;
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
@@ -1666,7 +1666,7 @@ a {
 
     .down-cat:hover {
         float: left;
-        background: rgb(54, 53, 51, 0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
         box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
@@ -2030,7 +2030,7 @@ a {
 
     .down-cat:hover {
         float: left;
-        background: rgb(54, 53, 51, 0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
         box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
@@ -2124,7 +2124,7 @@ a {
     .form-group1 {
         width: 100%;
         margin-left: 0%;
-        margin-right: 0%
+        margin-right: 0%;
     }
 
     .photoavtr {
@@ -2405,7 +2405,7 @@ a {
 
     .down-cat:hover {
         float: left;
-        background: rgb(54, 53, 51, 0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
         box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
@@ -2767,7 +2767,7 @@ a {
 
     .down-cat:hover {
         float: left;
-        background: rgb(54, 53, 51, 0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
         box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
@@ -3157,7 +3157,7 @@ a {
 
     .down-cat:hover {
         float: left;
-        background: rgb(54, 53, 51, 0.8);
+        background: rgba(54, 53, 51, 0.8);
         border-radius: 9px;
         padding: 5px 5px 5px 5px;
         box-shadow: 0 0px 6px rgba(0, 0, 0, 0.6);
@@ -3214,8 +3214,6 @@ a {
         border-right: 4px solid rgba(255, 255, 255, 0.4);
         padding-left: 65px;
         padding-right: 65px;
-        padding-left: 65px;
-
     }
 
     /* Settings Mail*/
@@ -3245,14 +3243,11 @@ a {
 
     .formsettings1 {
         width: 350px;
-
-
     }
 
     .formsettings2 {
         width: 350px;
         margin-top: 10px;
-
     }
 
     .
@@ -3800,7 +3795,7 @@ a {
 }
 .butsearc:hover{
     background: rgba(54, 53, 51, 0.8);
-    color: rgba(254,197,65);
+    color: rgb(254,197,65);
     border: none;
     width: 275px;
     padding-bottom: 5px;

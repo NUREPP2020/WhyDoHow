@@ -101,7 +101,7 @@ require('header.php')
                        placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Неверный адресс эл. почты" required/>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
-                <input type="password" class="form-control border border-dark form-control-orange" id="password1" name="password1"
+                <input type="password" class="form-control border border-dark form-control-orange" id="password3" name="password1"
                        placeholder="Пароль" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*]).{8,16}$" title="Неверный формат пароля. Необходимо 1 заглавная, 1 строчная, 1 цифра, 1спец символ, длинна 8-16" required/>
             </div>
             <div class="form-group" style="width: 64%;margin-left: 17%;margin-right: 17%">
@@ -109,7 +109,7 @@ require('header.php')
                        placeholder="Повторите пароль" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*]).{8,16}$" title="Неверный формат пароля. Необходимо 1 заглавная, 1 строчная, 1 цифра, 1спец символ, длинна 8-16" required/>
             </div>
 
-            <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit">Зарегестрироваться</button>
+            <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit" onclick="validatePassword()" >Зарегестрироваться</button>
             <p style="text-align: center; font-size: 0.7em;line-height: 1;width: 40%; margin: 5% 30% 0% 30%">
                 Регистрируясь, вы принимаете наши Условия, Политику использования данных и Политику в отношении файлов
                 cookie.</p>
@@ -119,17 +119,19 @@ require('header.php')
 require('footer.php')
 ?>
 <script type="text/javascript">
-    window.onload = function () {
+/*    window.onload = function () {
         document.getElementById("password1").onchange = validatePassword;
         document.getElementById("password2").onchange = validatePassword;
-    }
+    }*/
     function validatePassword(){
+        var pass3=document.getElementById("password3").value;
         var pass2=document.getElementById("password2").value;
-        var pass1=document.getElementById("password1").value;
-        if(pass1!=pass2)
-            document.getElementById("password2").setCustomValidity("Пароли не совпадают");
-        else
+        if(pass3===pass2)
             document.getElementById("password2").setCustomValidity('');
+        else{
+            alert("pass3 = " + pass3 + "pass2 =" +pass2);
+            document.getElementById("password2").setCustomValidity("Пароли не совпадают");
+        }
 //empty string means no validation error
     }
 </script>

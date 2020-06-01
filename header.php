@@ -1,8 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!--  Google API -->
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="425789449877-hmna0tirie3lf6aot04ckghk9rghcsid.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -155,7 +152,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" >
+            <div class="modal-body">
                 <!--форма входа-->
                 <form action="create_new_account.php" method="post" id="registrationform" class="needs-validation">
 
@@ -173,23 +170,26 @@
                                title="Неверный формат пароля. Необходимо 1 заглавная, 1 строчная, 1 цифра, 1спец символ, длинна 8-16"
                                required/>
                     </div>
-                    <div align="center">                    <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit" style="max-width: 300px">Войти</button>
-                    </div>
-                    <div>
-                        <div class="label-or" style="text-align: center; margin:  3% 0 3% 0"> или</div>
-                    </div>
-                    <!-- Google Api -->
                     <div align="center">
-                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" style="width: 300px"></div>
+                        <button class="btn  btn-my-dark-color btn-my-dark-size" type="submit" style="max-width: 300px">
+                            Войти
+                        </button>
                     </div>
-                    <script>
-                        function onSignIn(googleUser) {
-                            // Useful data for your client-side scripts:
-                            var profile = googleUser.getBasicProfile();
-                            var id_token = googleUser.getAuthResponse().id_token;
-                            document.location.href = "google_login.php?id=" + profile.getId() + "&email=" + profile.getEmail() + "&name=" + profile.getGivenName() + "&fname=" + profile.getFamilyName();
-                        }
-                    </script>
+                    <div id="status">
+                    </div>
+                </form>
+                <div>
+                    <div class="label-or" style="text-align: center; margin:  3% 0 3% 0"> или</div>
+                </div>
+                <!-- Google Api -->
+                <div align="center">
+                    <a href="google_button.php">
+                        <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                type="submit">
+                            Выйти
+                            <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                        </button>
+                    </a>
                     <!-- Facebook Api -->
                     <script>
 
@@ -247,13 +247,14 @@
                     <script async defer crossorigin="anonymous"
                             src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0"></script>
                     <div align="center" style="margin-top: 16px">
-                        <fb:login-button class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-size="large"  data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"
+                        <fb:login-button class="fb-login-button" scope="public_profile,email"
+                                         onlogin="checkLoginState();"
+                                         data-size="large" data-layout="default" data-auto-logout-link="false"
+                                         data-use-continue-as="false"
                                          data-width="300px">
                         </fb:login-button>
                     </div>
-                    <div id="status">
-                    </div>
-                </form>
+                </div>
             </div>
 
             <div class="modal-footer" style="float: left; margin-bottom: 2%; border: 0">
