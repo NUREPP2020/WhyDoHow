@@ -48,14 +48,18 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                                       class="rounded-circle profile-image-avatar">
                 </div>
                 <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
-                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Добавить NewHow
-                    </button>
+                    <a href="createpost.php">
+                        <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
+                            <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Добавить NewHow
+                        </button>
+                    </a>
                 </div>
                 <div class="col">
-                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
-                        <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Запустить стрим
-                    </button>
+                    <a href="createstream.php">
+                        <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-new" type="submit">
+                            <img src="img/девушка1.jpg" alt="" class="profile-button-new-image">Запустить стрим
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="col-7">

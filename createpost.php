@@ -23,21 +23,21 @@ if (isset($_POST["insert"])) {
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
-  <script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
+    <script>
 
-bkLib.onDomLoaded(function()
+        bkLib.onDomLoaded(function()
 
-{
+        {
 
-new nicEditor().panelInstance('NicEdit');
+            new nicEditor().panelInstance('NicEdit');
 
-new nicEditor().panelInstance('NicEdit2');
+            new nicEditor().panelInstance('NicEdit2');
 
-});
+        });
 
-</script>
+    </script>
 </head>
 <body>
 <?php
@@ -95,6 +95,7 @@ require('header.php')
                     </select>
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Example textarea</label>
                 <textarea class="form-control" textarea id="NicEdit" cols="80" rows="9"name="text"></textarea><br>

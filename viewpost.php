@@ -171,13 +171,28 @@ require('header.php')
         </div>
     </div>
     <div class="commentblock">
-        <form action="" method="post" enctype="multipart/form-data">
-            <section class="container">
-
-        </form>
-
         <div class="comments">
             <h2 class="title-comments">Комментарии (989)</h2>
+            <form action="" method="post" enctype="multipart/form-data" style="margin-bottom: 5%">
+                <div class="row">
+                    <div class="col" style="padding: 0 0 0 5%; max-width: 200px">
+                        <img src="img/девушка1.jpg" alt="ава" class="rounded-circle profile-image-avatar"
+                             style="width: 100px">
+                    </div>
+                    <div class="col" style="vertical-align: middle">
+                        <span class="round-sides dark-background"
+                              style="float: left; color: #FEC541; padding: 10px 20px 10px 20px; vertical-align: middle">имя любимое твое имя любимое твое</span>
+                    </div>
+                </div>
+                <textarea type="text" class="form-control" name="textarea" placeholder="Оставте коментарий"
+                          style="height: 300px;max-width:80%;max-height: 350px; margin: 2% 10% 0 10% "></textarea><br>
+                <button class="btn btn-success" type="submit"
+                        style="color: #FEC541; background-color: #363533; float: right; margin-right: 10%">
+                    Отправить отзыв
+                </button>
+            </form>
+            <hr>
+
             <ul class="media-list">
                 <?php
                 #заменить на реальные ссылки на страницы с фоточками и текстом
