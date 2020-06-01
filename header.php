@@ -21,8 +21,8 @@
 <header style=" position: sticky; top: 0; width: 100%; z-index: 100;">
 
     <nav class="navbar navbar-expand-lg navbar-light orange-background">
-        <a class="navbar-brand logo d-none d-lg-block" href="index.php"">
-        <img src="img/WhyDoHow.png" alt="лого" style="width: 300px">
+        <a class="navbar-brand " href="index.php"">
+        <img src="img/WhyDoHow.png" alt="лого" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,25 +30,22 @@
         </button>
         <a class="navbar-brand" href="index.php"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <ul class="navbar-nav mr-auto">
-                <form class="form-inline my-0 my-lg-0 ">
-
+            <ul class="navbar-nav mr-auto " style="margin-left: 15%;">
+                <form class="form-inline my-0 my-lg-0 " >
                     <div class="input-group mb-2 mr-sm-2">
                         <div class="input-group-prepend">
-                            <div class="input-group-text">🔎</div>
+                            <div class="input-group-text form-control-orange searchline-left" ><img src="img/magnifying-glass.png" alt="" style="width: 20px"></div>
                         </div>
-                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2"
+                        <input type="text" class="form-control form-control-orange searchline-midle" id="inlineFormInputGroupUsername2"
                                placeholder="Имя пользователя">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">🔎</button>
+                            <button class="btn btn-outline-secondary form-control-orange searchline-right" type="button" ><img src="img/next.png" alt="" style="width: 20px"></button>
                         </div>
                     </div>
                 </form>
-
             </ul>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 2px solid #363533; margin-right: 10%;border-radius: 10px;">
                 Категории
             </a>
             <div class="dropdown-menu category-background" aria-labelledby="navbarDropdown">

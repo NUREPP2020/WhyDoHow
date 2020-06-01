@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "id12390796_admin";
 $password = "1234@dminDark";
 $database = "id12390796_whydohow";
-$connect = mysqli_connect("localhost", "root", "root", "whydohow");
+$connect = mysqli_connect("localhost", "id13813325_admin", "1234@dminDark", "id13813325_wdh");
 if (isset($_POST["insert"])) {
     $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
     $iduser = $_POST['iduser'];
@@ -95,7 +95,6 @@ require('header.php')
                     </select>
                 </div>
             </div>
-
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Example textarea</label>
                 <textarea class="form-control" textarea id="NicEdit" cols="80" rows="9"name="text"></textarea><br>

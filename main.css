@@ -5,15 +5,23 @@
 body {
     height: 100%;
 }
+
 html {
-    position:relative;
-    min-height:100%;
+    min-height: 100%;
 }
+
 footer {
-    position: absolute;
-    bottom: -100px;
     width: 100%;
 }
+
+button:hover {
+    color: #FEC541;
+}
+
+.logo {
+    width: 300px;
+}
+
 .orange-background {
     background-color: rgba(254, 197, 65, 1);
 }
@@ -113,7 +121,7 @@ a {
     background-color: white;
     border-radius: 7px;
     box-shadow: 0 0 10px rgba(127, 127, 127, 0.42);
-    position:relative; /* добавили */
+    position: relative; /* добавили */
 }
 
 .post-for-image {
@@ -155,8 +163,8 @@ a {
 
 .post-statistics {
     padding: 0;
-    position:absolute; /* добавили */
-    bottom:  -24%; /* добавили */
+    position: absolute; /* добавили */
+    bottom: -24%; /* добавили */
     margin-left: 55%;
 }
 
@@ -643,6 +651,9 @@ a {
     }
 
     /* конец забаненый профиль*/
+    .logo {
+        width: 220px;
+    }
 }
 
 @media screen and (max-width: 998px) {
@@ -764,6 +775,9 @@ a {
     }
 
     /* конец забаненый профиль*/
+    .logo {
+        width: 160px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -992,6 +1006,9 @@ a {
     }
 
     /* конец забаненый профиль*/
+    .logo {
+        width: 140px;
+    }
 }
 
 @media screen and (max-width: 412px) {
@@ -1486,6 +1503,29 @@ a {
 
 .textcloud {
     font-size: 12pt;
+}
+
+.searchline-left {
+    border-top: 1px solid #363533;
+    border-bottom: 1px solid #363533;
+    border-left: 1px solid #363533;
+    border-right: 1px solid #FEC541;
+    border-radius: 10px 0 0 10px;
+    padding-left: 10px;
+}
+
+.searchline-midle {
+    border-top: 1px solid #363533;
+    border-bottom: 1px solid #363533;
+    border-left: 1px solid #FEC541;
+}
+
+.searchline-right {
+    border-top: 1px solid #363533;
+    border-bottom: 1px solid #363533;
+    border-right: 1px solid #363533;
+    border-left: 1px solid #FEC541;
+    border-radius: 0 10px 10px 0;
 }
 
 .ques1 {
@@ -3783,28 +3823,31 @@ a {
         font-size: 12pt;
     }
 }
+
 /*после поика*/
-.butsearc{
-    background: rgba(51,51,51);
-    color: rgba(254,197,65);
+.butsearc {
+    background: rgba(51, 51, 51);
+    color: rgba(254, 197, 65);
     border: none;
     width: 275px;
     padding-bottom: 5px;
     text-align: center;
 
 }
-.butsearc:hover{
+
+.butsearc:hover {
     background: rgba(54, 53, 51, 0.8);
-    color: rgb(254,197,65);
+    color: rgb(254, 197, 65);
     border: none;
     width: 275px;
     padding-bottom: 5px;
     text-align: center;
 }
 
-.butsearc i{
-    font-size:25px;
+.butsearc i {
+    font-size: 25px;
     padding-right: 10px;
-    margin:0;
+    margin: 0;
 }
+
 /* конец после поика*/
