@@ -20,15 +20,14 @@ require('header.php')
                 Зарегистрируйтесь,<br>
                 чтобы иметь больше возможностей</p>
             <!-- Google Api -->
-            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-            <script>
-                function onSignIn(googleUser) {
-                    // Useful data for your client-side scripts:
-                    var profile = googleUser.getBasicProfile();
-                    var id_token = googleUser.getAuthResponse().id_token;
-                    document.location.href = "google_login.php?id=" + profile.getId() + "&email=" + profile.getEmail() + "&name=" + profile.getGivenName() + "&fname=" + profile.getFamilyName();
-                }
-            </script>
+            <div align="center">
+                <a href="google_button.php">
+                    <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                            type="button">
+                        Sign in
+                        <img src="img/seo-and-web.svg" alt="" class="profile-button-settings-image" style="float: left">
+                    </button>
+                </a>
             <!-- Facebook Api -->
             <script>
 
@@ -83,8 +82,12 @@ require('header.php')
 
             </script>
 
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
+                <fb:login-button class="fb-login-button" scope="public_profile,email"
+                                 onlogin="checkLoginState();"
+                                 data-size="large" data-layout="default" data-auto-logout-link="false"
+                                 data-use-continue-as="false"
+                                 data-width="300px">
+                </fb:login-button>
 
             <div id="status">
             </div>
