@@ -9,9 +9,6 @@ html {
     position:relative;
     min-height:100%;
 }
-main {
-    padding-bottom: 1200px;/*Примерно 2 размера footer, чтобы он не наезжал на контент при узком окне браузера*/
-}
 footer {
     position: absolute;
     bottom: -100px;

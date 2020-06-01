@@ -62,11 +62,20 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                 <div class="row">
                     <div class="col"><span class="profile-span-name"><?= $_COOKIE['userName'] ?></span></div>
                     <div class="col" style="float: left">
-                        <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings" type="submit">
-                            Настройки профиля
-                            <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
-                        </button>
-
+                        <div class="row">
+                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                    type="submit">
+                                Настройки профиля
+                                <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                            </button>
+                        </div>
+                        <div class="row">
+                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                    type="submit">
+                                Выйти
+                                <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 10px">
