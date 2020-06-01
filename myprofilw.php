@@ -42,11 +42,23 @@ require('header.php')
                 <div class="row">
                     <div class="col"><span class="profile-span-name">Пахомова Алиса</span></div>
                     <div class="col" style="float: left">
-                        <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings" type="submit">
-                            Настройки профиля
-                            <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
-                        </button>
-
+                        <div class="row">
+                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                    type="submit">
+                                <a href="s">Настройки профиля
+                                    <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                                </a>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                    type="submit">
+                                <a href="exit.php">
+                                    Выйти
+                                    <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                                </a>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 10px">
@@ -125,19 +137,19 @@ require('header.php')
                 </div>
             </div>
             <div class="col">
-                <span class="profile-span-stats"><b><?=$countpost?></b> публикации</span>
+                <span class="profile-span-stats"><b><?= $countpost ?></b> публикации</span>
             </div>
-    </div>
-    <div class="row line profile-description">
-        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
-        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
-        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
-        <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
-            izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
-    </div>
+        </div>
+        <div class="row line profile-description">
+            <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+            <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+            <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+            <p>glhfgjks ghk hjkg kjss jfgdh jgfsdhgsdfhjfsdh g uirexgu uyre uygzwu h g hsdfh gk hszf hg
+                izuwrergh zh gh zshfdkgk s rezgh sgfkj hjsdzhfg hzshfgkhjzsdh fguizsrh h</p>
+        </div>
     </div>
     </div>
     </div>
@@ -155,7 +167,7 @@ require('header.php')
                     <p class="post-image-category" style="    background-color: rgba(0, 0, 0, 0.27);
     color: white;    border-radius: 17px;    width: 60%;    left: 37%;">
                         категория</p>
-                </div>
+                </div>style="font-size:19px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-line-clamp: 1; -webkit-box-orient: vertical;"
                 <div class="col">
                     <div class="row post-date">
                         12 марта 2020
@@ -165,7 +177,7 @@ require('header.php')
                     </div>
                     <div class="row" style="padding: 10px">
                         <p class="post-text">
-                            текст текст текст 
+                            текст текст текст
                         </p>
                     </div>
                     <div class="row post-statistics">
@@ -191,6 +203,7 @@ require('header.php')
                 </div>
             </div>
         </a>
+
         ';
         }
         ?>

@@ -72,8 +72,9 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                         <div class="row">
                             <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
                                     type="submit">
-                                Выйти
-                                <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                                <a href="exit.php">Выйти
+                                    <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                                </a>
                             </button>
                         </div>
                     </div>
