@@ -45,9 +45,11 @@ def callback_inline(call):
 				cursor.execute(query)
 				i=1
 				for row in cursor:
-					strin = str(i) + ") https://whydohow.000webhostapp.com/veiwpost.php?id=" + str(row)[1:len(row) - 3]
+					strin = str(i) + ") https://whydohow.000webhostapp.com/viewpost.php?id=" + str(row)[1:len(row) - 3]
 					bot.send_message(call.message.chat.id, strin)
 					i+=1
+				if i == 1:
+					bot.send_message(call.message.chat.id, "Таких постов пока нет!")
 			#https: // whydohow.000webhostapp.com / post.php?id =
 			bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="Выберите категорию",reply_markup=None)
 
