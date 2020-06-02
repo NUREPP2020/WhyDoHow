@@ -22,7 +22,7 @@
 require('header.php');
 mysqli_report(MYSQLI_REPORT_STRICT);
 try {
-    $db = new mysqli('localhost', 'root', 'root', 'whydohow');
+    $db = new mysqli('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
 } catch (Exception $e) {
     echo "Error:" . $e->getMessage();
 }
@@ -67,19 +67,23 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                     <div class="col"><span class="profile-span-name"><?= $_COOKIE['userName'] ?></span></div>
                     <div class="col" style="float: left">
                         <div class="row">
-                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
-                                    type="submit">
-                                Настройки профиля
-                                <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
-                            </button>
+                            <a href="setting_current.php">
+                                <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                        type="submit">
+                                    Настройки профиля
+                                    <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                                </button>
+                            </a>
                         </div>
                         <div class="row">
-                            <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
-                                    type="submit">
-                                <a href="exit.php">Выйти
+                            <a href="exit.php">
+                                <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
+                                        type="submit">
+                                    Выйти
                                     <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
-                                </a>
-                            </button>
+
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -100,21 +104,23 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                             </div>
                             <div class="modal-body">
                                 <?php
-                                for ($i = 0; $i < 112; $i++) {
-                                    echo '
-                                <a href="otherprofile.php">
-                                    <div class="row"
-                                         style="margin: 2px;">
-                                        <div class="col-2">
-                                            <img src="img/девушка1.jpg" alt="" style="width: 60px"
-                                                 class="rounded-circle">
+                                foreach($leadquery as $user) {
+                                    $query = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user']}'");
+                                    $use = mysqli_fetch_assoc($query);
+                                    echo"
+                                    <a href=\"otherprofile.php?id={$use['id_user']}\">
+                                    <div class=\"row\"
+                                         style=\"margin: 2px;\">
+                                        <div class=\"col-2\">
+                                            <img src=\"img/{$use['image']}\" alt=\"\" style=\"width: 60px\"
+                                                 class=\"rounded-circle\">
                                         </div>
-                                        <div class="col subscriptions-img">
-                                            <span class="subscriptions-text">  подписчики</span>
+                                        <div class=\"col subscriptions-img\">
+                                            <span class=\"subscriptions-text\">  {$use['name']}</span>
                                         </div>
                                     </div>
                                 </a>
-                                ';
+                                    ";
                                 }
                                 ?>
                             </div>
@@ -137,21 +143,23 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                         </div>
                         <div class="modal-body">
                             <?php
-                            for ($i = 0; $i < 112; $i++) {
-                                echo '
-                            <a href="otherprofile.php">
-                                <div class="row"
-                                     style="margin: 2px;">
-                                    <div class="col-2">
-                                        <img src="img/девушка1.jpg" alt="" style="width: 60px"
-                                             class="rounded-circle">
+                            foreach($followquery as $user) {
+                                $query = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user']}'");
+                                $use = mysqli_fetch_assoc($query);
+                                echo"
+                                    <a href=\"otherprofile.php?id={$use['id_user']}\">
+                                    <div class=\"row\"
+                                         style=\"margin: 2px;\">
+                                        <div class=\"col-2\">
+                                            <img src=\"img/{$use['image']}\" alt=\"\" style=\"width: 60px\"
+                                                 class=\"rounded-circle\">
+                                        </div>
+                                        <div class=\"col subscriptions-img\">
+                                            <span class=\"subscriptions-text\">  {$use['name']}</span>
+                                        </div>
                                     </div>
-                                    <div class="col subscriptions-img">
-                                        <span class="subscriptions-text">  подписчики</span>
-                                    </div>
-                                </div>
-                            </a>
-                            ';
+                                </a>
+                                    ";
                             }
                             ?>
                         </div>

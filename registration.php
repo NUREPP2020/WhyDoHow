@@ -86,7 +86,7 @@ require('header.php')
                                  onlogin="checkLoginState();"
                                  data-size="large" data-layout="default" data-auto-logout-link="false"
                                  data-use-continue-as="false"
-                                 data-width="300px">
+                                 data-width="360px">
                 </fb:login-button>
 
             <div id="status">

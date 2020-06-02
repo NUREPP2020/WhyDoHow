@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "id12390796_admin";
 $password = "1234@dminDark";
 $database = "id12390796_whydohow";
-$connect = mysqli_connect("localhost", "id13813325_admin", "1234@dminDark", "id13813325_wdh");
+$connect = mysqli_connect("sql101.epizy.com", "epiz_25115942", "7ldQ3ZxVVk", "epiz_25115942_whydohow");
 if (isset($_POST["insert"])) {
     $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
     $iduser = $_POST['iduser'];
@@ -20,24 +20,18 @@ if (isset($_POST["insert"])) {
     }
 }
 ?>
+<script src="nicEdit.js"></script>
+<script>
+    bkLib.onDomLoaded(function()
+    {
+        new nicEditor().panelInstance('NicEdit');
+        new nicEditor().panelInstance('NicEdit2');
+    });
+</script>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
-    <script>
 
-        bkLib.onDomLoaded(function()
-
-        {
-
-            new nicEditor().panelInstance('NicEdit');
-
-            new nicEditor().panelInstance('NicEdit2');
-
-        });
-
-    </script>
 </head>
 <body>
 <?php

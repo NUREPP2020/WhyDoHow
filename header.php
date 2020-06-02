@@ -31,21 +31,25 @@
         <a class="navbar-brand" href="index.php"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto " style="margin-left: 15%;">
-                <form class="form-inline my-0 my-lg-0 " >
+                <form class="form-inline my-0 my-lg-0 ">
                     <div class="input-group mb-2 mr-sm-2">
                         <div class="input-group-prepend">
-                            <div class="input-group-text form-control-orange searchline-left" ><img src="img/magnifying-glass.png" alt="" style="width: 20px"></div>
+                            <div class="input-group-text form-control-orange searchline-left"><img
+                                        src="img/magnifying-glass.png" alt="" style="width: 20px"></div>
                         </div>
-                        <input type="text" class="form-control form-control-orange searchline-midle" id="inlineFormInputGroupUsername2"
+                        <input type="text" class="form-control form-control-orange searchline-midle"
+                               id="inlineFormInputGroupUsername2"
                                placeholder="Имя пользователя">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary form-control-orange searchline-right" type="button" ><img src="img/next.png" alt="" style="width: 20px"></button>
+                            <button class="btn btn-outline-secondary form-control-orange searchline-right"
+                                    type="button"><img src="img/next.png" alt="" style="width: 20px"></button>
                         </div>
                     </div>
                 </form>
             </ul>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 2px solid #363533; margin-right: 10%;border-radius: 10px;">
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+               style="border: 2px solid #363533; margin-right: 10%;border-radius: 10px;">
                 Категории
             </a>
             <div class="dropdown-menu category-background" aria-labelledby="navbarDropdown">
@@ -72,15 +76,15 @@
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
                             <p style="bottom: -11px;">myprofile</p>
                         </div>
-                    </a><a href="#">
+                    </a><a href="createstream.php">
+                    <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
+                        <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                        <p style="bottom: -11px;">создние стрима</p>
+                    </div>
+                    </a><a href="createpost.php">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
-                        </div>
-                    </a><a href="#">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
+                            <p style="bottom: -11px;">создание поста</p>
                         </div>
                     </a><a href="#">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
@@ -181,9 +185,10 @@
                 <div align="center">
                     <a href="google_button.php">
                         <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
-                                type="submit">
-                            Выйти
-                            <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                                type="button">
+                            Sign in
+                            <img src="img/seo-and-web.svg" alt="" class="profile-button-settings-image"
+                                 style="float: left">
                         </button>
                     </a>
                     <!-- Facebook Api -->
@@ -237,7 +242,6 @@
                                     'Thanks for logging in, ' + response.name + '! <a href=facebook_login.php?name=' + response.name.replace(" ", "_") + '&email=' + response.email + '</a>';
                             });
                         }
-
                     </script>
                     <div id="fb-root"></div>
                     <script async defer crossorigin="anonymous"
