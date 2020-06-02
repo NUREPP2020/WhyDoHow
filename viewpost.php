@@ -61,10 +61,12 @@ require('header.php')
         <div class="id_post"><p align="center">'.$post['id_post'].'</p></div>
         <div class="category1"><h2 class="cattext" align="center">'.$post['id_category'].'</h2></div>
         <div class="namepost"><h1 class="napo" align="center">'.$post['header'].'</h1></div>
+        <a href="otherprofile.php?id='.$hozainposta['id_user'].'">
         <div class="authorp">
             <div class="avtar"><img src="img/'.$hozainposta['image'].'" class="avt"></div>
             <div class="autname"><h3 class="avttext">'.$hozainposta['name'].' </h3></div>
         </div>
+        </a>
         <div class="datap"><h5 class="dataptext">'.$post['date'].'</h5></div>
         <div class="infopo">
             <span style="font-size: 65px; color: white;" class="likepo"><i class="fas fa-heart"></i>
@@ -132,7 +134,9 @@ require('header.php')
                 if(isset($_COOKIE['userId']))
                 {
                     echo '
-                    <form action="" method="post" enctype="multipart/form-data" style="margin-bottom: 5%">
+                    <form action="add_comment.php" method="post" enctype="multipart/form-data" style="margin-bottom: 5%">
+                    <input name="post" type="hidden" value="'.$postn.'">
+                    <input name="user" type="hidden" value="'.$_COOKIE['userId'].'">
                     <div class="row">
                         <div class="col" style="padding: 0 0 0 5%; max-width: 200px">
                             <img src="img/'.$_COOKIE['userImage'].'" alt="ава" class="rounded-circle profile-image-avatar"
@@ -143,7 +147,7 @@ require('header.php')
                               style="float: left; color: #FEC541; padding: 10px 20px 10px 20px; vertical-align: middle">'.$_COOKIE['userName'].'</span>
                         </div>
                     </div>
-                    <textarea type="text" class="form-control" name="textarea" placeholder="Оставте коментарий"
+                    <textarea type="text" class="form-control" name="text" placeholder="Оставте коментарий"
                               style="height: 300px;max-width:80%;max-height: 350px; margin: 2% 10% 0 10% "></textarea><br>
                     <button class="btn btn-success" type="submit"
                             style="color: #FEC541; background-color: #363533; float: right; margin-right: 10%">
