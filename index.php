@@ -27,7 +27,7 @@ require('header.php')
       <?php
       /* Attempt MySQL server connection. Assuming you are running MySQL
       server with default setting (user 'root' with no password) */
-      $link = mysqli_connect("'95.216.155.184', 'whydohow', 'Admin', 'whydohowdb'");
+      $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
 
       // Check connection
       if($link === false){
@@ -38,6 +38,7 @@ require('header.php')
       $sql = "SELECT * FROM post ORDER BY view_count DESC";
       if($result = mysqli_query($link, $sql)){
           if(mysqli_num_rows($result) > 0){
+              $i = 0;
             while($rows = mysqli_fetch_array($result))
             {
                 if ($i == 0){
