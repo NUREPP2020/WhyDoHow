@@ -16,18 +16,13 @@ def welcome(message):
 
 	# keyboard сюда категории из таблички
 	connection = pymysql.connect(
-		#mysqli_connect("sql101.epizy.com", "epiz_25115942", "7ldQ3ZxVVk", "epiz_25115942_whydohow");
-		#host="sql101.epizy.com",
-		#user="epiz_25115942",
-		#password="7ldQ3ZxVVk",
-		#db="epiz_25115942_whydohow"
-		host='localhost',
-		user='root',
-		password='root',
-		db='whydohow'
+		host='95.216.155.184',
+		user="whydohow",
+		password="Admin",
+		db="whydohowdb"
 	)
 	with connection.cursor() as cursor:
-		query = "SELECT `name` FROM `category`"
+		query = "SELECT `id_category` FROM `category`"
 		cursor.execute(query)
 		for row in cursor:
 			strin = str(row)[2:len(row) - 4]
@@ -39,17 +34,22 @@ def welcome(message):
 def callback_inline(call):
 	try:
 		if call.message:
-			# 	with connection.cursor() as cursor:
-			# 		query = "SELECT `id_post` FROM `post` WHERE `id_post` = '" + call.data + "' ORDER BY popularity LIMIT 10"
-			# 		cursor.execute(query)
-			#       i = 1
-			# 		for row in cursor:
-			#           if i < 11:
-			#
-			# 			     bot.send_message(call.message.chat.id, i+") " + "http://...../post.php?id=" + int(row)
-			#
+			connection = pymysql.connect(
+				host='95.216.155.184',
+				user="whydohow",
+				password="Admin",
+				db="whydohowdb"
+			)
+			with connection.cursor() as cursor:
+				query = "SELECT `id_post` FROM `post` WHERE `id_category` = '" + call.data + "' ORDER BY popularity DESC LIMIT 10"
+				cursor.execute(query)
+				i=1
+				for row in cursor:
+					strin = str(i) + ") https://whydohow.000webhostapp.com/veiwpost.php?id=" + str(row)[1:len(row) - 3]
+					bot.send_message(call.message.chat.id, strin)
+					i+=1
+			#https: // whydohow.000webhostapp.com / post.php?id =
 			bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="Выберите категорию",reply_markup=None)
-			bot.send_message(call.message.chat.id, 'Отличный выбор! ' + call.data)
 
 	except Exception as e:
 		print(repr(e))
