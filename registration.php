@@ -76,7 +76,7 @@ require('header.php')
                     FB.api('/me', function(response) {
                         console.log('Successful login for: ' + response.name);
                         document.getElementById('status').innerHTML =
-                            'Thanks for logging in, ' + response.name + '! <a href=facebook_login.php?name=' + response.name.replace(" ","_") + '&email=' + response.email + '</a>';
+                            'Thanks for logging in, ' + '! <a href=facebook_login.php?name=' + response.name.replace(" ","_") + '&email=' + response.id + '>Войди через фейсбук</a>';
                     });
                 }
 

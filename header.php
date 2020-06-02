@@ -181,9 +181,10 @@
                 <div align="center">
                     <a href="google_button.php">
                         <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings"
-                                type="submit">
-                            Выйти
-                            <img src="img/девушка1.jpg" alt="" class="profile-button-settings-image">
+                                type="button">
+                            Sign in
+                            <img src="img/seo-and-web.svg" alt="" class="profile-button-settings-image"
+                                 style="float: left">
                         </button>
                     </a>
                     <!-- Facebook Api -->
@@ -234,7 +235,7 @@
                             FB.api('/me', function (response) {
                                 console.log('Successful login for: ' + response.name);
                                 document.getElementById('status').innerHTML =
-                                    'Thanks for logging in, ' + '! <a href=facebook_login.php?name=' + response.name.replace(" ", "_") + '&email=' + response.email + '>' + response.name + '</a>';
+                                    'Thanks for logging in, ' + '! <a href=facebook_login.php?name=' + response.name.replace(" ","_") + '&email=' + response.id + '>Войди через фейсбук</a>';
                             });
                         }
 
