@@ -60,7 +60,7 @@ require('header.php')
               </a>
             <span style="left: 30%" class="post-top-image-stats-size post-top-image-big-bottom-icon-y">
                   <img src="img/heart.png" alt="" class="post-top-image-big-bottom-icon">
-                  1231
+                 ' . $rows['like_count'] . '
                   <img src="img/comment.png" alt="" class="post-top-image-big-bottom-icon">
                   1231
               </span>';
@@ -79,7 +79,7 @@ require('header.php')
                       </span>
                     <span style="left: 60%" class="post-top-image-stats-size post-top-image-small-bottom-icon-y1">
                           <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
-                  1235
+                 ' . $rows['like_count'] . '
                   <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
                   1235
               </span>
@@ -101,7 +101,7 @@ require('header.php')
                       </span>
                     <span style="left: 60%" class="post-top-image-stats-size post-top-image-small-bottom-icon-y2">
                           <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
-                          1237
+                          ' . $rows['like_count'] . '
                           <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
                           1237
                       </span>
@@ -139,13 +139,17 @@ require('header.php')
                     echo '<div class="row " style="padding: 0">';
                     echo '<img src="img/heart.png" alt="" class="post-statistics-image">';
                     echo '</div>';
-                    echo '<div class="row post-statistics-values">123</div>';
+                    echo '<div class="row post-statistics-values">';
+                    echo    $rows['like_count'];
+                    echo'</div>';
                     echo '</div>';
                     echo '<div class="col post-statistics-comment" style="">';
                     echo '<div class="row" style="padding: 0">';
                     echo '<img src="img/comment.png" alt="" class="post-statistics-image">';
                     echo '</div>';
-                    echo '<div class="row post-statistics-values">123</div>';
+                    echo '<div class="row post-statistics-values">';
+                    echo    $countcomments['Lol'];
+                    echo '</div>';
                     echo '</div>';
                     echo '<div class="col post-statistics-views" style="">';
                     echo '<div class="row" style="padding: 0">';
