@@ -114,7 +114,7 @@ else
                                     $query2 = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user_follow']}'");
                                     $use = mysqli_fetch_assoc($query2);
                                     echo"
-                                    <a href=\"otherprofile.php?id={$use['id_user']}\">
+                                    <a href=\"current_profile.php?id={$use['id_user']}\">
                                     <div class=\"row\"
                                          style=\"margin: 2px;\">
                                         <div class=\"col-2\">
@@ -155,7 +155,7 @@ else
                                 $query2 = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user_lead']}'");
                                 $use = mysqli_fetch_assoc($query2);
                                 echo"
-                                    <a href=\"otherprofile.php?id={$use['id_user']}\">
+                                    <a href=\"current_profile.php?id={$use['id_user']}\">
                                     <div class=\"row\"
                                          style=\"margin: 2px;\">
                                         <div class=\"col-2\">
@@ -199,6 +199,8 @@ else
         echo "
         <!--мелкие постыы-->
 <div class=\"centerDivs\">";
+
+
         $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
         if ($link === false) {
             die("ERROR: Could not connect. " . mysqli_connect_error());

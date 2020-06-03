@@ -185,6 +185,9 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
     <hr>
     <!--мелкие постыы-->
     <div class="centerDivs">
+
+
+
         <?php
         $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
         if($link === false){
@@ -260,7 +263,7 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
         mysqli_close($link);
         ?>
 
-
+    </div>
 </main>
 <?php
 require('footer.php');

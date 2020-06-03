@@ -61,7 +61,7 @@ require('header.php')
         <div class="id_post"><p align="center">'.$post['id_post'].'</p></div>
         <div class="category1"><h2 class="cattext" align="center">'.$post['id_category'].'</h2></div>
         <div class="namepost"><h1 class="napo" align="center">'.$post['header'].'</h1></div>
-        <a href="otherprofile.php?id='.$hozainposta['id_user'].'">
+        <a href="current_profile.php?id='.$hozainposta['id_user'].'">
         <div class="authorp">
             <div class="avtar"><img src="img/'.$hozainposta['image'].'" class="avt"></div>
             <div class="autname"><h3 class="avttext">'.$hozainposta['name'].' </h3></div>
@@ -178,7 +178,7 @@ require('header.php')
                     </div>
                     <div class="media-left">
                         <!-- сюда ссылку на профиль чела -->
-                        <a href="otherprofile.php?id='.$user_comment['id_user'].'">
+                        <a href="current_profile.php?id='.$user_comment['id_user'].'">
                             <img class="media-object img-circle" src="img/'.$user_comment['image'].'" alt="...">
                         </a>
                     </div>
