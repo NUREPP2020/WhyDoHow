@@ -24,36 +24,33 @@ $userId = $_GET['id'];
 
 mysqli_report(MYSQLI_REPORT_STRICT);
 try {
-    $db = new mysqli('localhost', 'root', 'root', 'whydohow');
+    $db = new mysqli('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
 } catch (Exception $e) {
     echo "Error:" . $e->getMessage();
 }
-$query = $db->query("SELECT * FROM `subscribes` WHERE `id_user_lead`= '$userId' GROUP BY `id_user_lead`,`id_user_follow`");
-$leadquery = mysqli_fetch_assoc($query);
-$lead = count($leadquery);
-$query = $db->query("SELECT * FROM `subscribes` WHERE `id_user_follow`= '$userId' GROUP BY `id_user_lead`,`id_user_follow`");
-$followquery = mysqli_fetch_assoc($query);
-$follow = count($followquery);
+$query = $db->query("SELECT COUNT(*) AS `lol` FROM `subscribes` WHERE `id_user_lead`= '$userId' GROUP BY `id_user_lead`,`id_user_follow`");
+$lead = count(mysqli_fetch_assoc($query));
+$query = $db->query("SELECT COUNT(*) AS `lol` FROM `subscribes` WHERE `id_user_follow`= '$userId' GROUP BY `id_user_lead`,`id_user_follow`");
+$follow = count(mysqli_fetch_assoc($query));
 $query = $db->query("SELECT * FROM `post` WHERE `id_user`= '$userId'");
-$countquery = mysqli_fetch_assoc($query);
-$countpost = count($countquery);
+$countpost = count(mysqli_fetch_assoc($query))/3;
 $query = $db->query("SELECT * FROM `user` WHERE `id_user`= '$userId'");
 $user = mysqli_fetch_assoc($query);
-$description = filter_var(trim($description['description']), FILTER_SANITIZE_STRING);
-$name = filter_var(trim($description['name']), FILTER_SANITIZE_STRING);
-$Image = filter_var(trim($description['image']), FILTER_SANITIZE_STRING);
-$role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
+$description = filter_var(trim($user['description']), FILTER_SANITIZE_STRING);
+$name = filter_var(trim($user['name']), FILTER_SANITIZE_STRING);
+$Image = filter_var(trim($user['image']), FILTER_SANITIZE_STRING);
+$role = filter_var(trim($user['id_role']), FILTER_SANITIZE_NUMBER_INT);
 ?>
 <main class="main-block">
     <div class="centerDivs profile-header">
         <div class="row" style="border-color: #363533">
             <div class="col-3">
-                <div class="col"><img src="img/девушка1.jpg" alt="ава" class="rounded-circle profile-image-avatar">
+                <div class="col"><img src="img/<?=$Image?>" alt="ава" class="rounded-circle profile-image-avatar">
                 </div>
             </div>
             <div class="col-7">
                 <div class="row">
-                    <div class="col"><span class="profile-span-name">Пахомова Алиса</span></div>
+                    <div class="col"><span class="profile-span-name"><?=$name?></span></div>
                     <div class="col" style="float: left">
                         <button class="btn  btn-my-dark-color btn-my-dark-size profile-button-settings" type="submit">
                             Подписаться/отписаться
@@ -64,7 +61,7 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                 <div class="row" style="margin-top: 10px">
                     <!-- Button trigger modal -->
                     <div class="col" data-toggle="modal" data-target="#modalSubscribers"
-                    "><span class="profile-span-stats"><b>1234</b> подписчики</span></div>
+                    "><span class="profile-span-stats"><b><?= $lead ?></b> подписчики</span></div>
                 <!-- Modal -->
                 <div class="modal fade" id="modalSubscribers" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -78,21 +75,29 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             <div class="modal-body">
                                 <?php
-                                for ($i = 0; $i < 112; $i++) {
-                                    echo '
-                                <a href="otherprofile.php">
-                                    <div class="row"
-                                         style="margin: 2px;">
-                                        <div class="col-2">
-                                            <img src="img/девушка1.jpg" alt="" style="width: 60px"
-                                                 class="rounded-circle">
+                                $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
+                                $sql ="SELECT  `id_user_follow` FROM `subscribes` WHERE `id_user_lead`= `$userId`";
+                                var_dump(mysqli_query($link, $sql));
+                                if ($result = mysqli_query($link, $sql)) {
+                                    var_dump(mysqli_num_rows($result));
+                                    if (mysqli_num_rows($result) > 0) {
+                                        var_dump(mysqli_fetch_array($query));
+                                        while ($use = mysqli_fetch_array($query))
+                                            echo "
+                                    <a href=\"otherprofile.php?id={$use['id_user']}\">
+                                    <div class=\"row\"
+                                         style=\"margin: 2px;\">
+                                        <div class=\"col-2\">
+                                            <img src=\"img/{$use['image']}\" alt=\"\" style=\"width: 60px\"
+                                                 class=\"rounded-circle\">
                                         </div>
-                                        <div class="col subscriptions-img">
-                                            <span class="subscriptions-text">  подписчики</span>
+                                        <div class=\"col subscriptions-img\">
+                                            <span class=\"subscriptions-text\">{$use['name']}</span>
                                         </div>
                                     </div>
                                 </a>
-                                ';
+                                    ";
+                                    }
                                 }
                                 ?>
                             </div>
@@ -101,7 +106,7 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                 </div>
                 <!-- Button trigger modal -->
                 <div class="col" data-toggle="modal" data-target="#modalSubscriptions"
-                "><span class="profile-span-stats"><b>1234</b>подписки</span></div>
+                "><span class="profile-span-stats"><b><?= $follow ?></b> подписки</span></div>
             <!-- Modal -->
             <div class="modal fade" id="modalSubscriptions" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -115,21 +120,26 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
                         </div>
                         <div class="modal-body">
                             <?php
-                            for ($i = 0; $i < 112; $i++) {
-                                echo '
-                            <a href="otherprofile.php">
-                                <div class="row"
-                                     style="margin: 2px;">
-                                    <div class="col-2">
-                                        <img src="img/девушка1.jpg" alt="" style="width: 60px"
-                                             class="rounded-circle">
+                            $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
+                            $sql = $db->query("SELECT * FROM `subscribes` WHERE `id_user_follow`= '$userId' GROUP BY `id_user_lead`,`id_user_follow`");
+                            if ($result = mysqli_query($link, $sql)) {
+                                if (mysqli_num_rows($result) > 0) {
+                                    while ($use = mysqli_fetch_array($query))
+                                        echo "
+                                    <a href=\"otherprofile.php?id={$use['id_user']}\">
+                                    <div class=\"row\"
+                                         style=\"margin: 2px;\">
+                                        <div class=\"col-2\">
+                                            <img src=\"img/{$use['image']}\" alt=\"\" style=\"width: 60px\"
+                                                 class=\"rounded-circle\">
+                                        </div>
+                                        <div class=\"col subscriptions-img\">
+                                            <span class=\"subscriptions-text\">  {$use['name']}</span>
+                                        </div>
                                     </div>
-                                    <div class="col subscriptions-img">
-                                        <span class="subscriptions-text">  подписчики</span>
-                                    </div>
-                                </div>
-                            </a>
-                            ';
+                                </a>
+                                    ";
+                                }
                             }
                             ?>
                         </div>
@@ -159,71 +169,75 @@ $role = filter_var(trim($description['id_role']), FILTER_SANITIZE_NUMBER_INT);
         ";
     } else {
         echo "
-<!--мелкие постыы-->
+        <!--мелкие постыы-->
 <div class=\"centerDivs\">";
-
-        #заменить на реальные ссылки на страницы с фоточками и текстом
-        $query = $db->query("SELECT * FROM `post` WHERE `id_user`= '{$userId}'");
-        $posts = mysqli_fetch_assoc($query);
-
-        foreach ($posts as $post) {
-            $query = $db->query("SELECT * FROM `category` WHERE `id_category`= '{$post['id_category']}'");
-            $category = mysqli_fetch_assoc($query);
-            $category = filter_var(trim($category['name']), FILTER_SANITIZE_STRING);
-
-            $query = $db->query("SELECT * FROM `liked` WHERE `id_post`= '{$post['id_post']}'");
-            $countlike = mysqli_fetch_assoc($query);
-            $like = count($countlike);
-
-            $query = $db->query("SELECT * FROM `comment` WHERE `id_post`= '{$post['id_post']}'");
-            $countcomment = mysqli_fetch_assoc($query);
-            $comment = count($countcomment);
-
-            echo "
-        <a href=\"post.php?id={$post['id']}\">
-            <div class=\"item post\">
-                <div class=\"h-100 d-inline-block img-wrap post-for-image\">
-                    <img src=\"img/девушка1.jpg\" alt=\"категория\" class=\"post-image\">
-                    <p class=\"post-image-category\" style=\"    background-color: rgba(0, 0, 0, 0.27);color: white;border-radius: 17px width: 60%;left: 37%;\">
-                        $category</p>
-                </div>
-                <div class=\"col\">
-                    <div class=\"row post-date\">
-                        {$post['date']}
-                    </div>
-                    <div class=\"row post-header\">
-                        <b>{$post['header']}</b>
-                    </div>
-                    <div class=\"row\" style=\"padding: 10px\">
-                        <p class=\"post-text\">
-                            {$post['preview']}
-                        </p>
-                    </div>
-                    <div class=\"row post-statistics\">
-                        <div class=\"col post-statistics-like\">
-                            <div class=\"row post-statistics \">
-                                <img src=\"img/heart.png\" alt=\"\" class=\"post-statistics-image\">
-                            </div>
-                            <div class=\"row post-statistics-values\">$like</div>
-                        </div>
-                        <div class=\"col post-statistics-comment\" style=\"\">
-                            <div class=\"row\" style=\"padding: 0\">
-                                <img src=\"img/comment.png\" alt=\"\" class=\"post-statistics-image\">
-                            </div>
-                            <div class=\"row post-statistics-values\">$comment</div>
-                        </div>
-                        <div class=\"col post-statistics-views\" style=\"\">
-                            <div class=\"row\" style=\"padding: 0\">
-                                <img src=\"img/eye.png\" alt=\"\" class=\"post-statistics-image\">
-                            </div>
-                            <div class=\"row post-statistics-values\">{$post['view_count']}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        ";
+        $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
+        if ($link === false) {
+            die("ERROR: Could not connect. " . mysqli_connect_error());
         }
+        $sql = "SELECT * FROM `post` WHERE `id_user`= '$userId'";
+        if ($result = mysqli_query($link, $sql)) {
+            if (mysqli_num_rows($result) > 0) {
+                while ($rows = mysqli_fetch_array($result)) {
+                    echo '<a  href="viewpost.php?id=' . $rows['id_post'] . '">';
+
+                    echo '<div class="item post">';
+                    echo '<div class="h-100 d-inline-block img-wrap post-for-image">';
+                    echo '  <img src="data:image/jpeg;base64,' . base64_encode($rows['preview']) . '" alt="категория" class="post-image">';
+                    echo '  <p class="post-image-category" style="background-color: rgba(0, 0, 0, 0.27); color:white;    border-radius: 17px;width: 60%;left: 37%;">';
+                    echo $rows['id_category'];
+                    echo '</p>';
+                    echo '</div>';
+                    echo '<div class="col">';
+                    echo '<div class="row post-date">';
+                    echo $rows['date'];
+                    echo '</div>';
+                    echo '<div class="post-header" style="font-size:19px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-line-clamp: 1; -webkit-box-orient: vertical;">';
+                    echo '<b>';
+                    echo $rows['header'];
+                    echo '</b>';
+                    echo '</div>';
+                    echo '<div class="row" style="padding: 10px">';
+                    echo '<p class="post-text">';
+                    echo strip_tags($rows['text']);
+                    echo '</p>';
+                    echo '</div>';
+                    echo '  <div class="row post-statistics">';
+                    echo '<div class="col post-statistics-like">';
+                    echo '<div class="row " style="padding: 0">';
+                    echo '<img src="img/heart.png" alt="" class="post-statistics-image">';
+                    echo '</div>';
+                    echo '<div class="row post-statistics-values">123</div>';
+                    echo '</div>';
+                    echo '<div class="col post-statistics-comment">';
+                    echo '<div class="row" style="padding: 0">';
+                    echo '<img src="img/comment.png" alt="" class="post-statistics-image">';
+                    echo '</div>';
+                    echo '<div class="row post-statistics-values">123</div>';
+                    echo '</div>';
+                    echo '<div class="col post-statistics-views">';
+                    echo '<div class="row" style="padding: 0">';
+                    echo '<img src="img/eye.png" alt="" class="post-statistics-image">';
+                    echo '</div>';
+                    echo '<div class="row post-statistics-values"> ';
+                    echo $rows['view_count'];
+                    echo ' </div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+
+                    echo '</a>';
+                }
+                mysqli_free_result($result);
+            } else {
+                echo "No records matching your query were found.";
+            }
+        } else {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+        // Close connection
+        mysqli_close($link);
     }
     ?>
 
