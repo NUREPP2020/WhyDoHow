@@ -66,6 +66,12 @@ require('header.php')
                     <select class="custom-select" required class="input" name="idcategory" type="text" value="">
                         <option class="input" name="idcategory" type="text" value='Кулинария'>Кулинария</option>
                         <option class="input" name="idcategory" type="text" value='Спорт'>Спорт</option>
+                        <option class="input" name="idcategory" type="text" value='Фильмы'>Фильмы</option>
+                        <option class="input" name="idcategory" type="text" value='Путишествия'>Путишествия</option>
+                        <option class="input" name="idcategory" type="text" value='Игры'>Игры</option>
+                        <option class="input" name="idcategory" type="text" value='Мода'>Мода</option>
+                        <option class="input" name="idcategory" type="text" value='Наука'>Наука</option>
+                        <option class="input" name="idcategory" type="text" value='Транспорт'>Транспорт</option>
                     </select>
                 </div>
             </div>

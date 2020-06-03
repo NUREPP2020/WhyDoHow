@@ -18,10 +18,10 @@
 </head>
 <body>
 <?php
-require('header.php')
+require('header.php');
+$search = $_POST['search'];
 ?>
 <main class="main-block">
-
     <div class="centerDivs">
         <div class="bar_search">
     <button class="butsearc"><i class="fas fa-sort-down"></i>По популярности</button>
@@ -30,80 +30,87 @@ require('header.php')
     <button class="butsearc" ><i class="fas fa-sort-down"></i>По просмотрам</button>
 </div>
         <?php
-      /* Attempt MySQL server connection. Assuming you are running MySQL
-      server with default setting (user 'root' with no password) */
-      $link = mysqli_connect("localhost", "root", "root", "whydohow");
+        /* Attempt MySQL server connection. Assuming you are running MySQL
+        server with default setting (user 'root' with no password) */
+        $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
+        // Check connection
+        if ($link === false) {
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+        // Attempt select query execution
+        $sql = "SELECT * FROM post WHERE `header` LIKE '%$search%' ORDER BY popularity DESC";
+        if ($result = mysqli_query($link, $sql)) {
+            if (mysqli_num_rows($result) > 0) {
+                while ($rows = mysqli_fetch_array($result)) {
+                    $sql1 = "SELECT COUNT(*) AS CountCom FROM `comment` WHERE `id_post`= '{$rows['id_post']}'";
+                    $result1 = mysqli_query($link, $sql1);
+                    $r = mysqli_fetch_array($result1);
+                    $sql1 = "SELECT COUNT(*) AS CountCom FROM `comment` WHERE `id_post`= '{$rows['id_post']}'";
+                    $result1 = mysqli_query($link, $sql1);
+                    $r = mysqli_fetch_array($result1);
+                    echo '<a  href="viewpost.php?id=' . $rows['id_post'] . '">';
 
-      // Check connection
-      if($link === false){
-          die("ERROR: Could not connect. " . mysqli_connect_error());
-      }
-
-      // Attempt select query execution
-      $sql = "SELECT * FROM post ORDER BY id_post DESC";
-      if($result = mysqli_query($link, $sql)){
-          if(mysqli_num_rows($result) > 0){
-            while($rows = mysqli_fetch_array($result))
-            {
-            echo '<a  href="viewpost.php?id='.$rows['id_post'].'">';
-        echo '<div class="item post">';
-            echo '<div class="h-100 d-inline-block img-wrap post-for-image">';
-              echo '  <img src="data:image/jpeg;base64,'.base64_encode($rows['preview'] ).'" alt="категория" class="post-image">';
-              echo '  <p class="post-image-category" style="background-color: rgba(0, 0, 0, 0.27); color:black;    border-radius: 17px;width: 60%;left: 37%;">';
-                echo $rows['id_category'];
-              echo '</p>';
-            echo '</div>';
-            echo '<div class="col">';
-                echo '<div class="row post-date">';
+                    echo '<div class="item post">';
+                    echo '<div class="h-100 d-inline-block img-wrap post-for-image">';
+                    echo '  <img src="data:image/jpeg;base64,' . base64_encode($rows['preview']) . '" alt="категория" class="post-image">';
+                    echo '  <p class="post-image-category" style="background-color: rgba(0, 0, 0, 0.27); color:white;    border-radius: 17px;width: 60%;left: 37%;">';
+                    echo $rows['id_category'];
+                    echo '</p>';
+                    echo '</div>';
+                    echo '<div class="col">';
+                    echo '<div class="row post-date">';
                     echo $rows['date'];
-                echo '</div>';
-                echo '<div class="post-header" style="font-size:19px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-line-clamp: 1; -webkit-box-orient: vertical;">';
+                    echo '</div>';
+                    echo '<div class="post-header" style="font-size:19px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-line-clamp: 1; -webkit-box-orient: vertical;">';
                     echo '<b>';
-                    echo $rows['heder'];
+                    echo $rows['header'];
                     echo '</b>';
-                echo '</div>';
-                echo '<div class="row" style="padding: 10px">';
+                    echo '</div>';
+                    echo '<div class="row" style="padding: 10px">';
                     echo '<p class="post-text">';
                     echo strip_tags($rows['text']);
                     echo '</p>';
-                echo '</div>';
-              echo '  <div class="row post-statistics">';
+                    echo '</div>';
+                    echo '  <div class="row post-statistics">';
                     echo '<div class="col post-statistics-like">';
-                        echo '<div class="row post-statistics ">';
-                            echo '<img src="img/heart.png" alt="" class="post-statistics-image">';
-                        echo '</div>';
-                        echo '<div class="row post-statistics-values">123</div>';
+                    echo '<div class="row " style="padding: 0">';
+                    echo '<img src="img/heart.png" alt="" class="post-statistics-image">';
+                    echo '</div>';
+                    echo '<div class="row post-statistics-values">';
+                    echo    $rows['like_count'];
+                    echo'</div>';
                     echo '</div>';
                     echo '<div class="col post-statistics-comment" style="">';
-                        echo '<div class="row" style="padding: 0">';
-                            echo '<img src="img/comment.png" alt="" class="post-statistics-image">';
-                        echo '</div>';
-                        echo '<div class="row post-statistics-values">123</div>';
+                    echo '<div class="row" style="padding: 0">';
+                    echo '<img src="img/comment.png" alt="" class="post-statistics-image">';
+                    echo '</div>';
+                    echo '<div class="row post-statistics-values">';
+                    echo  $r['CountCom'];
+                    echo '</div>';
                     echo '</div>';
                     echo '<div class="col post-statistics-views" style="">';
-                        echo '<div class="row" style="padding: 0">';
-                            echo '<img src="img/eye.png" alt="" class="post-statistics-image">';
-                        echo '</div>';
-                        echo '<div class="row post-statistics-values"> ';
-                              echo  $rows['view_count'];
-                              echo ' </div>';
+                    echo '<div class="row" style="padding: 0">';
+                    echo '<img src="img/eye.png" alt="" class="post-statistics-image">';
                     echo '</div>';
-                echo '</div>';
-            echo '</div>';
-        echo '</div>';
-
-    echo '</a>';
+                    echo '<div class="row post-statistics-values"> ';
+                    echo $rows['view_count'];
+                    echo ' </div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</a>';
+                }
+                mysqli_free_result($result);
+            } else {
+                echo "Постов в данной категории еще нет.";
             }
-              mysqli_free_result($result);
-          } else{
-              echo "No records matching your query were found.";
-          }
-      } else{
-          echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-      }
-      // Close connection
-      mysqli_close($link);
-      ?>
+        } else {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+        // Close connection
+        mysqli_close($link);
+        ?>
 
 
 </main>

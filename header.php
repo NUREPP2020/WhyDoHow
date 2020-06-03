@@ -31,18 +31,18 @@
         <a class="navbar-brand" href="index.php"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto " style="margin-left: 15%;">
-                <form class="form-inline my-0 my-lg-0 ">
+                <form class="form-inline my-0 my-lg-0 " method="post" action="search.php">
                     <div class="input-group mb-2 mr-sm-2">
                         <div class="input-group-prepend">
                             <div class="input-group-text form-control-orange searchline-left"><img
                                         src="img/magnifying-glass.png" alt="" style="width: 20px"></div>
                         </div>
                         <input type="text" class="form-control form-control-orange searchline-midle"
-                               id="inlineFormInputGroupUsername2"
-                               placeholder="Имя пользователя">
+                               id="search" name="search"
+                               placeholder="найти что нибудь">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary form-control-orange searchline-right"
-                                    type="button"><img src="img/next.png" alt="" style="width: 20px"></button>
+                                    type="submit"><img src="img/next.png" alt="" style="width: 20px"></button>
                         </div>
                     </div>
                 </form>
@@ -56,15 +56,51 @@
                 <div class="centerDivs">
                     <!--категории-->
                     <a href="categories.php?id_category=Кулинария">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 27px">
+                            <img src="img/chef.png" alt="категория" class="category-img">
                             <p style="bottom: -11px;">Кулинария</p>
                         </div>
                     </a>
                     <a href="categories.php?id_category=Спорт">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 27px">
+                            <img src="img/winner.png" alt="категория" class="category-img">
                             <p style="bottom: -11px;">Спорт</p>
+                        </div>
+                    </a>
+                    <a href="categories.php?id_category=Фильмы">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 28px">
+                            <img src="img/cinema.png" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">Фильмы</p>
+                        </div>
+                    </a>
+                    <a href="categories.php?id_category=Путишествия">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 28px">
+                            <img src="img/travel.png" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">Путишествия</p>
+                        </div>
+                    </a>
+                    <a href="categories.php?id_category=Игры">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 28px">
+                            <img src="img/joystick.png" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">Игры</p>
+                        </div>
+                    </a>
+                    <a href="categories.php?id_category=Мода">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 28px">
+                            <img src="img/smart.png" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">Мода</p>
+                        </div>
+                    </a>
+                    <a href="categories.php?id_category=Наука">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 28px">
+                            <img src="img/science.png" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">Наука</p>
+                        </div>
+                    </a>
+                    <a href="categories.php?id_category=Транспорт">
+                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto; background:  rgba(254,197,65); padding-bottom: 28px">
+                            <img src="img/tire.png" alt="категория" class="category-img">
+                            <p style="bottom: -11px;">Транспорт</p>
                         </div>
                     </a>
                 </div>

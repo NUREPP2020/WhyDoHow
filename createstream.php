@@ -3,42 +3,47 @@ $servername = "localhost";
 $username = "id12390796_admin";
 $password = "1234@dminDark";
 $database = "id12390796_whydohow";
-$connect = mysqli_connect("localhost", "root", "root", "whydohow");
+$connect = mysqli_connect("95.216.155.184", "whydohow", "Admin", "whydohowdb");
 if (isset($_POST["insert"])) {
     $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-    $iduser = $_POST['iduser'];
     $header = $_POST['header'];
     $idcategory = $_POST['idcategory'];
-    $idsubcategory = $_POST['idsubcategory'];
     $privat = $_POST['privat'];
-    $linck = $_POST['linck'];
     $text = $_POST['text'];
-    $view_count = $_POST['view_count'];
-    $date = $_POST['date'];
-    $query = "INSERT INTO stream(id_user, preview, heder, id_category, id_subcategory, privat, linck, text, view_count, date) VALUES ('$iduser','$file','$header', '$idcategory', '$idsubcategory', '$privat','$linck', '$text', '$view_count', '$date')";
+    $today = date("Ymd");
+    $linck = $_POST['linck'];
+    $query = "INSERT INTO stream(id_user, preview, heder, id_category, privat, linck, text, view_count, date) VALUES ('{$_COOKIE['userId']}','$file','$header', '$idcategory', '$privat','$linck', '$text', 0,'$today')";
     if (mysqli_query($connect, $query)) {
         echo '<script>alert("Image Inserted into Database")</script>';
     }
-}
+    else{
+        echo $today;
+        echo "ERROR: Could not able to execute $query. " . mysqli_error($connect);
+    }
+}//                   id_post, id_user, preview, header, id_category, privat, text, last_view_date, view_count, like_count, date, popularity
 ?>
 <!DOCTYPE html>
 <html>
+<html lang="ru">
+
 <head>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
-  <script>
+    <meta charset="utf-8">
 
-bkLib.onDomLoaded(function()
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
+    <script>
 
-{
+        bkLib.onDomLoaded(function()
 
-new nicEditor().panelInstance('NicEdit');
+        {
 
-new nicEditor().panelInstance('NicEdit2');
+            new nicEditor().panelInstance('NicEdit');
 
-});
+            new nicEditor().panelInstance('NicEdit2');
 
-</script>
+        });
+
+    </script>
 </head>
 <body>
 <?php
@@ -47,8 +52,6 @@ require('header.php')
 <main class="main-block position-center" style="margin-top: 40px">
     <div class="orange-background" style="padding: 30px; border-radius:10px;width: 100%">
         <form method="post" enctype="multipart/form-data">
-            <label>ID пользователя:</label>
-            <input class="input" name="iduser" type="text" value=""><br>
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Превью поста</label>
                 <div class="col-sm-10">
@@ -70,21 +73,19 @@ require('header.php')
                     Категория</label>
                 <div class="form-group col-sm-10">
                     <select class="custom-select" required class="input" name="idcategory" type="text" value="">
-                        <option class="input" name="idcategory" type="text" value=2>Категорияu</option>
-                        <option class="input" name="idcategory" type="text" value=1>One</option>
-                        <option class="input" name="idcategory" type="text" value=2>Two</option>
+                        <option class="input" name="idcategory" type="text" value='Кулинария'>Кулинария</option>
+                        <option class="input" name="idcategory" type="text" value='Спорт'>Спорт</option>
+                        <option class="input" name="idcategory" type="text" value='Фильмы'>Фильмы</option>
+                        <option class="input" name="idcategory" type="text" value='Путишествия'>Путишествия</option>
+                        <option class="input" name="idcategory" type="text" value='Игры'>Игры</option>
+                        <option class="input" name="idcategory" type="text" value='Мода'>Мода</option>
+                        <option class="input" name="idcategory" type="text" value='Наука'>Наука</option>
+                        <option class="input" name="idcategory" type="text" value='Транспорт'>Транспорт</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">
-                    Подкатегория</label>
-                <div class="form-group col-sm-10">
-                    <select class="custom-select" required>
-                        <option class="input" name="idsubcategory" type="text" value=1>One</option>
-                        <option class="input" name="idsubcategory" type="text" value=2>Two</option>
-                    </select>
-                </div>
             </div>
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">
@@ -96,22 +97,24 @@ require('header.php')
                     </select>
                 </div>
             </div>
-
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">
+                    Ссылка:</label>
+                <div class="col-sm-10">
+                    <input class="input form-control" name="linck" type="text" placeholder="ссылка на стрим">
+                </div>
+            </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Example textarea</label>
                 <textarea class="form-control" textarea id="NicEdit" cols="80" rows="9"name="text"></textarea><br>
             </div>
-            <label>Ссылка:</label>
-            <input class="input" name="linck" type="text" value=""><br>
+
             <div class="form-group row" style="float: revert">
                 <div class="col-sm-10">
                     <button type="submit" class="btn  btn-my-dark-color btn-my-dark-size" type="submit" name="insert" id="insert" value="Insert" style="width: 30%">Insert</button>
                 </div>
             </div>
-            <label>Просмотров:</label>
-            <input class="input" name="view_count" type="text" value=""><br>
-            <label>Дата создания:</label>
-            <input class="input" name="date" type="text" value="">
+
         </form>
     </div>
 </main>

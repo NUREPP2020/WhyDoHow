@@ -101,7 +101,7 @@ $id_category = $_GET['id_category'];
                 }
                 mysqli_free_result($result);
             } else {
-                echo "No records matching your query were found.";
+                echo "Постов в данной категории еще нет.";
             }
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
