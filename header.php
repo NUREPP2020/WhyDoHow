@@ -55,56 +55,16 @@
             <div class="dropdown-menu category-background" aria-labelledby="navbarDropdown">
                 <div class="centerDivs">
                     <!--категории-->
-                    <a href="registration.php">
+                    <a href="categories.php?id_category=Кулинария">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">регистрация</p>
+                            <p style="bottom: -11px;">Кулинария</p>
                         </div>
                     </a>
-                    <a href="createpost.php">
+                    <a href="categories.php?id_category=Спорт">
                         <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
                             <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">создание поста</p>
-                        </div>
-                    </a><a href="myprofilw.php">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">myprofilw</p>
-                        </div>
-                    </a><a href="myprofile.php">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">myprofile</p>
-                        </div>
-                    </a><a href="createstream.php">
-                    <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                        <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                        <p style="bottom: -11px;">создние стрима</p>
-                    </div>
-                    </a><a href="createpost.php">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">создание поста</p>
-                        </div>
-                    </a><a href="#">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
-                        </div>
-                    </a><a href="#">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
-                        </div>
-                    </a><a href="#">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
-                        </div>
-                    </a><a href="#">
-                        <div class="item h-100 d-inline-block img-wrap category-img" style=" margin: auto">
-                            <img src="img/девушка1.jpg" alt="категория" class="category-img">
-                            <p style="bottom: -11px;">текст</p>
+                            <p style="bottom: -11px;">Спорт</p>
                         </div>
                     </a>
                 </div>

@@ -78,7 +78,6 @@ require('header.php')
             <span style="font-size: 65px; color: white;" class="viepo"><i class="fas fa-eye"></i>
                 <h4>'.$post['view_count'].'</h4>
             </span>
-
         </div>
       </div>
     </div>';
@@ -209,7 +208,7 @@ require('header.php')
                                                 </div>
                                                 <div class="modal-body">
                                                     <!--форма входа-->
-                                                    <form action="create_new_account.php" method="post"
+                                                    <form action="" method="post"
                                                           id="commentReport" class="needs-validation">
                                                         <div align="left">
                                                             <div class="form-check">

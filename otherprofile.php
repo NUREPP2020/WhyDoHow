@@ -75,15 +75,12 @@ $role = filter_var(trim($user['id_role']), FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             <div class="modal-body">
                                 <?php
-                                $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
-                                $sql ="SELECT  `id_user_follow` FROM `subscribes` WHERE `id_user_lead`= `$userId`";
-                                var_dump(mysqli_query($link, $sql));
-                                if ($result = mysqli_query($link, $sql)) {
-                                    var_dump(mysqli_num_rows($result));
-                                    if (mysqli_num_rows($result) > 0) {
-                                        var_dump(mysqli_fetch_array($query));
-                                        while ($use = mysqli_fetch_array($query))
-                                            echo "
+                                $query1 = $db->query("SELECT * FROM `subscribes` WHERE `id_user_lead`= '$userId'");
+                                while($user = mysqli_fetch_assoc($query1))
+                                {
+                                    $query2 = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user_follow']}'");
+                                    $use = mysqli_fetch_assoc($query2);
+                                    echo"
                                     <a href=\"otherprofile.php?id={$use['id_user']}\">
                                     <div class=\"row\"
                                          style=\"margin: 2px;\">
@@ -92,12 +89,11 @@ $role = filter_var(trim($user['id_role']), FILTER_SANITIZE_NUMBER_INT);
                                                  class=\"rounded-circle\">
                                         </div>
                                         <div class=\"col subscriptions-img\">
-                                            <span class=\"subscriptions-text\">{$use['name']}</span>
+                                            <span class=\"subscriptions-text\">  {$use['name']}</span>
                                         </div>
                                     </div>
                                 </a>
                                     ";
-                                    }
                                 }
                                 ?>
                             </div>
@@ -120,12 +116,12 @@ $role = filter_var(trim($user['id_role']), FILTER_SANITIZE_NUMBER_INT);
                         </div>
                         <div class="modal-body">
                             <?php
-                            $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
-                            $sql = $db->query("SELECT * FROM `subscribes` WHERE `id_user_follow`= '$userId' GROUP BY `id_user_lead`,`id_user_follow`");
-                            if ($result = mysqli_query($link, $sql)) {
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($use = mysqli_fetch_array($query))
-                                        echo "
+                            $query1 = $db->query("SELECT * FROM `subscribes` WHERE `id_user_follow`= '$userId'");
+                            while($user = mysqli_fetch_assoc($query1))
+                            {
+                                $query2 = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user_lead']}'");
+                                $use = mysqli_fetch_assoc($query2);
+                                echo"
                                     <a href=\"otherprofile.php?id={$use['id_user']}\">
                                     <div class=\"row\"
                                          style=\"margin: 2px;\">
@@ -139,7 +135,6 @@ $role = filter_var(trim($user['id_role']), FILTER_SANITIZE_NUMBER_INT);
                                     </div>
                                 </a>
                                     ";
-                                }
                             }
                             ?>
                         </div>
@@ -207,13 +202,17 @@ $role = filter_var(trim($user['id_role']), FILTER_SANITIZE_NUMBER_INT);
                     echo '<div class="row " style="padding: 0">';
                     echo '<img src="img/heart.png" alt="" class="post-statistics-image">';
                     echo '</div>';
-                    echo '<div class="row post-statistics-values">123</div>';
+                    echo '<div class="row post-statistics-values">';
+                    echo    $rows['like_count'];
+                    echo '</div>';
                     echo '</div>';
                     echo '<div class="col post-statistics-comment">';
                     echo '<div class="row" style="padding: 0">';
                     echo '<img src="img/comment.png" alt="" class="post-statistics-image">';
                     echo '</div>';
-                    echo '<div class="row post-statistics-values">123</div>';
+                    echo '<div class="row post-statistics-values">';
+                    echo    $rows['комеееееент'];
+                    echo '</div>';
                     echo '</div>';
                     echo '<div class="col post-statistics-views">';
                     echo '<div class="row" style="padding: 0">';

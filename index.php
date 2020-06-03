@@ -35,12 +35,15 @@ require('header.php')
     }
 
     // Attempt select query execution
-    $sql = "SELECT * FROM post ORDER BY view_count DESC";
+    $sql = "SELECT * FROM post ORDER BY popularity DESC";
     if ($result = mysqli_query($link, $sql)) {
         if (mysqli_num_rows($result) > 0) {
             $i = 0;
             while ($rows = mysqli_fetch_array($result)) {
                 if ($i == 0) {
+                    $sql1 = "SELECT COUNT(*) AS CountCom FROM `comment` WHERE `id_post`= '{$rows['id_post']}'";
+                    $result1 = mysqli_query($link, $sql1);
+                    $r = mysqli_fetch_array($result1);
                     echo '<!--топ 3 хреновины-->
 
     <div id="topPosts">
@@ -48,7 +51,7 @@ require('header.php')
             <img src="data:image/jpeg;base64,' . base64_encode($rows['preview']) . '" alt="" class="col post-top-image post-top-image-big">
             <span class="post-top-image-stats-size post-top-image-big-eye">
                   <img src="img/eye.png" alt="" class="post-top-image-big-top-icon">
-                  ' . $rows['id_category'] . '
+                  ' . $rows['view_count'] . '
               </span>
             <span class="post-top-label-most-popular">
                   самые популярные
@@ -62,9 +65,12 @@ require('header.php')
                   <img src="img/heart.png" alt="" class="post-top-image-big-bottom-icon">
                  ' . $rows['like_count'] . '
                   <img src="img/comment.png" alt="" class="post-top-image-big-bottom-icon">
-                  1231
+                  '.$r['CountCom'].'
               </span>';
                 } else if ($i == 1) {
+                    $sql1 = "SELECT COUNT(*) AS CountCom FROM `comment` WHERE `id_post`= '{$rows['id_post']}'";
+                    $result1 = mysqli_query($link, $sql1);
+                    $r = mysqli_fetch_array($result1);
                     echo '<div class="col img-wrap" style="max-width: 600px">
                 <!--первая мелкая фотка-->
                 <div class="row">
@@ -72,7 +78,7 @@ require('header.php')
                     <img src="data:image/jpeg;base64,' . base64_encode($rows['preview']) . '" alt="" class="col post-top-image post-top-image-small">
                     <span class="post-top-span-margin-content post-top-image-stats-size">
                   <img src="img/eye.png" alt="" class="post-top-image-small-top-icon">
-                ' . $rows['id_category'] . '
+                ' . $rows['view_count'] . '
                       </span>
                     <span class="post-top-span-margin-content post-top-image-small-top-span-header1">
                       <b>' . $rows['header'] . '</b>
@@ -81,20 +87,23 @@ require('header.php')
                           <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
                  ' . $rows['like_count'] . '
                   <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
-                  1235
+                  '.$r['CountCom'].'
               </span>
               </a>
                 </div>
                 
                 <br>';
                 } else if ($i == 2) {
+                    $sql1 = "SELECT COUNT(*) AS CountCom FROM `comment` WHERE `id_post`= '{$rows['id_post']}'";
+                    $result1 = mysqli_query($link, $sql1);
+                    $r = mysqli_fetch_array($result1);
                     echo '<!--вторая мелкая фотка-->
                 <div class="row">
                  <a href="viewpost.php?id='.$rows['id_post'].'">
                     <img src="data:image/jpeg;base64,' . base64_encode($rows['preview']) . '" alt="" class="col post-top-image post-top-image-small">
                     <span class="post-top-span-margin-content post-top-image-stats-size">
                   <img src="img/eye.png" alt="" class="post-top-image-small-top-icon">
-                  ' . $rows['id_category'] . '
+                  ' . $rows['view_count'] . '
                       </span>
                     <span class="post-top-span-margin-content post-top-image-small-top-span-header2">
                      <b>' . $rows['header'] . '</b>
@@ -103,7 +112,7 @@ require('header.php')
                           <img src="img/heart.png" alt="" class="post-top-image-small-bottom-icon">
                           ' . $rows['like_count'] . '
                           <img src="img/comment.png" alt="" class="post-top-image-small-bottom-icon">
-                          1237
+                          '.$r['CountCom'].'
                       </span>
                       </a>
                 </div>
@@ -111,6 +120,9 @@ require('header.php')
         </div>
     </div><div class="centerDivs">';
                 } else {
+                    $sql1 = "SELECT COUNT(*) AS CountCom FROM `comment` WHERE `id_post`= '{$rows['id_post']}'";
+                    $result1 = mysqli_query($link, $sql1);
+                    $r = mysqli_fetch_array($result1);
                     echo '<a  href="viewpost.php?id=' . $rows['id_post'] . '">';
 
                     echo '<div class="item post">';
@@ -148,7 +160,7 @@ require('header.php')
                     echo '<img src="img/comment.png" alt="" class="post-statistics-image">';
                     echo '</div>';
                     echo '<div class="row post-statistics-values">';
-                    echo    $countcomments['Lol'];
+                    echo  $r['CountCom'];
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="col post-statistics-views" style="">';

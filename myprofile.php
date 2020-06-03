@@ -22,20 +22,20 @@
 require('header.php');
 mysqli_report(MYSQLI_REPORT_STRICT);
 try {
-   
+    $db = new mysqli('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
 } catch (Exception $e) {
     echo "Error:" . $e->getMessage();
 }
-$query = $db->query("SELECT * FROM `subscribes` WHERE `id_user_lead`= '{$_COOKIE['userId']}' GROUP BY `id_user_lead`,`id_user_follow`");
+$query = $db->query("SELECT COUNT(*) AS CounLead FROM `subscribes` WHERE `id_user_lead`= '{$_COOKIE['userId']}'");
 $leadquery = mysqli_fetch_assoc($query);
-$lead = count($leadquery);
-$query = $db->query("SELECT * FROM `subscribes` WHERE `id_user_follow`= '{$_COOKIE['userId']}' GROUP BY `id_user_lead`,`id_user_follow`");
+$lead = $leadquery['CounLead'];
+$query = $db->query("SELECT COUNT(*) AS CounFoll FROM `subscribes` WHERE `id_user_follow`= '{$_COOKIE['userId']}'");
 $followquery = mysqli_fetch_assoc($query);
-$follow = count($followquery);
-$query = $db->query("SELECT * FROM `post` WHERE `id_user`= '{$_COOKIE['userId']}'");
+$follow = $followquery['CounFoll'];
+$query = $db->query("SELECT COUNT(*) AS CounPost FROM `post` WHERE `id_user` = '{$_COOKIE['userId']}'");
 $countquery = mysqli_fetch_assoc($query);
-$countpost = count($countquery);
-$query = $db->query("SELECT `description` FROM `user` WHERE `id_user`= '{$_COOKIE['userId']}'");
+$countpost = $countquery['CounPost'];
+$query = $db->query("SELECT `description` FROM `user` WHERE `id_user` = '{$_COOKIE['userId']}'");
 $description = mysqli_fetch_assoc($query);
 $description = filter_var(trim($description['description']), FILTER_SANITIZE_STRING);
 
@@ -104,9 +104,11 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                             </div>
                             <div class="modal-body">
                                 <?php
-                                foreach($leadquery as $user) {
-                                    $query = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user']}'");
-                                    $use = mysqli_fetch_assoc($query);
+                                $query1 = $db->query("SELECT * FROM `subscribes` WHERE `id_user_lead`= '{$_COOKIE['userId']}'");
+                                while($user = mysqli_fetch_assoc($query1))
+                                {
+                                    $query2 = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user_follow']}'");
+                                    $use = mysqli_fetch_assoc($query2);
                                     echo"
                                     <a href=\"otherprofile.php?id={$use['id_user']}\">
                                     <div class=\"row\"
@@ -143,9 +145,11 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                         </div>
                         <div class="modal-body">
                             <?php
-                            foreach($followquery as $user) {
-                                $query = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user']}'");
-                                $use = mysqli_fetch_assoc($query);
+                            $query1 = $db->query("SELECT * FROM `subscribes` WHERE `id_user_follow`= '{$_COOKIE['userId']}'");
+                            while($user = mysqli_fetch_assoc($query1))
+                            {
+                                $query2 = $db->query("SELECT * FROM `user` WHERE `id_user`= '{$user['id_user_lead']}'");
+                                $use = mysqli_fetch_assoc($query2);
                                 echo"
                                     <a href=\"otherprofile.php?id={$use['id_user']}\">
                                     <div class=\"row\"
@@ -196,7 +200,7 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                     echo '<div class="item post">';
                     echo '<div class="h-100 d-inline-block img-wrap post-for-image">';
                     echo '  <img src="data:image/jpeg;base64,'.base64_encode($rows['preview'] ).'" alt="категория" class="post-image">';
-                    echo '  <p class="post-image-category" style="background-color: rgba(0, 0, 0, 0.27); color:w;    border-radius: 17px;width: 60%;left: 37%;">';
+                    echo '  <p class="post-image-category" style="background-color: rgba(0, 0, 0, 0.27); color:white;    border-radius: 17px;width: 60%;left: 37%;">';
                     echo $rows['id_category'];
                     echo '</p>';
                     echo '</div>';
