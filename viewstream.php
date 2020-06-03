@@ -28,8 +28,9 @@ require('header.php')
         if($link === false){
             die("ERROR: Could not connect. " . mysqli_connect_error());
         }
-        $query = $db->query("UPDATE `stream` SET `view_count` = `view_count` + 1 WHERE `id_stream` = '$postn'");
-        $sql = "SELECT * FROM post WHERE id_post = $postno";
+        $sql = "UPDATE `stream` SET `view_count` = `view_count` + 1 WHERE `id_stream` = '$postn'";
+        $result = mysqli_query($link, $sql);
+        $sql = "SELECT * FROM stream WHERE id_stream = $postno";
         if($result = mysqli_query($link, $sql)){
             if(mysqli_num_rows($result) > 0){
                 while($rows = mysqli_fetch_array($result))
@@ -58,11 +59,11 @@ require('header.php')
         ?>
         <?php
         $postno= $_GET['id'];
-        $link = mysqli_connect("localhost", "root", "root", "whydohow");
+        $link = mysqli_connect('95.216.155.184', 'whydohow', 'Admin', 'whydohowdb');
         if($link === false){
             die("ERROR: Could not connect. " . mysqli_connect_error());
         }
-        $sql = "SELECT * FROM post WHERE id_post = $postno";
+        $sql = "SELECT * FROM stream WHERE id_stream = $postno";
         if($result = mysqli_query($link, $sql)){
             if(mysqli_num_rows($result) > 0){
                 while($rows = mysqli_fetch_array($result))

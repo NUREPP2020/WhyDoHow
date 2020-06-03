@@ -247,6 +247,7 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                 mysqli_free_result($result);
             }
             else{
+                echo "";
             }
         }
         else{
@@ -323,7 +324,7 @@ $description = filter_var(trim($description['description']), FILTER_SANITIZE_STR
                 mysqli_free_result($result);
             }
             else{
-                echo "No records matching your query were found.";
+                echo "Постов еще нет";
             }
         }
         else{
